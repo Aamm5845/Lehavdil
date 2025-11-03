@@ -1,0 +1,8428 @@
+{
+  "cities": [
+    {
+      "id": "1",
+      "nameEn": "Montreal",
+      "nameHe": "מונטריאול",
+      "country": "Canada",
+      "createdAt": "2025-11-03T19:32:47.351Z"
+    },
+    {
+      "id": "2",
+      "nameEn": "Monsey",
+      "nameHe": "מונסי",
+      "country": "USA",
+      "createdAt": "2025-11-03T19:32:47.353Z"
+    },
+    {
+      "id": "3",
+      "nameEn": "Boro Park",
+      "nameHe": "בורו פארק",
+      "country": "USA",
+      "createdAt": "2025-11-03T19:32:47.353Z"
+    },
+    {
+      "id": "4",
+      "nameEn": "Williamsburg",
+      "nameHe": "וויליאמסבורג",
+      "country": "USA",
+      "createdAt": "2025-11-03T19:32:47.354Z"
+    },
+    {
+      "id": "5",
+      "nameEn": "Lakewood",
+      "nameHe": "לייקווד",
+      "country": "USA",
+      "createdAt": "2025-11-03T19:32:47.354Z"
+    },
+    {
+      "id": "6",
+      "nameEn": "Yirushlayim",
+      "nameHe": "ירושלים",
+      "country": "Israel",
+      "createdAt": "2025-11-03T19:32:47.355Z"
+    },
+    {
+      "id": "7",
+      "nameEn": "Ashdod",
+      "nameHe": "אשדוד",
+      "country": "Israel",
+      "createdAt": "2025-11-03T19:32:47.355Z"
+    },
+    {
+      "id": "8",
+      "nameEn": "London",
+      "nameHe": "לונדון",
+      "country": "UK",
+      "createdAt": "2025-11-03T19:32:47.356Z"
+    }
+  ],
+  "communities": [
+    {
+      "id": "9",
+      "cityId": "1",
+      "nameEn": "Belz",
+      "nameHe": "בעלז",
+      "createdAt": "2025-11-03T19:32:47.357Z"
+    },
+    {
+      "id": "10",
+      "cityId": "1",
+      "nameEn": "Viznitz",
+      "nameHe": "ויזניץ",
+      "createdAt": "2025-11-03T19:32:47.357Z"
+    },
+    {
+      "id": "11",
+      "cityId": "1",
+      "nameEn": "Skver",
+      "nameHe": "סקווירא",
+      "createdAt": "2025-11-03T19:32:47.358Z"
+    },
+    {
+      "id": "12",
+      "cityId": "1",
+      "nameEn": "Satmar",
+      "nameHe": "סאטמר",
+      "createdAt": "2025-11-03T19:32:47.358Z"
+    },
+    {
+      "id": "13",
+      "cityId": "1",
+      "nameEn": "Lubavitz",
+      "nameHe": "ליובאוויטש",
+      "createdAt": "2025-11-03T19:32:47.359Z"
+    },
+    {
+      "id": "14",
+      "cityId": "2",
+      "nameEn": "Belz",
+      "nameHe": "בעלז",
+      "createdAt": "2025-11-03T19:32:47.360Z"
+    },
+    {
+      "id": "15",
+      "cityId": "2",
+      "nameEn": "Viznitz",
+      "nameHe": "ויזניץ",
+      "createdAt": "2025-11-03T19:32:47.360Z"
+    },
+    {
+      "id": "16",
+      "cityId": "2",
+      "nameEn": "Skver",
+      "nameHe": "סקווירא",
+      "createdAt": "2025-11-03T19:32:47.361Z"
+    },
+    {
+      "id": "17",
+      "cityId": "2",
+      "nameEn": "Satmar",
+      "nameHe": "סאטמר",
+      "createdAt": "2025-11-03T19:32:47.361Z"
+    },
+    {
+      "id": "18",
+      "cityId": "2",
+      "nameEn": "Lubavitz",
+      "nameHe": "ליובאוויטש",
+      "createdAt": "2025-11-03T19:32:47.362Z"
+    },
+    {
+      "id": "19",
+      "cityId": "3",
+      "nameEn": "Belz",
+      "nameHe": "בעלז",
+      "createdAt": "2025-11-03T19:32:47.362Z"
+    },
+    {
+      "id": "20",
+      "cityId": "3",
+      "nameEn": "Viznitz",
+      "nameHe": "ויזניץ",
+      "createdAt": "2025-11-03T19:32:47.363Z"
+    },
+    {
+      "id": "21",
+      "cityId": "3",
+      "nameEn": "Skver",
+      "nameHe": "סקווירא",
+      "createdAt": "2025-11-03T19:32:47.363Z"
+    },
+    {
+      "id": "22",
+      "cityId": "3",
+      "nameEn": "Satmar",
+      "nameHe": "סאטמר",
+      "createdAt": "2025-11-03T19:32:47.364Z"
+    },
+    {
+      "id": "23",
+      "cityId": "3",
+      "nameEn": "Lubavitz",
+      "nameHe": "ליובאוויטש",
+      "createdAt": "2025-11-03T19:32:47.364Z"
+    },
+    {
+      "id": "24",
+      "cityId": "4",
+      "nameEn": "Belz",
+      "nameHe": "בעלז",
+      "createdAt": "2025-11-03T19:32:47.365Z"
+    },
+    {
+      "id": "25",
+      "cityId": "4",
+      "nameEn": "Viznitz",
+      "nameHe": "ויזניץ",
+      "createdAt": "2025-11-03T19:32:47.366Z"
+    },
+    {
+      "id": "26",
+      "cityId": "4",
+      "nameEn": "Skver",
+      "nameHe": "סקווירא",
+      "createdAt": "2025-11-03T19:32:47.366Z"
+    },
+    {
+      "id": "27",
+      "cityId": "4",
+      "nameEn": "Satmar",
+      "nameHe": "סאטמר",
+      "createdAt": "2025-11-03T19:32:47.367Z"
+    },
+    {
+      "id": "28",
+      "cityId": "4",
+      "nameEn": "Lubavitz",
+      "nameHe": "ליובאוויטש",
+      "createdAt": "2025-11-03T19:32:47.368Z"
+    },
+    {
+      "id": "29",
+      "cityId": "5",
+      "nameEn": "Belz",
+      "nameHe": "בעלז",
+      "createdAt": "2025-11-03T19:32:47.368Z"
+    },
+    {
+      "id": "30",
+      "cityId": "5",
+      "nameEn": "Viznitz",
+      "nameHe": "ויזניץ",
+      "createdAt": "2025-11-03T19:32:47.369Z"
+    },
+    {
+      "id": "31",
+      "cityId": "5",
+      "nameEn": "Skver",
+      "nameHe": "סקווירא",
+      "createdAt": "2025-11-03T19:32:47.369Z"
+    },
+    {
+      "id": "32",
+      "cityId": "5",
+      "nameEn": "Satmar",
+      "nameHe": "סאטמר",
+      "createdAt": "2025-11-03T19:32:47.370Z"
+    },
+    {
+      "id": "33",
+      "cityId": "5",
+      "nameEn": "Lubavitz",
+      "nameHe": "ליובאוויטש",
+      "createdAt": "2025-11-03T19:32:47.370Z"
+    },
+    {
+      "id": "34",
+      "cityId": "6",
+      "nameEn": "Belz",
+      "nameHe": "בעלז",
+      "createdAt": "2025-11-03T19:32:47.371Z"
+    },
+    {
+      "id": "35",
+      "cityId": "6",
+      "nameEn": "Viznitz",
+      "nameHe": "ויזניץ",
+      "createdAt": "2025-11-03T19:32:47.372Z"
+    },
+    {
+      "id": "36",
+      "cityId": "6",
+      "nameEn": "Skver",
+      "nameHe": "סקווירא",
+      "createdAt": "2025-11-03T19:32:47.372Z"
+    },
+    {
+      "id": "37",
+      "cityId": "6",
+      "nameEn": "Satmar",
+      "nameHe": "סאטמר",
+      "createdAt": "2025-11-03T19:32:47.373Z"
+    },
+    {
+      "id": "38",
+      "cityId": "6",
+      "nameEn": "Lubavitz",
+      "nameHe": "ליובאוויטש",
+      "createdAt": "2025-11-03T19:32:47.374Z"
+    },
+    {
+      "id": "39",
+      "cityId": "7",
+      "nameEn": "Belz",
+      "nameHe": "בעלז",
+      "createdAt": "2025-11-03T19:32:47.374Z"
+    },
+    {
+      "id": "40",
+      "cityId": "7",
+      "nameEn": "Viznitz",
+      "nameHe": "ויזניץ",
+      "createdAt": "2025-11-03T19:32:47.375Z"
+    },
+    {
+      "id": "41",
+      "cityId": "7",
+      "nameEn": "Skver",
+      "nameHe": "סקווירא",
+      "createdAt": "2025-11-03T19:32:47.376Z"
+    },
+    {
+      "id": "42",
+      "cityId": "7",
+      "nameEn": "Satmar",
+      "nameHe": "סאטמר",
+      "createdAt": "2025-11-03T19:32:47.376Z"
+    },
+    {
+      "id": "43",
+      "cityId": "7",
+      "nameEn": "Lubavitz",
+      "nameHe": "ליובאוויטש",
+      "createdAt": "2025-11-03T19:32:47.377Z"
+    },
+    {
+      "id": "44",
+      "cityId": "8",
+      "nameEn": "Belz",
+      "nameHe": "בעלז",
+      "createdAt": "2025-11-03T19:32:47.377Z"
+    },
+    {
+      "id": "45",
+      "cityId": "8",
+      "nameEn": "Viznitz",
+      "nameHe": "ויזניץ",
+      "createdAt": "2025-11-03T19:32:47.378Z"
+    },
+    {
+      "id": "46",
+      "cityId": "8",
+      "nameEn": "Skver",
+      "nameHe": "סקווירא",
+      "createdAt": "2025-11-03T19:32:47.378Z"
+    },
+    {
+      "id": "47",
+      "cityId": "8",
+      "nameEn": "Satmar",
+      "nameHe": "סאטמר",
+      "createdAt": "2025-11-03T19:32:47.379Z"
+    },
+    {
+      "id": "48",
+      "cityId": "8",
+      "nameEn": "Lubavitz",
+      "nameHe": "ליובאוויטש",
+      "createdAt": "2025-11-03T19:32:47.380Z"
+    }
+  ],
+  "schools": [
+    {
+      "id": "49",
+      "communityId": "9",
+      "schoolType": "boys",
+      "nameEn": "Belz Boys School",
+      "nameHe": "ת\"ת בעלז בנים",
+      "isBaseline": true,
+      "createdAt": "2025-11-03T19:32:47.380Z"
+    },
+    {
+      "id": "50",
+      "communityId": "9",
+      "schoolType": "yeshivah",
+      "nameEn": "Belz Yeshivah",
+      "nameHe": "ישיבה בעלז",
+      "isBaseline": true,
+      "createdAt": "2025-11-03T19:32:47.381Z"
+    },
+    {
+      "id": "51",
+      "communityId": "9",
+      "schoolType": "girls",
+      "nameEn": "Belz Girls School",
+      "nameHe": "ב\"ס בעלז בנות",
+      "isBaseline": true,
+      "createdAt": "2025-11-03T19:32:47.382Z"
+    },
+    {
+      "id": "52",
+      "communityId": "10",
+      "schoolType": "boys",
+      "nameEn": "Viznitz Boys School",
+      "nameHe": "ת\"ת ויזניץ בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.382Z"
+    },
+    {
+      "id": "53",
+      "communityId": "10",
+      "schoolType": "yeshivah",
+      "nameEn": "Viznitz Yeshivah",
+      "nameHe": "ישיבה ויזניץ",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.383Z"
+    },
+    {
+      "id": "54",
+      "communityId": "10",
+      "schoolType": "girls",
+      "nameEn": "Viznitz Girls School",
+      "nameHe": "ב\"ס ויזניץ בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.383Z"
+    },
+    {
+      "id": "55",
+      "communityId": "11",
+      "schoolType": "boys",
+      "nameEn": "Skver Boys School",
+      "nameHe": "ת\"ת סקווירא בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.384Z"
+    },
+    {
+      "id": "56",
+      "communityId": "11",
+      "schoolType": "yeshivah",
+      "nameEn": "Skver Yeshivah",
+      "nameHe": "ישיבה סקווירא",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.384Z"
+    },
+    {
+      "id": "57",
+      "communityId": "11",
+      "schoolType": "girls",
+      "nameEn": "Skver Girls School",
+      "nameHe": "ב\"ס סקווירא בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.385Z"
+    },
+    {
+      "id": "58",
+      "communityId": "12",
+      "schoolType": "boys",
+      "nameEn": "Satmar Boys School",
+      "nameHe": "ת\"ת סאטמר בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.386Z"
+    },
+    {
+      "id": "59",
+      "communityId": "12",
+      "schoolType": "yeshivah",
+      "nameEn": "Satmar Yeshivah",
+      "nameHe": "ישיבה סאטמר",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.386Z"
+    },
+    {
+      "id": "60",
+      "communityId": "12",
+      "schoolType": "girls",
+      "nameEn": "Satmar Girls School",
+      "nameHe": "ב\"ס סאטמר בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.387Z"
+    },
+    {
+      "id": "61",
+      "communityId": "13",
+      "schoolType": "boys",
+      "nameEn": "Lubavitz Boys School",
+      "nameHe": "ת\"ת ליובאוויטש בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.388Z"
+    },
+    {
+      "id": "62",
+      "communityId": "13",
+      "schoolType": "yeshivah",
+      "nameEn": "Lubavitz Yeshivah",
+      "nameHe": "ישיבה ליובאוויטש",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.389Z"
+    },
+    {
+      "id": "63",
+      "communityId": "13",
+      "schoolType": "girls",
+      "nameEn": "Lubavitz Girls School",
+      "nameHe": "ב\"ס ליובאוויטש בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.389Z"
+    },
+    {
+      "id": "64",
+      "communityId": "14",
+      "schoolType": "boys",
+      "nameEn": "Belz Boys School",
+      "nameHe": "ת\"ת בעלז בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.390Z"
+    },
+    {
+      "id": "65",
+      "communityId": "14",
+      "schoolType": "yeshivah",
+      "nameEn": "Belz Yeshivah",
+      "nameHe": "ישיבה בעלז",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.391Z"
+    },
+    {
+      "id": "66",
+      "communityId": "14",
+      "schoolType": "girls",
+      "nameEn": "Belz Girls School",
+      "nameHe": "ב\"ס בעלז בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.391Z"
+    },
+    {
+      "id": "67",
+      "communityId": "15",
+      "schoolType": "boys",
+      "nameEn": "Viznitz Boys School",
+      "nameHe": "ת\"ת ויזניץ בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.392Z"
+    },
+    {
+      "id": "68",
+      "communityId": "15",
+      "schoolType": "yeshivah",
+      "nameEn": "Viznitz Yeshivah",
+      "nameHe": "ישיבה ויזניץ",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.392Z"
+    },
+    {
+      "id": "69",
+      "communityId": "15",
+      "schoolType": "girls",
+      "nameEn": "Viznitz Girls School",
+      "nameHe": "ב\"ס ויזניץ בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.393Z"
+    },
+    {
+      "id": "70",
+      "communityId": "16",
+      "schoolType": "boys",
+      "nameEn": "Skver Boys School",
+      "nameHe": "ת\"ת סקווירא בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.394Z"
+    },
+    {
+      "id": "71",
+      "communityId": "16",
+      "schoolType": "yeshivah",
+      "nameEn": "Skver Yeshivah",
+      "nameHe": "ישיבה סקווירא",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.394Z"
+    },
+    {
+      "id": "72",
+      "communityId": "16",
+      "schoolType": "girls",
+      "nameEn": "Skver Girls School",
+      "nameHe": "ב\"ס סקווירא בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.395Z"
+    },
+    {
+      "id": "73",
+      "communityId": "17",
+      "schoolType": "boys",
+      "nameEn": "Satmar Boys School",
+      "nameHe": "ת\"ת סאטמר בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.396Z"
+    },
+    {
+      "id": "74",
+      "communityId": "17",
+      "schoolType": "yeshivah",
+      "nameEn": "Satmar Yeshivah",
+      "nameHe": "ישיבה סאטמר",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.396Z"
+    },
+    {
+      "id": "75",
+      "communityId": "17",
+      "schoolType": "girls",
+      "nameEn": "Satmar Girls School",
+      "nameHe": "ב\"ס סאטמר בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.397Z"
+    },
+    {
+      "id": "76",
+      "communityId": "18",
+      "schoolType": "boys",
+      "nameEn": "Lubavitz Boys School",
+      "nameHe": "ת\"ת ליובאוויטש בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.397Z"
+    },
+    {
+      "id": "77",
+      "communityId": "18",
+      "schoolType": "yeshivah",
+      "nameEn": "Lubavitz Yeshivah",
+      "nameHe": "ישיבה ליובאוויטש",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.398Z"
+    },
+    {
+      "id": "78",
+      "communityId": "18",
+      "schoolType": "girls",
+      "nameEn": "Lubavitz Girls School",
+      "nameHe": "ב\"ס ליובאוויטש בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.398Z"
+    },
+    {
+      "id": "79",
+      "communityId": "19",
+      "schoolType": "boys",
+      "nameEn": "Belz Boys School",
+      "nameHe": "ת\"ת בעלז בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.399Z"
+    },
+    {
+      "id": "80",
+      "communityId": "19",
+      "schoolType": "yeshivah",
+      "nameEn": "Belz Yeshivah",
+      "nameHe": "ישיבה בעלז",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.400Z"
+    },
+    {
+      "id": "81",
+      "communityId": "19",
+      "schoolType": "girls",
+      "nameEn": "Belz Girls School",
+      "nameHe": "ב\"ס בעלז בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.400Z"
+    },
+    {
+      "id": "82",
+      "communityId": "20",
+      "schoolType": "boys",
+      "nameEn": "Viznitz Boys School",
+      "nameHe": "ת\"ת ויזניץ בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.401Z"
+    },
+    {
+      "id": "83",
+      "communityId": "20",
+      "schoolType": "yeshivah",
+      "nameEn": "Viznitz Yeshivah",
+      "nameHe": "ישיבה ויזניץ",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.402Z"
+    },
+    {
+      "id": "84",
+      "communityId": "20",
+      "schoolType": "girls",
+      "nameEn": "Viznitz Girls School",
+      "nameHe": "ב\"ס ויזניץ בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.402Z"
+    },
+    {
+      "id": "85",
+      "communityId": "21",
+      "schoolType": "boys",
+      "nameEn": "Skver Boys School",
+      "nameHe": "ת\"ת סקווירא בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.403Z"
+    },
+    {
+      "id": "86",
+      "communityId": "21",
+      "schoolType": "yeshivah",
+      "nameEn": "Skver Yeshivah",
+      "nameHe": "ישיבה סקווירא",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.404Z"
+    },
+    {
+      "id": "87",
+      "communityId": "21",
+      "schoolType": "girls",
+      "nameEn": "Skver Girls School",
+      "nameHe": "ב\"ס סקווירא בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.404Z"
+    },
+    {
+      "id": "88",
+      "communityId": "22",
+      "schoolType": "boys",
+      "nameEn": "Satmar Boys School",
+      "nameHe": "ת\"ת סאטמר בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.405Z"
+    },
+    {
+      "id": "89",
+      "communityId": "22",
+      "schoolType": "yeshivah",
+      "nameEn": "Satmar Yeshivah",
+      "nameHe": "ישיבה סאטמר",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.406Z"
+    },
+    {
+      "id": "90",
+      "communityId": "22",
+      "schoolType": "girls",
+      "nameEn": "Satmar Girls School",
+      "nameHe": "ב\"ס סאטמר בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.406Z"
+    },
+    {
+      "id": "91",
+      "communityId": "23",
+      "schoolType": "boys",
+      "nameEn": "Lubavitz Boys School",
+      "nameHe": "ת\"ת ליובאוויטש בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.407Z"
+    },
+    {
+      "id": "92",
+      "communityId": "23",
+      "schoolType": "yeshivah",
+      "nameEn": "Lubavitz Yeshivah",
+      "nameHe": "ישיבה ליובאוויטש",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.408Z"
+    },
+    {
+      "id": "93",
+      "communityId": "23",
+      "schoolType": "girls",
+      "nameEn": "Lubavitz Girls School",
+      "nameHe": "ב\"ס ליובאוויטש בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.408Z"
+    },
+    {
+      "id": "94",
+      "communityId": "24",
+      "schoolType": "boys",
+      "nameEn": "Belz Boys School",
+      "nameHe": "ת\"ת בעלז בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.409Z"
+    },
+    {
+      "id": "95",
+      "communityId": "24",
+      "schoolType": "yeshivah",
+      "nameEn": "Belz Yeshivah",
+      "nameHe": "ישיבה בעלז",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.410Z"
+    },
+    {
+      "id": "96",
+      "communityId": "24",
+      "schoolType": "girls",
+      "nameEn": "Belz Girls School",
+      "nameHe": "ב\"ס בעלז בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.410Z"
+    },
+    {
+      "id": "97",
+      "communityId": "25",
+      "schoolType": "boys",
+      "nameEn": "Viznitz Boys School",
+      "nameHe": "ת\"ת ויזניץ בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.411Z"
+    },
+    {
+      "id": "98",
+      "communityId": "25",
+      "schoolType": "yeshivah",
+      "nameEn": "Viznitz Yeshivah",
+      "nameHe": "ישיבה ויזניץ",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.412Z"
+    },
+    {
+      "id": "99",
+      "communityId": "25",
+      "schoolType": "girls",
+      "nameEn": "Viznitz Girls School",
+      "nameHe": "ב\"ס ויזניץ בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.412Z"
+    },
+    {
+      "id": "100",
+      "communityId": "26",
+      "schoolType": "boys",
+      "nameEn": "Skver Boys School",
+      "nameHe": "ת\"ת סקווירא בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.413Z"
+    },
+    {
+      "id": "101",
+      "communityId": "26",
+      "schoolType": "yeshivah",
+      "nameEn": "Skver Yeshivah",
+      "nameHe": "ישיבה סקווירא",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.414Z"
+    },
+    {
+      "id": "102",
+      "communityId": "26",
+      "schoolType": "girls",
+      "nameEn": "Skver Girls School",
+      "nameHe": "ב\"ס סקווירא בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.414Z"
+    },
+    {
+      "id": "103",
+      "communityId": "27",
+      "schoolType": "boys",
+      "nameEn": "Satmar Boys School",
+      "nameHe": "ת\"ת סאטמר בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.415Z"
+    },
+    {
+      "id": "104",
+      "communityId": "27",
+      "schoolType": "yeshivah",
+      "nameEn": "Satmar Yeshivah",
+      "nameHe": "ישיבה סאטמר",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.416Z"
+    },
+    {
+      "id": "105",
+      "communityId": "27",
+      "schoolType": "girls",
+      "nameEn": "Satmar Girls School",
+      "nameHe": "ב\"ס סאטמר בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.416Z"
+    },
+    {
+      "id": "106",
+      "communityId": "28",
+      "schoolType": "boys",
+      "nameEn": "Lubavitz Boys School",
+      "nameHe": "ת\"ת ליובאוויטש בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.417Z"
+    },
+    {
+      "id": "107",
+      "communityId": "28",
+      "schoolType": "yeshivah",
+      "nameEn": "Lubavitz Yeshivah",
+      "nameHe": "ישיבה ליובאוויטש",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.418Z"
+    },
+    {
+      "id": "108",
+      "communityId": "28",
+      "schoolType": "girls",
+      "nameEn": "Lubavitz Girls School",
+      "nameHe": "ב\"ס ליובאוויטש בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.418Z"
+    },
+    {
+      "id": "109",
+      "communityId": "29",
+      "schoolType": "boys",
+      "nameEn": "Belz Boys School",
+      "nameHe": "ת\"ת בעלז בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.419Z"
+    },
+    {
+      "id": "110",
+      "communityId": "29",
+      "schoolType": "yeshivah",
+      "nameEn": "Belz Yeshivah",
+      "nameHe": "ישיבה בעלז",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.420Z"
+    },
+    {
+      "id": "111",
+      "communityId": "29",
+      "schoolType": "girls",
+      "nameEn": "Belz Girls School",
+      "nameHe": "ב\"ס בעלז בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.420Z"
+    },
+    {
+      "id": "112",
+      "communityId": "30",
+      "schoolType": "boys",
+      "nameEn": "Viznitz Boys School",
+      "nameHe": "ת\"ת ויזניץ בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.421Z"
+    },
+    {
+      "id": "113",
+      "communityId": "30",
+      "schoolType": "yeshivah",
+      "nameEn": "Viznitz Yeshivah",
+      "nameHe": "ישיבה ויזניץ",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.422Z"
+    },
+    {
+      "id": "114",
+      "communityId": "30",
+      "schoolType": "girls",
+      "nameEn": "Viznitz Girls School",
+      "nameHe": "ב\"ס ויזניץ בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.422Z"
+    },
+    {
+      "id": "115",
+      "communityId": "31",
+      "schoolType": "boys",
+      "nameEn": "Skver Boys School",
+      "nameHe": "ת\"ת סקווירא בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.423Z"
+    },
+    {
+      "id": "116",
+      "communityId": "31",
+      "schoolType": "yeshivah",
+      "nameEn": "Skver Yeshivah",
+      "nameHe": "ישיבה סקווירא",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.424Z"
+    },
+    {
+      "id": "117",
+      "communityId": "31",
+      "schoolType": "girls",
+      "nameEn": "Skver Girls School",
+      "nameHe": "ב\"ס סקווירא בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.425Z"
+    },
+    {
+      "id": "118",
+      "communityId": "32",
+      "schoolType": "boys",
+      "nameEn": "Satmar Boys School",
+      "nameHe": "ת\"ת סאטמר בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.425Z"
+    },
+    {
+      "id": "119",
+      "communityId": "32",
+      "schoolType": "yeshivah",
+      "nameEn": "Satmar Yeshivah",
+      "nameHe": "ישיבה סאטמר",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.426Z"
+    },
+    {
+      "id": "120",
+      "communityId": "32",
+      "schoolType": "girls",
+      "nameEn": "Satmar Girls School",
+      "nameHe": "ב\"ס סאטמר בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.427Z"
+    },
+    {
+      "id": "121",
+      "communityId": "33",
+      "schoolType": "boys",
+      "nameEn": "Lubavitz Boys School",
+      "nameHe": "ת\"ת ליובאוויטש בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.427Z"
+    },
+    {
+      "id": "122",
+      "communityId": "33",
+      "schoolType": "yeshivah",
+      "nameEn": "Lubavitz Yeshivah",
+      "nameHe": "ישיבה ליובאוויטש",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.428Z"
+    },
+    {
+      "id": "123",
+      "communityId": "33",
+      "schoolType": "girls",
+      "nameEn": "Lubavitz Girls School",
+      "nameHe": "ב\"ס ליובאוויטש בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.429Z"
+    },
+    {
+      "id": "124",
+      "communityId": "34",
+      "schoolType": "boys",
+      "nameEn": "Belz Boys School",
+      "nameHe": "ת\"ת בעלז בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.430Z"
+    },
+    {
+      "id": "125",
+      "communityId": "34",
+      "schoolType": "yeshivah",
+      "nameEn": "Belz Yeshivah",
+      "nameHe": "ישיבה בעלז",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.430Z"
+    },
+    {
+      "id": "126",
+      "communityId": "34",
+      "schoolType": "girls",
+      "nameEn": "Belz Girls School",
+      "nameHe": "ב\"ס בעלז בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.431Z"
+    },
+    {
+      "id": "127",
+      "communityId": "35",
+      "schoolType": "boys",
+      "nameEn": "Viznitz Boys School",
+      "nameHe": "ת\"ת ויזניץ בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.432Z"
+    },
+    {
+      "id": "128",
+      "communityId": "35",
+      "schoolType": "yeshivah",
+      "nameEn": "Viznitz Yeshivah",
+      "nameHe": "ישיבה ויזניץ",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.433Z"
+    },
+    {
+      "id": "129",
+      "communityId": "35",
+      "schoolType": "girls",
+      "nameEn": "Viznitz Girls School",
+      "nameHe": "ב\"ס ויזניץ בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.433Z"
+    },
+    {
+      "id": "130",
+      "communityId": "36",
+      "schoolType": "boys",
+      "nameEn": "Skver Boys School",
+      "nameHe": "ת\"ת סקווירא בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.434Z"
+    },
+    {
+      "id": "131",
+      "communityId": "36",
+      "schoolType": "yeshivah",
+      "nameEn": "Skver Yeshivah",
+      "nameHe": "ישיבה סקווירא",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.435Z"
+    },
+    {
+      "id": "132",
+      "communityId": "36",
+      "schoolType": "girls",
+      "nameEn": "Skver Girls School",
+      "nameHe": "ב\"ס סקווירא בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.436Z"
+    },
+    {
+      "id": "133",
+      "communityId": "37",
+      "schoolType": "boys",
+      "nameEn": "Satmar Boys School",
+      "nameHe": "ת\"ת סאטמר בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.437Z"
+    },
+    {
+      "id": "134",
+      "communityId": "37",
+      "schoolType": "yeshivah",
+      "nameEn": "Satmar Yeshivah",
+      "nameHe": "ישיבה סאטמר",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.437Z"
+    },
+    {
+      "id": "135",
+      "communityId": "37",
+      "schoolType": "girls",
+      "nameEn": "Satmar Girls School",
+      "nameHe": "ב\"ס סאטמר בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.438Z"
+    },
+    {
+      "id": "136",
+      "communityId": "38",
+      "schoolType": "boys",
+      "nameEn": "Lubavitz Boys School",
+      "nameHe": "ת\"ת ליובאוויטש בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.439Z"
+    },
+    {
+      "id": "137",
+      "communityId": "38",
+      "schoolType": "yeshivah",
+      "nameEn": "Lubavitz Yeshivah",
+      "nameHe": "ישיבה ליובאוויטש",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.439Z"
+    },
+    {
+      "id": "138",
+      "communityId": "38",
+      "schoolType": "girls",
+      "nameEn": "Lubavitz Girls School",
+      "nameHe": "ב\"ס ליובאוויטש בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.440Z"
+    },
+    {
+      "id": "139",
+      "communityId": "39",
+      "schoolType": "boys",
+      "nameEn": "Belz Boys School",
+      "nameHe": "ת\"ת בעלז בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.441Z"
+    },
+    {
+      "id": "140",
+      "communityId": "39",
+      "schoolType": "yeshivah",
+      "nameEn": "Belz Yeshivah",
+      "nameHe": "ישיבה בעלז",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.442Z"
+    },
+    {
+      "id": "141",
+      "communityId": "39",
+      "schoolType": "girls",
+      "nameEn": "Belz Girls School",
+      "nameHe": "ב\"ס בעלז בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.442Z"
+    },
+    {
+      "id": "142",
+      "communityId": "40",
+      "schoolType": "boys",
+      "nameEn": "Viznitz Boys School",
+      "nameHe": "ת\"ת ויזניץ בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.443Z"
+    },
+    {
+      "id": "143",
+      "communityId": "40",
+      "schoolType": "yeshivah",
+      "nameEn": "Viznitz Yeshivah",
+      "nameHe": "ישיבה ויזניץ",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.444Z"
+    },
+    {
+      "id": "144",
+      "communityId": "40",
+      "schoolType": "girls",
+      "nameEn": "Viznitz Girls School",
+      "nameHe": "ב\"ס ויזניץ בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.445Z"
+    },
+    {
+      "id": "145",
+      "communityId": "41",
+      "schoolType": "boys",
+      "nameEn": "Skver Boys School",
+      "nameHe": "ת\"ת סקווירא בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.445Z"
+    },
+    {
+      "id": "146",
+      "communityId": "41",
+      "schoolType": "yeshivah",
+      "nameEn": "Skver Yeshivah",
+      "nameHe": "ישיבה סקווירא",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.446Z"
+    },
+    {
+      "id": "147",
+      "communityId": "41",
+      "schoolType": "girls",
+      "nameEn": "Skver Girls School",
+      "nameHe": "ב\"ס סקווירא בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.447Z"
+    },
+    {
+      "id": "148",
+      "communityId": "42",
+      "schoolType": "boys",
+      "nameEn": "Satmar Boys School",
+      "nameHe": "ת\"ת סאטמר בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.448Z"
+    },
+    {
+      "id": "149",
+      "communityId": "42",
+      "schoolType": "yeshivah",
+      "nameEn": "Satmar Yeshivah",
+      "nameHe": "ישיבה סאטמר",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.449Z"
+    },
+    {
+      "id": "150",
+      "communityId": "42",
+      "schoolType": "girls",
+      "nameEn": "Satmar Girls School",
+      "nameHe": "ב\"ס סאטמר בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.449Z"
+    },
+    {
+      "id": "151",
+      "communityId": "43",
+      "schoolType": "boys",
+      "nameEn": "Lubavitz Boys School",
+      "nameHe": "ת\"ת ליובאוויטש בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.450Z"
+    },
+    {
+      "id": "152",
+      "communityId": "43",
+      "schoolType": "yeshivah",
+      "nameEn": "Lubavitz Yeshivah",
+      "nameHe": "ישיבה ליובאוויטש",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.451Z"
+    },
+    {
+      "id": "153",
+      "communityId": "43",
+      "schoolType": "girls",
+      "nameEn": "Lubavitz Girls School",
+      "nameHe": "ב\"ס ליובאוויטש בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.451Z"
+    },
+    {
+      "id": "154",
+      "communityId": "44",
+      "schoolType": "boys",
+      "nameEn": "Belz Boys School",
+      "nameHe": "ת\"ת בעלז בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.452Z"
+    },
+    {
+      "id": "155",
+      "communityId": "44",
+      "schoolType": "yeshivah",
+      "nameEn": "Belz Yeshivah",
+      "nameHe": "ישיבה בעלז",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.453Z"
+    },
+    {
+      "id": "156",
+      "communityId": "44",
+      "schoolType": "girls",
+      "nameEn": "Belz Girls School",
+      "nameHe": "ב\"ס בעלז בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.454Z"
+    },
+    {
+      "id": "157",
+      "communityId": "45",
+      "schoolType": "boys",
+      "nameEn": "Viznitz Boys School",
+      "nameHe": "ת\"ת ויזניץ בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.455Z"
+    },
+    {
+      "id": "158",
+      "communityId": "45",
+      "schoolType": "yeshivah",
+      "nameEn": "Viznitz Yeshivah",
+      "nameHe": "ישיבה ויזניץ",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.455Z"
+    },
+    {
+      "id": "159",
+      "communityId": "45",
+      "schoolType": "girls",
+      "nameEn": "Viznitz Girls School",
+      "nameHe": "ב\"ס ויזניץ בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.456Z"
+    },
+    {
+      "id": "160",
+      "communityId": "46",
+      "schoolType": "boys",
+      "nameEn": "Skver Boys School",
+      "nameHe": "ת\"ת סקווירא בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.457Z"
+    },
+    {
+      "id": "161",
+      "communityId": "46",
+      "schoolType": "yeshivah",
+      "nameEn": "Skver Yeshivah",
+      "nameHe": "ישיבה סקווירא",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.458Z"
+    },
+    {
+      "id": "162",
+      "communityId": "46",
+      "schoolType": "girls",
+      "nameEn": "Skver Girls School",
+      "nameHe": "ב\"ס סקווירא בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.459Z"
+    },
+    {
+      "id": "163",
+      "communityId": "47",
+      "schoolType": "boys",
+      "nameEn": "Satmar Boys School",
+      "nameHe": "ת\"ת סאטמר בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.460Z"
+    },
+    {
+      "id": "164",
+      "communityId": "47",
+      "schoolType": "yeshivah",
+      "nameEn": "Satmar Yeshivah",
+      "nameHe": "ישיבה סאטמר",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.460Z"
+    },
+    {
+      "id": "165",
+      "communityId": "47",
+      "schoolType": "girls",
+      "nameEn": "Satmar Girls School",
+      "nameHe": "ב\"ס סאטמר בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.461Z"
+    },
+    {
+      "id": "166",
+      "communityId": "48",
+      "schoolType": "boys",
+      "nameEn": "Lubavitz Boys School",
+      "nameHe": "ת\"ת ליובאוויטש בנים",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.462Z"
+    },
+    {
+      "id": "167",
+      "communityId": "48",
+      "schoolType": "yeshivah",
+      "nameEn": "Lubavitz Yeshivah",
+      "nameHe": "ישיבה ליובאוויטש",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.463Z"
+    },
+    {
+      "id": "168",
+      "communityId": "48",
+      "schoolType": "girls",
+      "nameEn": "Lubavitz Girls School",
+      "nameHe": "ב\"ס ליובאוויטש בנות",
+      "isBaseline": false,
+      "createdAt": "2025-11-03T19:32:47.463Z"
+    }
+  ],
+  "classes": [
+    {
+      "id": "169",
+      "schoolId": "49",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.465Z"
+    },
+    {
+      "id": "170",
+      "schoolId": "49",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.465Z"
+    },
+    {
+      "id": "171",
+      "schoolId": "49",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.466Z"
+    },
+    {
+      "id": "172",
+      "schoolId": "49",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.467Z"
+    },
+    {
+      "id": "173",
+      "schoolId": "49",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.468Z"
+    },
+    {
+      "id": "174",
+      "schoolId": "49",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.469Z"
+    },
+    {
+      "id": "175",
+      "schoolId": "49",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.470Z"
+    },
+    {
+      "id": "176",
+      "schoolId": "49",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.471Z"
+    },
+    {
+      "id": "177",
+      "schoolId": "49",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.471Z"
+    },
+    {
+      "id": "178",
+      "schoolId": "50",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.472Z"
+    },
+    {
+      "id": "179",
+      "schoolId": "50",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.473Z"
+    },
+    {
+      "id": "180",
+      "schoolId": "50",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.474Z"
+    },
+    {
+      "id": "181",
+      "schoolId": "51",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.475Z"
+    },
+    {
+      "id": "182",
+      "schoolId": "51",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.476Z"
+    },
+    {
+      "id": "183",
+      "schoolId": "51",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.476Z"
+    },
+    {
+      "id": "184",
+      "schoolId": "51",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.477Z"
+    },
+    {
+      "id": "185",
+      "schoolId": "51",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.478Z"
+    },
+    {
+      "id": "186",
+      "schoolId": "51",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.479Z"
+    },
+    {
+      "id": "187",
+      "schoolId": "51",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.480Z"
+    },
+    {
+      "id": "188",
+      "schoolId": "51",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.480Z"
+    },
+    {
+      "id": "189",
+      "schoolId": "51",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.481Z"
+    },
+    {
+      "id": "190",
+      "schoolId": "51",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.482Z"
+    },
+    {
+      "id": "191",
+      "schoolId": "51",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.483Z"
+    },
+    {
+      "id": "192",
+      "schoolId": "51",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.484Z"
+    },
+    {
+      "id": "193",
+      "schoolId": "51",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.485Z"
+    },
+    {
+      "id": "194",
+      "schoolId": "52",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.485Z"
+    },
+    {
+      "id": "195",
+      "schoolId": "52",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.486Z"
+    },
+    {
+      "id": "196",
+      "schoolId": "52",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.487Z"
+    },
+    {
+      "id": "197",
+      "schoolId": "52",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.488Z"
+    },
+    {
+      "id": "198",
+      "schoolId": "52",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.489Z"
+    },
+    {
+      "id": "199",
+      "schoolId": "52",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.490Z"
+    },
+    {
+      "id": "200",
+      "schoolId": "52",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.490Z"
+    },
+    {
+      "id": "201",
+      "schoolId": "52",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.491Z"
+    },
+    {
+      "id": "202",
+      "schoolId": "52",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.492Z"
+    },
+    {
+      "id": "203",
+      "schoolId": "53",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.493Z"
+    },
+    {
+      "id": "204",
+      "schoolId": "53",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.494Z"
+    },
+    {
+      "id": "205",
+      "schoolId": "53",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.495Z"
+    },
+    {
+      "id": "206",
+      "schoolId": "54",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.496Z"
+    },
+    {
+      "id": "207",
+      "schoolId": "54",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.496Z"
+    },
+    {
+      "id": "208",
+      "schoolId": "54",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.497Z"
+    },
+    {
+      "id": "209",
+      "schoolId": "54",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.498Z"
+    },
+    {
+      "id": "210",
+      "schoolId": "54",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.499Z"
+    },
+    {
+      "id": "211",
+      "schoolId": "54",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.500Z"
+    },
+    {
+      "id": "212",
+      "schoolId": "54",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.501Z"
+    },
+    {
+      "id": "213",
+      "schoolId": "54",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.502Z"
+    },
+    {
+      "id": "214",
+      "schoolId": "54",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.503Z"
+    },
+    {
+      "id": "215",
+      "schoolId": "54",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.504Z"
+    },
+    {
+      "id": "216",
+      "schoolId": "54",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.504Z"
+    },
+    {
+      "id": "217",
+      "schoolId": "54",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.505Z"
+    },
+    {
+      "id": "218",
+      "schoolId": "54",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.506Z"
+    },
+    {
+      "id": "219",
+      "schoolId": "55",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.507Z"
+    },
+    {
+      "id": "220",
+      "schoolId": "55",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.508Z"
+    },
+    {
+      "id": "221",
+      "schoolId": "55",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.509Z"
+    },
+    {
+      "id": "222",
+      "schoolId": "55",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.510Z"
+    },
+    {
+      "id": "223",
+      "schoolId": "55",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.511Z"
+    },
+    {
+      "id": "224",
+      "schoolId": "55",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.511Z"
+    },
+    {
+      "id": "225",
+      "schoolId": "55",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.512Z"
+    },
+    {
+      "id": "226",
+      "schoolId": "55",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.516Z"
+    },
+    {
+      "id": "227",
+      "schoolId": "55",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.517Z"
+    },
+    {
+      "id": "228",
+      "schoolId": "56",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.519Z"
+    },
+    {
+      "id": "229",
+      "schoolId": "56",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.520Z"
+    },
+    {
+      "id": "230",
+      "schoolId": "56",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.521Z"
+    },
+    {
+      "id": "231",
+      "schoolId": "57",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.522Z"
+    },
+    {
+      "id": "232",
+      "schoolId": "57",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.523Z"
+    },
+    {
+      "id": "233",
+      "schoolId": "57",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.524Z"
+    },
+    {
+      "id": "234",
+      "schoolId": "57",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.525Z"
+    },
+    {
+      "id": "235",
+      "schoolId": "57",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.526Z"
+    },
+    {
+      "id": "236",
+      "schoolId": "57",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.527Z"
+    },
+    {
+      "id": "237",
+      "schoolId": "57",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.528Z"
+    },
+    {
+      "id": "238",
+      "schoolId": "57",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.529Z"
+    },
+    {
+      "id": "239",
+      "schoolId": "57",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.530Z"
+    },
+    {
+      "id": "240",
+      "schoolId": "57",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.531Z"
+    },
+    {
+      "id": "241",
+      "schoolId": "57",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.532Z"
+    },
+    {
+      "id": "242",
+      "schoolId": "57",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.533Z"
+    },
+    {
+      "id": "243",
+      "schoolId": "57",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.534Z"
+    },
+    {
+      "id": "244",
+      "schoolId": "58",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.535Z"
+    },
+    {
+      "id": "245",
+      "schoolId": "58",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.536Z"
+    },
+    {
+      "id": "246",
+      "schoolId": "58",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.537Z"
+    },
+    {
+      "id": "247",
+      "schoolId": "58",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.538Z"
+    },
+    {
+      "id": "248",
+      "schoolId": "58",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.539Z"
+    },
+    {
+      "id": "249",
+      "schoolId": "58",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.540Z"
+    },
+    {
+      "id": "250",
+      "schoolId": "58",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.541Z"
+    },
+    {
+      "id": "251",
+      "schoolId": "58",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.542Z"
+    },
+    {
+      "id": "252",
+      "schoolId": "58",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.542Z"
+    },
+    {
+      "id": "253",
+      "schoolId": "59",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.543Z"
+    },
+    {
+      "id": "254",
+      "schoolId": "59",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.545Z"
+    },
+    {
+      "id": "255",
+      "schoolId": "59",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.546Z"
+    },
+    {
+      "id": "256",
+      "schoolId": "60",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.547Z"
+    },
+    {
+      "id": "257",
+      "schoolId": "60",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.548Z"
+    },
+    {
+      "id": "258",
+      "schoolId": "60",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.549Z"
+    },
+    {
+      "id": "259",
+      "schoolId": "60",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.550Z"
+    },
+    {
+      "id": "260",
+      "schoolId": "60",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.551Z"
+    },
+    {
+      "id": "261",
+      "schoolId": "60",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.552Z"
+    },
+    {
+      "id": "262",
+      "schoolId": "60",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.553Z"
+    },
+    {
+      "id": "263",
+      "schoolId": "60",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.554Z"
+    },
+    {
+      "id": "264",
+      "schoolId": "60",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.555Z"
+    },
+    {
+      "id": "265",
+      "schoolId": "60",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.556Z"
+    },
+    {
+      "id": "266",
+      "schoolId": "60",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.557Z"
+    },
+    {
+      "id": "267",
+      "schoolId": "60",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.558Z"
+    },
+    {
+      "id": "268",
+      "schoolId": "60",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.559Z"
+    },
+    {
+      "id": "269",
+      "schoolId": "61",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.560Z"
+    },
+    {
+      "id": "270",
+      "schoolId": "61",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.561Z"
+    },
+    {
+      "id": "271",
+      "schoolId": "61",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.562Z"
+    },
+    {
+      "id": "272",
+      "schoolId": "61",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.563Z"
+    },
+    {
+      "id": "273",
+      "schoolId": "61",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.564Z"
+    },
+    {
+      "id": "274",
+      "schoolId": "61",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.565Z"
+    },
+    {
+      "id": "275",
+      "schoolId": "61",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.566Z"
+    },
+    {
+      "id": "276",
+      "schoolId": "61",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.567Z"
+    },
+    {
+      "id": "277",
+      "schoolId": "61",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.567Z"
+    },
+    {
+      "id": "278",
+      "schoolId": "62",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.568Z"
+    },
+    {
+      "id": "279",
+      "schoolId": "62",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.569Z"
+    },
+    {
+      "id": "280",
+      "schoolId": "62",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.570Z"
+    },
+    {
+      "id": "281",
+      "schoolId": "63",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.571Z"
+    },
+    {
+      "id": "282",
+      "schoolId": "63",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.572Z"
+    },
+    {
+      "id": "283",
+      "schoolId": "63",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.573Z"
+    },
+    {
+      "id": "284",
+      "schoolId": "63",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.574Z"
+    },
+    {
+      "id": "285",
+      "schoolId": "63",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.575Z"
+    },
+    {
+      "id": "286",
+      "schoolId": "63",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.576Z"
+    },
+    {
+      "id": "287",
+      "schoolId": "63",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.577Z"
+    },
+    {
+      "id": "288",
+      "schoolId": "63",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.578Z"
+    },
+    {
+      "id": "289",
+      "schoolId": "63",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.578Z"
+    },
+    {
+      "id": "290",
+      "schoolId": "63",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.579Z"
+    },
+    {
+      "id": "291",
+      "schoolId": "63",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.580Z"
+    },
+    {
+      "id": "292",
+      "schoolId": "63",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.581Z"
+    },
+    {
+      "id": "293",
+      "schoolId": "63",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.582Z"
+    },
+    {
+      "id": "294",
+      "schoolId": "64",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.583Z"
+    },
+    {
+      "id": "295",
+      "schoolId": "64",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.584Z"
+    },
+    {
+      "id": "296",
+      "schoolId": "64",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.585Z"
+    },
+    {
+      "id": "297",
+      "schoolId": "64",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.586Z"
+    },
+    {
+      "id": "298",
+      "schoolId": "64",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.587Z"
+    },
+    {
+      "id": "299",
+      "schoolId": "64",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.588Z"
+    },
+    {
+      "id": "300",
+      "schoolId": "64",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.589Z"
+    },
+    {
+      "id": "301",
+      "schoolId": "64",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.590Z"
+    },
+    {
+      "id": "302",
+      "schoolId": "64",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.591Z"
+    },
+    {
+      "id": "303",
+      "schoolId": "65",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.592Z"
+    },
+    {
+      "id": "304",
+      "schoolId": "65",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.593Z"
+    },
+    {
+      "id": "305",
+      "schoolId": "65",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.594Z"
+    },
+    {
+      "id": "306",
+      "schoolId": "66",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.595Z"
+    },
+    {
+      "id": "307",
+      "schoolId": "66",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.596Z"
+    },
+    {
+      "id": "308",
+      "schoolId": "66",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.597Z"
+    },
+    {
+      "id": "309",
+      "schoolId": "66",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.598Z"
+    },
+    {
+      "id": "310",
+      "schoolId": "66",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.599Z"
+    },
+    {
+      "id": "311",
+      "schoolId": "66",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.600Z"
+    },
+    {
+      "id": "312",
+      "schoolId": "66",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.601Z"
+    },
+    {
+      "id": "313",
+      "schoolId": "66",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.602Z"
+    },
+    {
+      "id": "314",
+      "schoolId": "66",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.603Z"
+    },
+    {
+      "id": "315",
+      "schoolId": "66",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.604Z"
+    },
+    {
+      "id": "316",
+      "schoolId": "66",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.605Z"
+    },
+    {
+      "id": "317",
+      "schoolId": "66",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.606Z"
+    },
+    {
+      "id": "318",
+      "schoolId": "66",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.607Z"
+    },
+    {
+      "id": "319",
+      "schoolId": "67",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.608Z"
+    },
+    {
+      "id": "320",
+      "schoolId": "67",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.609Z"
+    },
+    {
+      "id": "321",
+      "schoolId": "67",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.610Z"
+    },
+    {
+      "id": "322",
+      "schoolId": "67",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.611Z"
+    },
+    {
+      "id": "323",
+      "schoolId": "67",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.612Z"
+    },
+    {
+      "id": "324",
+      "schoolId": "67",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.613Z"
+    },
+    {
+      "id": "325",
+      "schoolId": "67",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.614Z"
+    },
+    {
+      "id": "326",
+      "schoolId": "67",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.615Z"
+    },
+    {
+      "id": "327",
+      "schoolId": "67",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.616Z"
+    },
+    {
+      "id": "328",
+      "schoolId": "68",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.617Z"
+    },
+    {
+      "id": "329",
+      "schoolId": "68",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.618Z"
+    },
+    {
+      "id": "330",
+      "schoolId": "68",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.619Z"
+    },
+    {
+      "id": "331",
+      "schoolId": "69",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.620Z"
+    },
+    {
+      "id": "332",
+      "schoolId": "69",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.621Z"
+    },
+    {
+      "id": "333",
+      "schoolId": "69",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.622Z"
+    },
+    {
+      "id": "334",
+      "schoolId": "69",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.623Z"
+    },
+    {
+      "id": "335",
+      "schoolId": "69",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.624Z"
+    },
+    {
+      "id": "336",
+      "schoolId": "69",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.625Z"
+    },
+    {
+      "id": "337",
+      "schoolId": "69",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.627Z"
+    },
+    {
+      "id": "338",
+      "schoolId": "69",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.628Z"
+    },
+    {
+      "id": "339",
+      "schoolId": "69",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.629Z"
+    },
+    {
+      "id": "340",
+      "schoolId": "69",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.630Z"
+    },
+    {
+      "id": "341",
+      "schoolId": "69",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.631Z"
+    },
+    {
+      "id": "342",
+      "schoolId": "69",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.632Z"
+    },
+    {
+      "id": "343",
+      "schoolId": "69",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.633Z"
+    },
+    {
+      "id": "344",
+      "schoolId": "70",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.634Z"
+    },
+    {
+      "id": "345",
+      "schoolId": "70",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.635Z"
+    },
+    {
+      "id": "346",
+      "schoolId": "70",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.636Z"
+    },
+    {
+      "id": "347",
+      "schoolId": "70",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.637Z"
+    },
+    {
+      "id": "348",
+      "schoolId": "70",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.638Z"
+    },
+    {
+      "id": "349",
+      "schoolId": "70",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.639Z"
+    },
+    {
+      "id": "350",
+      "schoolId": "70",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.640Z"
+    },
+    {
+      "id": "351",
+      "schoolId": "70",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.641Z"
+    },
+    {
+      "id": "352",
+      "schoolId": "70",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.642Z"
+    },
+    {
+      "id": "353",
+      "schoolId": "71",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.643Z"
+    },
+    {
+      "id": "354",
+      "schoolId": "71",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.644Z"
+    },
+    {
+      "id": "355",
+      "schoolId": "71",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.645Z"
+    },
+    {
+      "id": "356",
+      "schoolId": "72",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.646Z"
+    },
+    {
+      "id": "357",
+      "schoolId": "72",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.647Z"
+    },
+    {
+      "id": "358",
+      "schoolId": "72",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.648Z"
+    },
+    {
+      "id": "359",
+      "schoolId": "72",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.649Z"
+    },
+    {
+      "id": "360",
+      "schoolId": "72",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.650Z"
+    },
+    {
+      "id": "361",
+      "schoolId": "72",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.652Z"
+    },
+    {
+      "id": "362",
+      "schoolId": "72",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.653Z"
+    },
+    {
+      "id": "363",
+      "schoolId": "72",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.654Z"
+    },
+    {
+      "id": "364",
+      "schoolId": "72",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.655Z"
+    },
+    {
+      "id": "365",
+      "schoolId": "72",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.656Z"
+    },
+    {
+      "id": "366",
+      "schoolId": "72",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.657Z"
+    },
+    {
+      "id": "367",
+      "schoolId": "72",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.658Z"
+    },
+    {
+      "id": "368",
+      "schoolId": "72",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.659Z"
+    },
+    {
+      "id": "369",
+      "schoolId": "73",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.660Z"
+    },
+    {
+      "id": "370",
+      "schoolId": "73",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.661Z"
+    },
+    {
+      "id": "371",
+      "schoolId": "73",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.662Z"
+    },
+    {
+      "id": "372",
+      "schoolId": "73",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.664Z"
+    },
+    {
+      "id": "373",
+      "schoolId": "73",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.665Z"
+    },
+    {
+      "id": "374",
+      "schoolId": "73",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.666Z"
+    },
+    {
+      "id": "375",
+      "schoolId": "73",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.667Z"
+    },
+    {
+      "id": "376",
+      "schoolId": "73",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.668Z"
+    },
+    {
+      "id": "377",
+      "schoolId": "73",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.669Z"
+    },
+    {
+      "id": "378",
+      "schoolId": "74",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.670Z"
+    },
+    {
+      "id": "379",
+      "schoolId": "74",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.671Z"
+    },
+    {
+      "id": "380",
+      "schoolId": "74",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.672Z"
+    },
+    {
+      "id": "381",
+      "schoolId": "75",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.674Z"
+    },
+    {
+      "id": "382",
+      "schoolId": "75",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.675Z"
+    },
+    {
+      "id": "383",
+      "schoolId": "75",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.676Z"
+    },
+    {
+      "id": "384",
+      "schoolId": "75",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.677Z"
+    },
+    {
+      "id": "385",
+      "schoolId": "75",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.678Z"
+    },
+    {
+      "id": "386",
+      "schoolId": "75",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.680Z"
+    },
+    {
+      "id": "387",
+      "schoolId": "75",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.681Z"
+    },
+    {
+      "id": "388",
+      "schoolId": "75",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.682Z"
+    },
+    {
+      "id": "389",
+      "schoolId": "75",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.683Z"
+    },
+    {
+      "id": "390",
+      "schoolId": "75",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.684Z"
+    },
+    {
+      "id": "391",
+      "schoolId": "75",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.685Z"
+    },
+    {
+      "id": "392",
+      "schoolId": "75",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.687Z"
+    },
+    {
+      "id": "393",
+      "schoolId": "75",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.688Z"
+    },
+    {
+      "id": "394",
+      "schoolId": "76",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.689Z"
+    },
+    {
+      "id": "395",
+      "schoolId": "76",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.690Z"
+    },
+    {
+      "id": "396",
+      "schoolId": "76",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.691Z"
+    },
+    {
+      "id": "397",
+      "schoolId": "76",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.692Z"
+    },
+    {
+      "id": "398",
+      "schoolId": "76",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.693Z"
+    },
+    {
+      "id": "399",
+      "schoolId": "76",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.695Z"
+    },
+    {
+      "id": "400",
+      "schoolId": "76",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.696Z"
+    },
+    {
+      "id": "401",
+      "schoolId": "76",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.697Z"
+    },
+    {
+      "id": "402",
+      "schoolId": "76",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.698Z"
+    },
+    {
+      "id": "403",
+      "schoolId": "77",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.700Z"
+    },
+    {
+      "id": "404",
+      "schoolId": "77",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.701Z"
+    },
+    {
+      "id": "405",
+      "schoolId": "77",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.702Z"
+    },
+    {
+      "id": "406",
+      "schoolId": "78",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.703Z"
+    },
+    {
+      "id": "407",
+      "schoolId": "78",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.704Z"
+    },
+    {
+      "id": "408",
+      "schoolId": "78",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.706Z"
+    },
+    {
+      "id": "409",
+      "schoolId": "78",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.707Z"
+    },
+    {
+      "id": "410",
+      "schoolId": "78",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.708Z"
+    },
+    {
+      "id": "411",
+      "schoolId": "78",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.709Z"
+    },
+    {
+      "id": "412",
+      "schoolId": "78",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.710Z"
+    },
+    {
+      "id": "413",
+      "schoolId": "78",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.711Z"
+    },
+    {
+      "id": "414",
+      "schoolId": "78",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.713Z"
+    },
+    {
+      "id": "415",
+      "schoolId": "78",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.714Z"
+    },
+    {
+      "id": "416",
+      "schoolId": "78",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.715Z"
+    },
+    {
+      "id": "417",
+      "schoolId": "78",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.717Z"
+    },
+    {
+      "id": "418",
+      "schoolId": "78",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.718Z"
+    },
+    {
+      "id": "419",
+      "schoolId": "79",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.719Z"
+    },
+    {
+      "id": "420",
+      "schoolId": "79",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.721Z"
+    },
+    {
+      "id": "421",
+      "schoolId": "79",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.722Z"
+    },
+    {
+      "id": "422",
+      "schoolId": "79",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.723Z"
+    },
+    {
+      "id": "423",
+      "schoolId": "79",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.724Z"
+    },
+    {
+      "id": "424",
+      "schoolId": "79",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.725Z"
+    },
+    {
+      "id": "425",
+      "schoolId": "79",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.726Z"
+    },
+    {
+      "id": "426",
+      "schoolId": "79",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.728Z"
+    },
+    {
+      "id": "427",
+      "schoolId": "79",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.729Z"
+    },
+    {
+      "id": "428",
+      "schoolId": "80",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.730Z"
+    },
+    {
+      "id": "429",
+      "schoolId": "80",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.731Z"
+    },
+    {
+      "id": "430",
+      "schoolId": "80",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.733Z"
+    },
+    {
+      "id": "431",
+      "schoolId": "81",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.734Z"
+    },
+    {
+      "id": "432",
+      "schoolId": "81",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.735Z"
+    },
+    {
+      "id": "433",
+      "schoolId": "81",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.737Z"
+    },
+    {
+      "id": "434",
+      "schoolId": "81",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.738Z"
+    },
+    {
+      "id": "435",
+      "schoolId": "81",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.739Z"
+    },
+    {
+      "id": "436",
+      "schoolId": "81",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.740Z"
+    },
+    {
+      "id": "437",
+      "schoolId": "81",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.741Z"
+    },
+    {
+      "id": "438",
+      "schoolId": "81",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.743Z"
+    },
+    {
+      "id": "439",
+      "schoolId": "81",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.744Z"
+    },
+    {
+      "id": "440",
+      "schoolId": "81",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.745Z"
+    },
+    {
+      "id": "441",
+      "schoolId": "81",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.746Z"
+    },
+    {
+      "id": "442",
+      "schoolId": "81",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.747Z"
+    },
+    {
+      "id": "443",
+      "schoolId": "81",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.749Z"
+    },
+    {
+      "id": "444",
+      "schoolId": "82",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.750Z"
+    },
+    {
+      "id": "445",
+      "schoolId": "82",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.751Z"
+    },
+    {
+      "id": "446",
+      "schoolId": "82",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.753Z"
+    },
+    {
+      "id": "447",
+      "schoolId": "82",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.754Z"
+    },
+    {
+      "id": "448",
+      "schoolId": "82",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.755Z"
+    },
+    {
+      "id": "449",
+      "schoolId": "82",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.756Z"
+    },
+    {
+      "id": "450",
+      "schoolId": "82",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.758Z"
+    },
+    {
+      "id": "451",
+      "schoolId": "82",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.759Z"
+    },
+    {
+      "id": "452",
+      "schoolId": "82",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.760Z"
+    },
+    {
+      "id": "453",
+      "schoolId": "83",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.762Z"
+    },
+    {
+      "id": "454",
+      "schoolId": "83",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.763Z"
+    },
+    {
+      "id": "455",
+      "schoolId": "83",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.764Z"
+    },
+    {
+      "id": "456",
+      "schoolId": "84",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.766Z"
+    },
+    {
+      "id": "457",
+      "schoolId": "84",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.768Z"
+    },
+    {
+      "id": "458",
+      "schoolId": "84",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.769Z"
+    },
+    {
+      "id": "459",
+      "schoolId": "84",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.770Z"
+    },
+    {
+      "id": "460",
+      "schoolId": "84",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.771Z"
+    },
+    {
+      "id": "461",
+      "schoolId": "84",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.773Z"
+    },
+    {
+      "id": "462",
+      "schoolId": "84",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.774Z"
+    },
+    {
+      "id": "463",
+      "schoolId": "84",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.775Z"
+    },
+    {
+      "id": "464",
+      "schoolId": "84",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.776Z"
+    },
+    {
+      "id": "465",
+      "schoolId": "84",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.778Z"
+    },
+    {
+      "id": "466",
+      "schoolId": "84",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.779Z"
+    },
+    {
+      "id": "467",
+      "schoolId": "84",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.781Z"
+    },
+    {
+      "id": "468",
+      "schoolId": "84",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.782Z"
+    },
+    {
+      "id": "469",
+      "schoolId": "85",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.783Z"
+    },
+    {
+      "id": "470",
+      "schoolId": "85",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.785Z"
+    },
+    {
+      "id": "471",
+      "schoolId": "85",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.786Z"
+    },
+    {
+      "id": "472",
+      "schoolId": "85",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.787Z"
+    },
+    {
+      "id": "473",
+      "schoolId": "85",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.789Z"
+    },
+    {
+      "id": "474",
+      "schoolId": "85",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.790Z"
+    },
+    {
+      "id": "475",
+      "schoolId": "85",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.791Z"
+    },
+    {
+      "id": "476",
+      "schoolId": "85",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.792Z"
+    },
+    {
+      "id": "477",
+      "schoolId": "85",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.794Z"
+    },
+    {
+      "id": "478",
+      "schoolId": "86",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.795Z"
+    },
+    {
+      "id": "479",
+      "schoolId": "86",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.796Z"
+    },
+    {
+      "id": "480",
+      "schoolId": "86",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.798Z"
+    },
+    {
+      "id": "481",
+      "schoolId": "87",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.799Z"
+    },
+    {
+      "id": "482",
+      "schoolId": "87",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.801Z"
+    },
+    {
+      "id": "483",
+      "schoolId": "87",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.802Z"
+    },
+    {
+      "id": "484",
+      "schoolId": "87",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.803Z"
+    },
+    {
+      "id": "485",
+      "schoolId": "87",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.805Z"
+    },
+    {
+      "id": "486",
+      "schoolId": "87",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.806Z"
+    },
+    {
+      "id": "487",
+      "schoolId": "87",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.807Z"
+    },
+    {
+      "id": "488",
+      "schoolId": "87",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.808Z"
+    },
+    {
+      "id": "489",
+      "schoolId": "87",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.810Z"
+    },
+    {
+      "id": "490",
+      "schoolId": "87",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.811Z"
+    },
+    {
+      "id": "491",
+      "schoolId": "87",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.812Z"
+    },
+    {
+      "id": "492",
+      "schoolId": "87",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.814Z"
+    },
+    {
+      "id": "493",
+      "schoolId": "87",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.815Z"
+    },
+    {
+      "id": "494",
+      "schoolId": "88",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.816Z"
+    },
+    {
+      "id": "495",
+      "schoolId": "88",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.818Z"
+    },
+    {
+      "id": "496",
+      "schoolId": "88",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.820Z"
+    },
+    {
+      "id": "497",
+      "schoolId": "88",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.821Z"
+    },
+    {
+      "id": "498",
+      "schoolId": "88",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.822Z"
+    },
+    {
+      "id": "499",
+      "schoolId": "88",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.823Z"
+    },
+    {
+      "id": "500",
+      "schoolId": "88",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.825Z"
+    },
+    {
+      "id": "501",
+      "schoolId": "88",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.826Z"
+    },
+    {
+      "id": "502",
+      "schoolId": "88",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.827Z"
+    },
+    {
+      "id": "503",
+      "schoolId": "89",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.829Z"
+    },
+    {
+      "id": "504",
+      "schoolId": "89",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.830Z"
+    },
+    {
+      "id": "505",
+      "schoolId": "89",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.832Z"
+    },
+    {
+      "id": "506",
+      "schoolId": "90",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.833Z"
+    },
+    {
+      "id": "507",
+      "schoolId": "90",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.835Z"
+    },
+    {
+      "id": "508",
+      "schoolId": "90",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.836Z"
+    },
+    {
+      "id": "509",
+      "schoolId": "90",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.837Z"
+    },
+    {
+      "id": "510",
+      "schoolId": "90",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.839Z"
+    },
+    {
+      "id": "511",
+      "schoolId": "90",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.840Z"
+    },
+    {
+      "id": "512",
+      "schoolId": "90",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.841Z"
+    },
+    {
+      "id": "513",
+      "schoolId": "90",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.843Z"
+    },
+    {
+      "id": "514",
+      "schoolId": "90",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.844Z"
+    },
+    {
+      "id": "515",
+      "schoolId": "90",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.845Z"
+    },
+    {
+      "id": "516",
+      "schoolId": "90",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.847Z"
+    },
+    {
+      "id": "517",
+      "schoolId": "90",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.848Z"
+    },
+    {
+      "id": "518",
+      "schoolId": "90",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.849Z"
+    },
+    {
+      "id": "519",
+      "schoolId": "91",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.851Z"
+    },
+    {
+      "id": "520",
+      "schoolId": "91",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.852Z"
+    },
+    {
+      "id": "521",
+      "schoolId": "91",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.854Z"
+    },
+    {
+      "id": "522",
+      "schoolId": "91",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.855Z"
+    },
+    {
+      "id": "523",
+      "schoolId": "91",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.856Z"
+    },
+    {
+      "id": "524",
+      "schoolId": "91",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.857Z"
+    },
+    {
+      "id": "525",
+      "schoolId": "91",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.859Z"
+    },
+    {
+      "id": "526",
+      "schoolId": "91",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.860Z"
+    },
+    {
+      "id": "527",
+      "schoolId": "91",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.862Z"
+    },
+    {
+      "id": "528",
+      "schoolId": "92",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.863Z"
+    },
+    {
+      "id": "529",
+      "schoolId": "92",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.865Z"
+    },
+    {
+      "id": "530",
+      "schoolId": "92",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.866Z"
+    },
+    {
+      "id": "531",
+      "schoolId": "93",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.868Z"
+    },
+    {
+      "id": "532",
+      "schoolId": "93",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.869Z"
+    },
+    {
+      "id": "533",
+      "schoolId": "93",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.870Z"
+    },
+    {
+      "id": "534",
+      "schoolId": "93",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.872Z"
+    },
+    {
+      "id": "535",
+      "schoolId": "93",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.873Z"
+    },
+    {
+      "id": "536",
+      "schoolId": "93",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.874Z"
+    },
+    {
+      "id": "537",
+      "schoolId": "93",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.876Z"
+    },
+    {
+      "id": "538",
+      "schoolId": "93",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.877Z"
+    },
+    {
+      "id": "539",
+      "schoolId": "93",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.878Z"
+    },
+    {
+      "id": "540",
+      "schoolId": "93",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.880Z"
+    },
+    {
+      "id": "541",
+      "schoolId": "93",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.881Z"
+    },
+    {
+      "id": "542",
+      "schoolId": "93",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.883Z"
+    },
+    {
+      "id": "543",
+      "schoolId": "93",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.884Z"
+    },
+    {
+      "id": "544",
+      "schoolId": "94",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.886Z"
+    },
+    {
+      "id": "545",
+      "schoolId": "94",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.887Z"
+    },
+    {
+      "id": "546",
+      "schoolId": "94",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.888Z"
+    },
+    {
+      "id": "547",
+      "schoolId": "94",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.890Z"
+    },
+    {
+      "id": "548",
+      "schoolId": "94",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.892Z"
+    },
+    {
+      "id": "549",
+      "schoolId": "94",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.893Z"
+    },
+    {
+      "id": "550",
+      "schoolId": "94",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.894Z"
+    },
+    {
+      "id": "551",
+      "schoolId": "94",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.896Z"
+    },
+    {
+      "id": "552",
+      "schoolId": "94",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.897Z"
+    },
+    {
+      "id": "553",
+      "schoolId": "95",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.899Z"
+    },
+    {
+      "id": "554",
+      "schoolId": "95",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.900Z"
+    },
+    {
+      "id": "555",
+      "schoolId": "95",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.902Z"
+    },
+    {
+      "id": "556",
+      "schoolId": "96",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.903Z"
+    },
+    {
+      "id": "557",
+      "schoolId": "96",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.904Z"
+    },
+    {
+      "id": "558",
+      "schoolId": "96",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.906Z"
+    },
+    {
+      "id": "559",
+      "schoolId": "96",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.907Z"
+    },
+    {
+      "id": "560",
+      "schoolId": "96",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.908Z"
+    },
+    {
+      "id": "561",
+      "schoolId": "96",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.910Z"
+    },
+    {
+      "id": "562",
+      "schoolId": "96",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.911Z"
+    },
+    {
+      "id": "563",
+      "schoolId": "96",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.912Z"
+    },
+    {
+      "id": "564",
+      "schoolId": "96",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.914Z"
+    },
+    {
+      "id": "565",
+      "schoolId": "96",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.916Z"
+    },
+    {
+      "id": "566",
+      "schoolId": "96",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.917Z"
+    },
+    {
+      "id": "567",
+      "schoolId": "96",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.918Z"
+    },
+    {
+      "id": "568",
+      "schoolId": "96",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.920Z"
+    },
+    {
+      "id": "569",
+      "schoolId": "97",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.921Z"
+    },
+    {
+      "id": "570",
+      "schoolId": "97",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.923Z"
+    },
+    {
+      "id": "571",
+      "schoolId": "97",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.924Z"
+    },
+    {
+      "id": "572",
+      "schoolId": "97",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.926Z"
+    },
+    {
+      "id": "573",
+      "schoolId": "97",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.927Z"
+    },
+    {
+      "id": "574",
+      "schoolId": "97",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.929Z"
+    },
+    {
+      "id": "575",
+      "schoolId": "97",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.930Z"
+    },
+    {
+      "id": "576",
+      "schoolId": "97",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.932Z"
+    },
+    {
+      "id": "577",
+      "schoolId": "97",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.934Z"
+    },
+    {
+      "id": "578",
+      "schoolId": "98",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.935Z"
+    },
+    {
+      "id": "579",
+      "schoolId": "98",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.937Z"
+    },
+    {
+      "id": "580",
+      "schoolId": "98",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.938Z"
+    },
+    {
+      "id": "581",
+      "schoolId": "99",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.940Z"
+    },
+    {
+      "id": "582",
+      "schoolId": "99",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.941Z"
+    },
+    {
+      "id": "583",
+      "schoolId": "99",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.942Z"
+    },
+    {
+      "id": "584",
+      "schoolId": "99",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.944Z"
+    },
+    {
+      "id": "585",
+      "schoolId": "99",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.946Z"
+    },
+    {
+      "id": "586",
+      "schoolId": "99",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.947Z"
+    },
+    {
+      "id": "587",
+      "schoolId": "99",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.949Z"
+    },
+    {
+      "id": "588",
+      "schoolId": "99",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.950Z"
+    },
+    {
+      "id": "589",
+      "schoolId": "99",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.952Z"
+    },
+    {
+      "id": "590",
+      "schoolId": "99",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.953Z"
+    },
+    {
+      "id": "591",
+      "schoolId": "99",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.955Z"
+    },
+    {
+      "id": "592",
+      "schoolId": "99",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.956Z"
+    },
+    {
+      "id": "593",
+      "schoolId": "99",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.957Z"
+    },
+    {
+      "id": "594",
+      "schoolId": "100",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.959Z"
+    },
+    {
+      "id": "595",
+      "schoolId": "100",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.961Z"
+    },
+    {
+      "id": "596",
+      "schoolId": "100",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.962Z"
+    },
+    {
+      "id": "597",
+      "schoolId": "100",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.964Z"
+    },
+    {
+      "id": "598",
+      "schoolId": "100",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.965Z"
+    },
+    {
+      "id": "599",
+      "schoolId": "100",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.967Z"
+    },
+    {
+      "id": "600",
+      "schoolId": "100",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.968Z"
+    },
+    {
+      "id": "601",
+      "schoolId": "100",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.970Z"
+    },
+    {
+      "id": "602",
+      "schoolId": "100",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.971Z"
+    },
+    {
+      "id": "603",
+      "schoolId": "101",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.972Z"
+    },
+    {
+      "id": "604",
+      "schoolId": "101",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.974Z"
+    },
+    {
+      "id": "605",
+      "schoolId": "101",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.976Z"
+    },
+    {
+      "id": "606",
+      "schoolId": "102",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:47.977Z"
+    },
+    {
+      "id": "607",
+      "schoolId": "102",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.979Z"
+    },
+    {
+      "id": "608",
+      "schoolId": "102",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.980Z"
+    },
+    {
+      "id": "609",
+      "schoolId": "102",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:47.982Z"
+    },
+    {
+      "id": "610",
+      "schoolId": "102",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:47.983Z"
+    },
+    {
+      "id": "611",
+      "schoolId": "102",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:47.985Z"
+    },
+    {
+      "id": "612",
+      "schoolId": "102",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:47.987Z"
+    },
+    {
+      "id": "613",
+      "schoolId": "102",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:47.988Z"
+    },
+    {
+      "id": "614",
+      "schoolId": "102",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:47.990Z"
+    },
+    {
+      "id": "615",
+      "schoolId": "102",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:47.991Z"
+    },
+    {
+      "id": "616",
+      "schoolId": "102",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:47.993Z"
+    },
+    {
+      "id": "617",
+      "schoolId": "102",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:47.994Z"
+    },
+    {
+      "id": "618",
+      "schoolId": "102",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:47.996Z"
+    },
+    {
+      "id": "619",
+      "schoolId": "103",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:47.997Z"
+    },
+    {
+      "id": "620",
+      "schoolId": "103",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:47.999Z"
+    },
+    {
+      "id": "621",
+      "schoolId": "103",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.000Z"
+    },
+    {
+      "id": "622",
+      "schoolId": "103",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.002Z"
+    },
+    {
+      "id": "623",
+      "schoolId": "103",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.003Z"
+    },
+    {
+      "id": "624",
+      "schoolId": "103",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.005Z"
+    },
+    {
+      "id": "625",
+      "schoolId": "103",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.007Z"
+    },
+    {
+      "id": "626",
+      "schoolId": "103",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.008Z"
+    },
+    {
+      "id": "627",
+      "schoolId": "103",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.010Z"
+    },
+    {
+      "id": "628",
+      "schoolId": "104",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.012Z"
+    },
+    {
+      "id": "629",
+      "schoolId": "104",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.013Z"
+    },
+    {
+      "id": "630",
+      "schoolId": "104",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.015Z"
+    },
+    {
+      "id": "631",
+      "schoolId": "105",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.016Z"
+    },
+    {
+      "id": "632",
+      "schoolId": "105",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.018Z"
+    },
+    {
+      "id": "633",
+      "schoolId": "105",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.019Z"
+    },
+    {
+      "id": "634",
+      "schoolId": "105",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.021Z"
+    },
+    {
+      "id": "635",
+      "schoolId": "105",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.023Z"
+    },
+    {
+      "id": "636",
+      "schoolId": "105",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.024Z"
+    },
+    {
+      "id": "637",
+      "schoolId": "105",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.026Z"
+    },
+    {
+      "id": "638",
+      "schoolId": "105",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.027Z"
+    },
+    {
+      "id": "639",
+      "schoolId": "105",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.029Z"
+    },
+    {
+      "id": "640",
+      "schoolId": "105",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.031Z"
+    },
+    {
+      "id": "641",
+      "schoolId": "105",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.033Z"
+    },
+    {
+      "id": "642",
+      "schoolId": "105",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.034Z"
+    },
+    {
+      "id": "643",
+      "schoolId": "105",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.036Z"
+    },
+    {
+      "id": "644",
+      "schoolId": "106",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.037Z"
+    },
+    {
+      "id": "645",
+      "schoolId": "106",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.039Z"
+    },
+    {
+      "id": "646",
+      "schoolId": "106",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.041Z"
+    },
+    {
+      "id": "647",
+      "schoolId": "106",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.042Z"
+    },
+    {
+      "id": "648",
+      "schoolId": "106",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.044Z"
+    },
+    {
+      "id": "649",
+      "schoolId": "106",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.046Z"
+    },
+    {
+      "id": "650",
+      "schoolId": "106",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.047Z"
+    },
+    {
+      "id": "651",
+      "schoolId": "106",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.049Z"
+    },
+    {
+      "id": "652",
+      "schoolId": "106",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.050Z"
+    },
+    {
+      "id": "653",
+      "schoolId": "107",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.052Z"
+    },
+    {
+      "id": "654",
+      "schoolId": "107",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.054Z"
+    },
+    {
+      "id": "655",
+      "schoolId": "107",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.055Z"
+    },
+    {
+      "id": "656",
+      "schoolId": "108",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.057Z"
+    },
+    {
+      "id": "657",
+      "schoolId": "108",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.058Z"
+    },
+    {
+      "id": "658",
+      "schoolId": "108",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.060Z"
+    },
+    {
+      "id": "659",
+      "schoolId": "108",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.062Z"
+    },
+    {
+      "id": "660",
+      "schoolId": "108",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.063Z"
+    },
+    {
+      "id": "661",
+      "schoolId": "108",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.065Z"
+    },
+    {
+      "id": "662",
+      "schoolId": "108",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.067Z"
+    },
+    {
+      "id": "663",
+      "schoolId": "108",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.068Z"
+    },
+    {
+      "id": "664",
+      "schoolId": "108",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.070Z"
+    },
+    {
+      "id": "665",
+      "schoolId": "108",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.072Z"
+    },
+    {
+      "id": "666",
+      "schoolId": "108",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.073Z"
+    },
+    {
+      "id": "667",
+      "schoolId": "108",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.075Z"
+    },
+    {
+      "id": "668",
+      "schoolId": "108",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.077Z"
+    },
+    {
+      "id": "669",
+      "schoolId": "109",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.078Z"
+    },
+    {
+      "id": "670",
+      "schoolId": "109",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.080Z"
+    },
+    {
+      "id": "671",
+      "schoolId": "109",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.081Z"
+    },
+    {
+      "id": "672",
+      "schoolId": "109",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.083Z"
+    },
+    {
+      "id": "673",
+      "schoolId": "109",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.085Z"
+    },
+    {
+      "id": "674",
+      "schoolId": "109",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.087Z"
+    },
+    {
+      "id": "675",
+      "schoolId": "109",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.088Z"
+    },
+    {
+      "id": "676",
+      "schoolId": "109",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.090Z"
+    },
+    {
+      "id": "677",
+      "schoolId": "109",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.091Z"
+    },
+    {
+      "id": "678",
+      "schoolId": "110",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.093Z"
+    },
+    {
+      "id": "679",
+      "schoolId": "110",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.095Z"
+    },
+    {
+      "id": "680",
+      "schoolId": "110",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.096Z"
+    },
+    {
+      "id": "681",
+      "schoolId": "111",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.098Z"
+    },
+    {
+      "id": "682",
+      "schoolId": "111",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.100Z"
+    },
+    {
+      "id": "683",
+      "schoolId": "111",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.101Z"
+    },
+    {
+      "id": "684",
+      "schoolId": "111",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.103Z"
+    },
+    {
+      "id": "685",
+      "schoolId": "111",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.104Z"
+    },
+    {
+      "id": "686",
+      "schoolId": "111",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.106Z"
+    },
+    {
+      "id": "687",
+      "schoolId": "111",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.107Z"
+    },
+    {
+      "id": "688",
+      "schoolId": "111",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.109Z"
+    },
+    {
+      "id": "689",
+      "schoolId": "111",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.111Z"
+    },
+    {
+      "id": "690",
+      "schoolId": "111",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.112Z"
+    },
+    {
+      "id": "691",
+      "schoolId": "111",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.114Z"
+    },
+    {
+      "id": "692",
+      "schoolId": "111",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.116Z"
+    },
+    {
+      "id": "693",
+      "schoolId": "111",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.118Z"
+    },
+    {
+      "id": "694",
+      "schoolId": "112",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.119Z"
+    },
+    {
+      "id": "695",
+      "schoolId": "112",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.121Z"
+    },
+    {
+      "id": "696",
+      "schoolId": "112",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.122Z"
+    },
+    {
+      "id": "697",
+      "schoolId": "112",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.124Z"
+    },
+    {
+      "id": "698",
+      "schoolId": "112",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.126Z"
+    },
+    {
+      "id": "699",
+      "schoolId": "112",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.128Z"
+    },
+    {
+      "id": "700",
+      "schoolId": "112",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.130Z"
+    },
+    {
+      "id": "701",
+      "schoolId": "112",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.131Z"
+    },
+    {
+      "id": "702",
+      "schoolId": "112",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.133Z"
+    },
+    {
+      "id": "703",
+      "schoolId": "113",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.135Z"
+    },
+    {
+      "id": "704",
+      "schoolId": "113",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.136Z"
+    },
+    {
+      "id": "705",
+      "schoolId": "113",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.138Z"
+    },
+    {
+      "id": "706",
+      "schoolId": "114",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.140Z"
+    },
+    {
+      "id": "707",
+      "schoolId": "114",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.141Z"
+    },
+    {
+      "id": "708",
+      "schoolId": "114",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.143Z"
+    },
+    {
+      "id": "709",
+      "schoolId": "114",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.145Z"
+    },
+    {
+      "id": "710",
+      "schoolId": "114",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.147Z"
+    },
+    {
+      "id": "711",
+      "schoolId": "114",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.148Z"
+    },
+    {
+      "id": "712",
+      "schoolId": "114",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.150Z"
+    },
+    {
+      "id": "713",
+      "schoolId": "114",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.152Z"
+    },
+    {
+      "id": "714",
+      "schoolId": "114",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.153Z"
+    },
+    {
+      "id": "715",
+      "schoolId": "114",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.155Z"
+    },
+    {
+      "id": "716",
+      "schoolId": "114",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.157Z"
+    },
+    {
+      "id": "717",
+      "schoolId": "114",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.159Z"
+    },
+    {
+      "id": "718",
+      "schoolId": "114",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.161Z"
+    },
+    {
+      "id": "719",
+      "schoolId": "115",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.163Z"
+    },
+    {
+      "id": "720",
+      "schoolId": "115",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.164Z"
+    },
+    {
+      "id": "721",
+      "schoolId": "115",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.166Z"
+    },
+    {
+      "id": "722",
+      "schoolId": "115",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.168Z"
+    },
+    {
+      "id": "723",
+      "schoolId": "115",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.169Z"
+    },
+    {
+      "id": "724",
+      "schoolId": "115",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.171Z"
+    },
+    {
+      "id": "725",
+      "schoolId": "115",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.173Z"
+    },
+    {
+      "id": "726",
+      "schoolId": "115",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.175Z"
+    },
+    {
+      "id": "727",
+      "schoolId": "115",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.177Z"
+    },
+    {
+      "id": "728",
+      "schoolId": "116",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.179Z"
+    },
+    {
+      "id": "729",
+      "schoolId": "116",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.180Z"
+    },
+    {
+      "id": "730",
+      "schoolId": "116",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.182Z"
+    },
+    {
+      "id": "731",
+      "schoolId": "117",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.184Z"
+    },
+    {
+      "id": "732",
+      "schoolId": "117",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.186Z"
+    },
+    {
+      "id": "733",
+      "schoolId": "117",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.187Z"
+    },
+    {
+      "id": "734",
+      "schoolId": "117",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.189Z"
+    },
+    {
+      "id": "735",
+      "schoolId": "117",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.192Z"
+    },
+    {
+      "id": "736",
+      "schoolId": "117",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.193Z"
+    },
+    {
+      "id": "737",
+      "schoolId": "117",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.195Z"
+    },
+    {
+      "id": "738",
+      "schoolId": "117",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.197Z"
+    },
+    {
+      "id": "739",
+      "schoolId": "117",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.199Z"
+    },
+    {
+      "id": "740",
+      "schoolId": "117",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.200Z"
+    },
+    {
+      "id": "741",
+      "schoolId": "117",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.202Z"
+    },
+    {
+      "id": "742",
+      "schoolId": "117",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.204Z"
+    },
+    {
+      "id": "743",
+      "schoolId": "117",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.206Z"
+    },
+    {
+      "id": "744",
+      "schoolId": "118",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.208Z"
+    },
+    {
+      "id": "745",
+      "schoolId": "118",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.209Z"
+    },
+    {
+      "id": "746",
+      "schoolId": "118",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.211Z"
+    },
+    {
+      "id": "747",
+      "schoolId": "118",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.213Z"
+    },
+    {
+      "id": "748",
+      "schoolId": "118",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.215Z"
+    },
+    {
+      "id": "749",
+      "schoolId": "118",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.217Z"
+    },
+    {
+      "id": "750",
+      "schoolId": "118",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.218Z"
+    },
+    {
+      "id": "751",
+      "schoolId": "118",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.220Z"
+    },
+    {
+      "id": "752",
+      "schoolId": "118",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.222Z"
+    },
+    {
+      "id": "753",
+      "schoolId": "119",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.224Z"
+    },
+    {
+      "id": "754",
+      "schoolId": "119",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.226Z"
+    },
+    {
+      "id": "755",
+      "schoolId": "119",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.228Z"
+    },
+    {
+      "id": "756",
+      "schoolId": "120",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.229Z"
+    },
+    {
+      "id": "757",
+      "schoolId": "120",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.231Z"
+    },
+    {
+      "id": "758",
+      "schoolId": "120",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.233Z"
+    },
+    {
+      "id": "759",
+      "schoolId": "120",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.234Z"
+    },
+    {
+      "id": "760",
+      "schoolId": "120",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.237Z"
+    },
+    {
+      "id": "761",
+      "schoolId": "120",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.239Z"
+    },
+    {
+      "id": "762",
+      "schoolId": "120",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.241Z"
+    },
+    {
+      "id": "763",
+      "schoolId": "120",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.243Z"
+    },
+    {
+      "id": "764",
+      "schoolId": "120",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.245Z"
+    },
+    {
+      "id": "765",
+      "schoolId": "120",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.247Z"
+    },
+    {
+      "id": "766",
+      "schoolId": "120",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.248Z"
+    },
+    {
+      "id": "767",
+      "schoolId": "120",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.250Z"
+    },
+    {
+      "id": "768",
+      "schoolId": "120",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.252Z"
+    },
+    {
+      "id": "769",
+      "schoolId": "121",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.254Z"
+    },
+    {
+      "id": "770",
+      "schoolId": "121",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.256Z"
+    },
+    {
+      "id": "771",
+      "schoolId": "121",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.258Z"
+    },
+    {
+      "id": "772",
+      "schoolId": "121",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.260Z"
+    },
+    {
+      "id": "773",
+      "schoolId": "121",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.261Z"
+    },
+    {
+      "id": "774",
+      "schoolId": "121",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.263Z"
+    },
+    {
+      "id": "775",
+      "schoolId": "121",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.265Z"
+    },
+    {
+      "id": "776",
+      "schoolId": "121",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.267Z"
+    },
+    {
+      "id": "777",
+      "schoolId": "121",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.269Z"
+    },
+    {
+      "id": "778",
+      "schoolId": "122",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.271Z"
+    },
+    {
+      "id": "779",
+      "schoolId": "122",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.273Z"
+    },
+    {
+      "id": "780",
+      "schoolId": "122",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.275Z"
+    },
+    {
+      "id": "781",
+      "schoolId": "123",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.277Z"
+    },
+    {
+      "id": "782",
+      "schoolId": "123",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.279Z"
+    },
+    {
+      "id": "783",
+      "schoolId": "123",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.280Z"
+    },
+    {
+      "id": "784",
+      "schoolId": "123",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.283Z"
+    },
+    {
+      "id": "785",
+      "schoolId": "123",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.284Z"
+    },
+    {
+      "id": "786",
+      "schoolId": "123",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.286Z"
+    },
+    {
+      "id": "787",
+      "schoolId": "123",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.288Z"
+    },
+    {
+      "id": "788",
+      "schoolId": "123",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.290Z"
+    },
+    {
+      "id": "789",
+      "schoolId": "123",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.291Z"
+    },
+    {
+      "id": "790",
+      "schoolId": "123",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.293Z"
+    },
+    {
+      "id": "791",
+      "schoolId": "123",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.295Z"
+    },
+    {
+      "id": "792",
+      "schoolId": "123",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.297Z"
+    },
+    {
+      "id": "793",
+      "schoolId": "123",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.299Z"
+    },
+    {
+      "id": "794",
+      "schoolId": "124",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.301Z"
+    },
+    {
+      "id": "795",
+      "schoolId": "124",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.303Z"
+    },
+    {
+      "id": "796",
+      "schoolId": "124",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.304Z"
+    },
+    {
+      "id": "797",
+      "schoolId": "124",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.306Z"
+    },
+    {
+      "id": "798",
+      "schoolId": "124",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.308Z"
+    },
+    {
+      "id": "799",
+      "schoolId": "124",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.310Z"
+    },
+    {
+      "id": "800",
+      "schoolId": "124",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.312Z"
+    },
+    {
+      "id": "801",
+      "schoolId": "124",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.314Z"
+    },
+    {
+      "id": "802",
+      "schoolId": "124",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.316Z"
+    },
+    {
+      "id": "803",
+      "schoolId": "125",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.318Z"
+    },
+    {
+      "id": "804",
+      "schoolId": "125",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.319Z"
+    },
+    {
+      "id": "805",
+      "schoolId": "125",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.321Z"
+    },
+    {
+      "id": "806",
+      "schoolId": "126",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.323Z"
+    },
+    {
+      "id": "807",
+      "schoolId": "126",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.325Z"
+    },
+    {
+      "id": "808",
+      "schoolId": "126",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.327Z"
+    },
+    {
+      "id": "809",
+      "schoolId": "126",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.329Z"
+    },
+    {
+      "id": "810",
+      "schoolId": "126",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.331Z"
+    },
+    {
+      "id": "811",
+      "schoolId": "126",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.333Z"
+    },
+    {
+      "id": "812",
+      "schoolId": "126",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.335Z"
+    },
+    {
+      "id": "813",
+      "schoolId": "126",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.337Z"
+    },
+    {
+      "id": "814",
+      "schoolId": "126",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.339Z"
+    },
+    {
+      "id": "815",
+      "schoolId": "126",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.341Z"
+    },
+    {
+      "id": "816",
+      "schoolId": "126",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.344Z"
+    },
+    {
+      "id": "817",
+      "schoolId": "126",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.346Z"
+    },
+    {
+      "id": "818",
+      "schoolId": "126",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.348Z"
+    },
+    {
+      "id": "819",
+      "schoolId": "127",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.350Z"
+    },
+    {
+      "id": "820",
+      "schoolId": "127",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.352Z"
+    },
+    {
+      "id": "821",
+      "schoolId": "127",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.354Z"
+    },
+    {
+      "id": "822",
+      "schoolId": "127",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.357Z"
+    },
+    {
+      "id": "823",
+      "schoolId": "127",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.359Z"
+    },
+    {
+      "id": "824",
+      "schoolId": "127",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.361Z"
+    },
+    {
+      "id": "825",
+      "schoolId": "127",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.363Z"
+    },
+    {
+      "id": "826",
+      "schoolId": "127",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.365Z"
+    },
+    {
+      "id": "827",
+      "schoolId": "127",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.368Z"
+    },
+    {
+      "id": "828",
+      "schoolId": "128",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.370Z"
+    },
+    {
+      "id": "829",
+      "schoolId": "128",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.372Z"
+    },
+    {
+      "id": "830",
+      "schoolId": "128",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.374Z"
+    },
+    {
+      "id": "831",
+      "schoolId": "129",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.377Z"
+    },
+    {
+      "id": "832",
+      "schoolId": "129",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.379Z"
+    },
+    {
+      "id": "833",
+      "schoolId": "129",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.381Z"
+    },
+    {
+      "id": "834",
+      "schoolId": "129",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.383Z"
+    },
+    {
+      "id": "835",
+      "schoolId": "129",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.385Z"
+    },
+    {
+      "id": "836",
+      "schoolId": "129",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.387Z"
+    },
+    {
+      "id": "837",
+      "schoolId": "129",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.389Z"
+    },
+    {
+      "id": "838",
+      "schoolId": "129",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.392Z"
+    },
+    {
+      "id": "839",
+      "schoolId": "129",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.394Z"
+    },
+    {
+      "id": "840",
+      "schoolId": "129",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.396Z"
+    },
+    {
+      "id": "841",
+      "schoolId": "129",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.399Z"
+    },
+    {
+      "id": "842",
+      "schoolId": "129",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.401Z"
+    },
+    {
+      "id": "843",
+      "schoolId": "129",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.403Z"
+    },
+    {
+      "id": "844",
+      "schoolId": "130",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.405Z"
+    },
+    {
+      "id": "845",
+      "schoolId": "130",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.408Z"
+    },
+    {
+      "id": "846",
+      "schoolId": "130",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.410Z"
+    },
+    {
+      "id": "847",
+      "schoolId": "130",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.412Z"
+    },
+    {
+      "id": "848",
+      "schoolId": "130",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.414Z"
+    },
+    {
+      "id": "849",
+      "schoolId": "130",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.416Z"
+    },
+    {
+      "id": "850",
+      "schoolId": "130",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.418Z"
+    },
+    {
+      "id": "851",
+      "schoolId": "130",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.421Z"
+    },
+    {
+      "id": "852",
+      "schoolId": "130",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.423Z"
+    },
+    {
+      "id": "853",
+      "schoolId": "131",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.426Z"
+    },
+    {
+      "id": "854",
+      "schoolId": "131",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.428Z"
+    },
+    {
+      "id": "855",
+      "schoolId": "131",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.430Z"
+    },
+    {
+      "id": "856",
+      "schoolId": "132",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.432Z"
+    },
+    {
+      "id": "857",
+      "schoolId": "132",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.434Z"
+    },
+    {
+      "id": "858",
+      "schoolId": "132",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.436Z"
+    },
+    {
+      "id": "859",
+      "schoolId": "132",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.438Z"
+    },
+    {
+      "id": "860",
+      "schoolId": "132",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.441Z"
+    },
+    {
+      "id": "861",
+      "schoolId": "132",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.443Z"
+    },
+    {
+      "id": "862",
+      "schoolId": "132",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.445Z"
+    },
+    {
+      "id": "863",
+      "schoolId": "132",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.447Z"
+    },
+    {
+      "id": "864",
+      "schoolId": "132",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.449Z"
+    },
+    {
+      "id": "865",
+      "schoolId": "132",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.452Z"
+    },
+    {
+      "id": "866",
+      "schoolId": "132",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.454Z"
+    },
+    {
+      "id": "867",
+      "schoolId": "132",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.456Z"
+    },
+    {
+      "id": "868",
+      "schoolId": "132",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.459Z"
+    },
+    {
+      "id": "869",
+      "schoolId": "133",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.461Z"
+    },
+    {
+      "id": "870",
+      "schoolId": "133",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.462Z"
+    },
+    {
+      "id": "871",
+      "schoolId": "133",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.464Z"
+    },
+    {
+      "id": "872",
+      "schoolId": "133",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.466Z"
+    },
+    {
+      "id": "873",
+      "schoolId": "133",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.468Z"
+    },
+    {
+      "id": "874",
+      "schoolId": "133",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.470Z"
+    },
+    {
+      "id": "875",
+      "schoolId": "133",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.472Z"
+    },
+    {
+      "id": "876",
+      "schoolId": "133",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.474Z"
+    },
+    {
+      "id": "877",
+      "schoolId": "133",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.476Z"
+    },
+    {
+      "id": "878",
+      "schoolId": "134",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.477Z"
+    },
+    {
+      "id": "879",
+      "schoolId": "134",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.479Z"
+    },
+    {
+      "id": "880",
+      "schoolId": "134",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.481Z"
+    },
+    {
+      "id": "881",
+      "schoolId": "135",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.483Z"
+    },
+    {
+      "id": "882",
+      "schoolId": "135",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.486Z"
+    },
+    {
+      "id": "883",
+      "schoolId": "135",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.488Z"
+    },
+    {
+      "id": "884",
+      "schoolId": "135",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.489Z"
+    },
+    {
+      "id": "885",
+      "schoolId": "135",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.491Z"
+    },
+    {
+      "id": "886",
+      "schoolId": "135",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.493Z"
+    },
+    {
+      "id": "887",
+      "schoolId": "135",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.495Z"
+    },
+    {
+      "id": "888",
+      "schoolId": "135",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.497Z"
+    },
+    {
+      "id": "889",
+      "schoolId": "135",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.499Z"
+    },
+    {
+      "id": "890",
+      "schoolId": "135",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.501Z"
+    },
+    {
+      "id": "891",
+      "schoolId": "135",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.503Z"
+    },
+    {
+      "id": "892",
+      "schoolId": "135",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.505Z"
+    },
+    {
+      "id": "893",
+      "schoolId": "135",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.507Z"
+    },
+    {
+      "id": "894",
+      "schoolId": "136",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.509Z"
+    },
+    {
+      "id": "895",
+      "schoolId": "136",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.511Z"
+    },
+    {
+      "id": "896",
+      "schoolId": "136",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.513Z"
+    },
+    {
+      "id": "897",
+      "schoolId": "136",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.515Z"
+    },
+    {
+      "id": "898",
+      "schoolId": "136",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.518Z"
+    },
+    {
+      "id": "899",
+      "schoolId": "136",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.519Z"
+    },
+    {
+      "id": "900",
+      "schoolId": "136",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.521Z"
+    },
+    {
+      "id": "901",
+      "schoolId": "136",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.523Z"
+    },
+    {
+      "id": "902",
+      "schoolId": "136",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.525Z"
+    },
+    {
+      "id": "903",
+      "schoolId": "137",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.527Z"
+    },
+    {
+      "id": "904",
+      "schoolId": "137",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.529Z"
+    },
+    {
+      "id": "905",
+      "schoolId": "137",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.531Z"
+    },
+    {
+      "id": "906",
+      "schoolId": "138",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.533Z"
+    },
+    {
+      "id": "907",
+      "schoolId": "138",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.535Z"
+    },
+    {
+      "id": "908",
+      "schoolId": "138",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.537Z"
+    },
+    {
+      "id": "909",
+      "schoolId": "138",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.539Z"
+    },
+    {
+      "id": "910",
+      "schoolId": "138",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.540Z"
+    },
+    {
+      "id": "911",
+      "schoolId": "138",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.543Z"
+    },
+    {
+      "id": "912",
+      "schoolId": "138",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.545Z"
+    },
+    {
+      "id": "913",
+      "schoolId": "138",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.547Z"
+    },
+    {
+      "id": "914",
+      "schoolId": "138",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.549Z"
+    },
+    {
+      "id": "915",
+      "schoolId": "138",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.551Z"
+    },
+    {
+      "id": "916",
+      "schoolId": "138",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.553Z"
+    },
+    {
+      "id": "917",
+      "schoolId": "138",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.555Z"
+    },
+    {
+      "id": "918",
+      "schoolId": "138",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.557Z"
+    },
+    {
+      "id": "919",
+      "schoolId": "139",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.559Z"
+    },
+    {
+      "id": "920",
+      "schoolId": "139",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.561Z"
+    },
+    {
+      "id": "921",
+      "schoolId": "139",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.563Z"
+    },
+    {
+      "id": "922",
+      "schoolId": "139",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.566Z"
+    },
+    {
+      "id": "923",
+      "schoolId": "139",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.568Z"
+    },
+    {
+      "id": "924",
+      "schoolId": "139",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.570Z"
+    },
+    {
+      "id": "925",
+      "schoolId": "139",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.572Z"
+    },
+    {
+      "id": "926",
+      "schoolId": "139",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.574Z"
+    },
+    {
+      "id": "927",
+      "schoolId": "139",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.576Z"
+    },
+    {
+      "id": "928",
+      "schoolId": "140",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.578Z"
+    },
+    {
+      "id": "929",
+      "schoolId": "140",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.580Z"
+    },
+    {
+      "id": "930",
+      "schoolId": "140",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.582Z"
+    },
+    {
+      "id": "931",
+      "schoolId": "141",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.584Z"
+    },
+    {
+      "id": "932",
+      "schoolId": "141",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.586Z"
+    },
+    {
+      "id": "933",
+      "schoolId": "141",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.588Z"
+    },
+    {
+      "id": "934",
+      "schoolId": "141",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.590Z"
+    },
+    {
+      "id": "935",
+      "schoolId": "141",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.592Z"
+    },
+    {
+      "id": "936",
+      "schoolId": "141",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.594Z"
+    },
+    {
+      "id": "937",
+      "schoolId": "141",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.596Z"
+    },
+    {
+      "id": "938",
+      "schoolId": "141",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.599Z"
+    },
+    {
+      "id": "939",
+      "schoolId": "141",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.601Z"
+    },
+    {
+      "id": "940",
+      "schoolId": "141",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.603Z"
+    },
+    {
+      "id": "941",
+      "schoolId": "141",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.605Z"
+    },
+    {
+      "id": "942",
+      "schoolId": "141",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.607Z"
+    },
+    {
+      "id": "943",
+      "schoolId": "141",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.609Z"
+    },
+    {
+      "id": "944",
+      "schoolId": "142",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.611Z"
+    },
+    {
+      "id": "945",
+      "schoolId": "142",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.613Z"
+    },
+    {
+      "id": "946",
+      "schoolId": "142",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.615Z"
+    },
+    {
+      "id": "947",
+      "schoolId": "142",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.617Z"
+    },
+    {
+      "id": "948",
+      "schoolId": "142",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.619Z"
+    },
+    {
+      "id": "949",
+      "schoolId": "142",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.621Z"
+    },
+    {
+      "id": "950",
+      "schoolId": "142",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.623Z"
+    },
+    {
+      "id": "951",
+      "schoolId": "142",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.625Z"
+    },
+    {
+      "id": "952",
+      "schoolId": "142",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.628Z"
+    },
+    {
+      "id": "953",
+      "schoolId": "143",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.630Z"
+    },
+    {
+      "id": "954",
+      "schoolId": "143",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.632Z"
+    },
+    {
+      "id": "955",
+      "schoolId": "143",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.634Z"
+    },
+    {
+      "id": "956",
+      "schoolId": "144",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.636Z"
+    },
+    {
+      "id": "957",
+      "schoolId": "144",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.639Z"
+    },
+    {
+      "id": "958",
+      "schoolId": "144",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.641Z"
+    },
+    {
+      "id": "959",
+      "schoolId": "144",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.643Z"
+    },
+    {
+      "id": "960",
+      "schoolId": "144",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.645Z"
+    },
+    {
+      "id": "961",
+      "schoolId": "144",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.647Z"
+    },
+    {
+      "id": "962",
+      "schoolId": "144",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.649Z"
+    },
+    {
+      "id": "963",
+      "schoolId": "144",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.651Z"
+    },
+    {
+      "id": "964",
+      "schoolId": "144",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.654Z"
+    },
+    {
+      "id": "965",
+      "schoolId": "144",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.656Z"
+    },
+    {
+      "id": "966",
+      "schoolId": "144",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.659Z"
+    },
+    {
+      "id": "967",
+      "schoolId": "144",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.661Z"
+    },
+    {
+      "id": "968",
+      "schoolId": "144",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.663Z"
+    },
+    {
+      "id": "969",
+      "schoolId": "145",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.665Z"
+    },
+    {
+      "id": "970",
+      "schoolId": "145",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.667Z"
+    },
+    {
+      "id": "971",
+      "schoolId": "145",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.669Z"
+    },
+    {
+      "id": "972",
+      "schoolId": "145",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.671Z"
+    },
+    {
+      "id": "973",
+      "schoolId": "145",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.673Z"
+    },
+    {
+      "id": "974",
+      "schoolId": "145",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.676Z"
+    },
+    {
+      "id": "975",
+      "schoolId": "145",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.678Z"
+    },
+    {
+      "id": "976",
+      "schoolId": "145",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.680Z"
+    },
+    {
+      "id": "977",
+      "schoolId": "145",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.682Z"
+    },
+    {
+      "id": "978",
+      "schoolId": "146",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.685Z"
+    },
+    {
+      "id": "979",
+      "schoolId": "146",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.687Z"
+    },
+    {
+      "id": "980",
+      "schoolId": "146",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.689Z"
+    },
+    {
+      "id": "981",
+      "schoolId": "147",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.691Z"
+    },
+    {
+      "id": "982",
+      "schoolId": "147",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.693Z"
+    },
+    {
+      "id": "983",
+      "schoolId": "147",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.695Z"
+    },
+    {
+      "id": "984",
+      "schoolId": "147",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.697Z"
+    },
+    {
+      "id": "985",
+      "schoolId": "147",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.700Z"
+    },
+    {
+      "id": "986",
+      "schoolId": "147",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.702Z"
+    },
+    {
+      "id": "987",
+      "schoolId": "147",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.704Z"
+    },
+    {
+      "id": "988",
+      "schoolId": "147",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.706Z"
+    },
+    {
+      "id": "989",
+      "schoolId": "147",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.708Z"
+    },
+    {
+      "id": "990",
+      "schoolId": "147",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.710Z"
+    },
+    {
+      "id": "991",
+      "schoolId": "147",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.713Z"
+    },
+    {
+      "id": "992",
+      "schoolId": "147",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.715Z"
+    },
+    {
+      "id": "993",
+      "schoolId": "147",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.718Z"
+    },
+    {
+      "id": "994",
+      "schoolId": "148",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.720Z"
+    },
+    {
+      "id": "995",
+      "schoolId": "148",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.722Z"
+    },
+    {
+      "id": "996",
+      "schoolId": "148",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.725Z"
+    },
+    {
+      "id": "997",
+      "schoolId": "148",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.727Z"
+    },
+    {
+      "id": "998",
+      "schoolId": "148",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.729Z"
+    },
+    {
+      "id": "999",
+      "schoolId": "148",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.732Z"
+    },
+    {
+      "id": "1000",
+      "schoolId": "148",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.734Z"
+    },
+    {
+      "id": "1001",
+      "schoolId": "148",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.736Z"
+    },
+    {
+      "id": "1002",
+      "schoolId": "148",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.738Z"
+    },
+    {
+      "id": "1003",
+      "schoolId": "149",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.740Z"
+    },
+    {
+      "id": "1004",
+      "schoolId": "149",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.743Z"
+    },
+    {
+      "id": "1005",
+      "schoolId": "149",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.745Z"
+    },
+    {
+      "id": "1006",
+      "schoolId": "150",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.747Z"
+    },
+    {
+      "id": "1007",
+      "schoolId": "150",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.749Z"
+    },
+    {
+      "id": "1008",
+      "schoolId": "150",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.751Z"
+    },
+    {
+      "id": "1009",
+      "schoolId": "150",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.753Z"
+    },
+    {
+      "id": "1010",
+      "schoolId": "150",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.755Z"
+    },
+    {
+      "id": "1011",
+      "schoolId": "150",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.757Z"
+    },
+    {
+      "id": "1012",
+      "schoolId": "150",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.760Z"
+    },
+    {
+      "id": "1013",
+      "schoolId": "150",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.762Z"
+    },
+    {
+      "id": "1014",
+      "schoolId": "150",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.764Z"
+    },
+    {
+      "id": "1015",
+      "schoolId": "150",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.766Z"
+    },
+    {
+      "id": "1016",
+      "schoolId": "150",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.768Z"
+    },
+    {
+      "id": "1017",
+      "schoolId": "150",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.771Z"
+    },
+    {
+      "id": "1018",
+      "schoolId": "150",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.773Z"
+    },
+    {
+      "id": "1019",
+      "schoolId": "151",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.775Z"
+    },
+    {
+      "id": "1020",
+      "schoolId": "151",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.777Z"
+    },
+    {
+      "id": "1021",
+      "schoolId": "151",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.780Z"
+    },
+    {
+      "id": "1022",
+      "schoolId": "151",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.782Z"
+    },
+    {
+      "id": "1023",
+      "schoolId": "151",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.784Z"
+    },
+    {
+      "id": "1024",
+      "schoolId": "151",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.786Z"
+    },
+    {
+      "id": "1025",
+      "schoolId": "151",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.788Z"
+    },
+    {
+      "id": "1026",
+      "schoolId": "151",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.790Z"
+    },
+    {
+      "id": "1027",
+      "schoolId": "151",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.793Z"
+    },
+    {
+      "id": "1028",
+      "schoolId": "152",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.795Z"
+    },
+    {
+      "id": "1029",
+      "schoolId": "152",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.797Z"
+    },
+    {
+      "id": "1030",
+      "schoolId": "152",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.800Z"
+    },
+    {
+      "id": "1031",
+      "schoolId": "153",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.802Z"
+    },
+    {
+      "id": "1032",
+      "schoolId": "153",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.804Z"
+    },
+    {
+      "id": "1033",
+      "schoolId": "153",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.806Z"
+    },
+    {
+      "id": "1034",
+      "schoolId": "153",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.808Z"
+    },
+    {
+      "id": "1035",
+      "schoolId": "153",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.810Z"
+    },
+    {
+      "id": "1036",
+      "schoolId": "153",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.813Z"
+    },
+    {
+      "id": "1037",
+      "schoolId": "153",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.815Z"
+    },
+    {
+      "id": "1038",
+      "schoolId": "153",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.818Z"
+    },
+    {
+      "id": "1039",
+      "schoolId": "153",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.820Z"
+    },
+    {
+      "id": "1040",
+      "schoolId": "153",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.822Z"
+    },
+    {
+      "id": "1041",
+      "schoolId": "153",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.824Z"
+    },
+    {
+      "id": "1042",
+      "schoolId": "153",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.827Z"
+    },
+    {
+      "id": "1043",
+      "schoolId": "153",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.829Z"
+    },
+    {
+      "id": "1044",
+      "schoolId": "154",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.832Z"
+    },
+    {
+      "id": "1045",
+      "schoolId": "154",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.834Z"
+    },
+    {
+      "id": "1046",
+      "schoolId": "154",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.836Z"
+    },
+    {
+      "id": "1047",
+      "schoolId": "154",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.838Z"
+    },
+    {
+      "id": "1048",
+      "schoolId": "154",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.840Z"
+    },
+    {
+      "id": "1049",
+      "schoolId": "154",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.842Z"
+    },
+    {
+      "id": "1050",
+      "schoolId": "154",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.845Z"
+    },
+    {
+      "id": "1051",
+      "schoolId": "154",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.847Z"
+    },
+    {
+      "id": "1052",
+      "schoolId": "154",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.849Z"
+    },
+    {
+      "id": "1053",
+      "schoolId": "155",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.851Z"
+    },
+    {
+      "id": "1054",
+      "schoolId": "155",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.854Z"
+    },
+    {
+      "id": "1055",
+      "schoolId": "155",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.856Z"
+    },
+    {
+      "id": "1056",
+      "schoolId": "156",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.858Z"
+    },
+    {
+      "id": "1057",
+      "schoolId": "156",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.860Z"
+    },
+    {
+      "id": "1058",
+      "schoolId": "156",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.863Z"
+    },
+    {
+      "id": "1059",
+      "schoolId": "156",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.865Z"
+    },
+    {
+      "id": "1060",
+      "schoolId": "156",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.867Z"
+    },
+    {
+      "id": "1061",
+      "schoolId": "156",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.870Z"
+    },
+    {
+      "id": "1062",
+      "schoolId": "156",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.872Z"
+    },
+    {
+      "id": "1063",
+      "schoolId": "156",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.874Z"
+    },
+    {
+      "id": "1064",
+      "schoolId": "156",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.877Z"
+    },
+    {
+      "id": "1065",
+      "schoolId": "156",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.879Z"
+    },
+    {
+      "id": "1066",
+      "schoolId": "156",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.882Z"
+    },
+    {
+      "id": "1067",
+      "schoolId": "156",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.885Z"
+    },
+    {
+      "id": "1068",
+      "schoolId": "156",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.887Z"
+    },
+    {
+      "id": "1069",
+      "schoolId": "157",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.889Z"
+    },
+    {
+      "id": "1070",
+      "schoolId": "157",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.891Z"
+    },
+    {
+      "id": "1071",
+      "schoolId": "157",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.894Z"
+    },
+    {
+      "id": "1072",
+      "schoolId": "157",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.896Z"
+    },
+    {
+      "id": "1073",
+      "schoolId": "157",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.899Z"
+    },
+    {
+      "id": "1074",
+      "schoolId": "157",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.901Z"
+    },
+    {
+      "id": "1075",
+      "schoolId": "157",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.903Z"
+    },
+    {
+      "id": "1076",
+      "schoolId": "157",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.905Z"
+    },
+    {
+      "id": "1077",
+      "schoolId": "157",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.907Z"
+    },
+    {
+      "id": "1078",
+      "schoolId": "158",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.910Z"
+    },
+    {
+      "id": "1079",
+      "schoolId": "158",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.912Z"
+    },
+    {
+      "id": "1080",
+      "schoolId": "158",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.914Z"
+    },
+    {
+      "id": "1081",
+      "schoolId": "159",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.916Z"
+    },
+    {
+      "id": "1082",
+      "schoolId": "159",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.918Z"
+    },
+    {
+      "id": "1083",
+      "schoolId": "159",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.920Z"
+    },
+    {
+      "id": "1084",
+      "schoolId": "159",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.922Z"
+    },
+    {
+      "id": "1085",
+      "schoolId": "159",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.924Z"
+    },
+    {
+      "id": "1086",
+      "schoolId": "159",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.926Z"
+    },
+    {
+      "id": "1087",
+      "schoolId": "159",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.929Z"
+    },
+    {
+      "id": "1088",
+      "schoolId": "159",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.930Z"
+    },
+    {
+      "id": "1089",
+      "schoolId": "159",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.932Z"
+    },
+    {
+      "id": "1090",
+      "schoolId": "159",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.935Z"
+    },
+    {
+      "id": "1091",
+      "schoolId": "159",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.937Z"
+    },
+    {
+      "id": "1092",
+      "schoolId": "159",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.939Z"
+    },
+    {
+      "id": "1093",
+      "schoolId": "159",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.941Z"
+    },
+    {
+      "id": "1094",
+      "schoolId": "160",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.943Z"
+    },
+    {
+      "id": "1095",
+      "schoolId": "160",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.945Z"
+    },
+    {
+      "id": "1096",
+      "schoolId": "160",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.947Z"
+    },
+    {
+      "id": "1097",
+      "schoolId": "160",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.949Z"
+    },
+    {
+      "id": "1098",
+      "schoolId": "160",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.952Z"
+    },
+    {
+      "id": "1099",
+      "schoolId": "160",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.954Z"
+    },
+    {
+      "id": "1100",
+      "schoolId": "160",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.956Z"
+    },
+    {
+      "id": "1101",
+      "schoolId": "160",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.958Z"
+    },
+    {
+      "id": "1102",
+      "schoolId": "160",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.960Z"
+    },
+    {
+      "id": "1103",
+      "schoolId": "161",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.962Z"
+    },
+    {
+      "id": "1104",
+      "schoolId": "161",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.965Z"
+    },
+    {
+      "id": "1105",
+      "schoolId": "161",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.967Z"
+    },
+    {
+      "id": "1106",
+      "schoolId": "162",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:48.969Z"
+    },
+    {
+      "id": "1107",
+      "schoolId": "162",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.971Z"
+    },
+    {
+      "id": "1108",
+      "schoolId": "162",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.973Z"
+    },
+    {
+      "id": "1109",
+      "schoolId": "162",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:48.975Z"
+    },
+    {
+      "id": "1110",
+      "schoolId": "162",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:48.977Z"
+    },
+    {
+      "id": "1111",
+      "schoolId": "162",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:48.979Z"
+    },
+    {
+      "id": "1112",
+      "schoolId": "162",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:48.981Z"
+    },
+    {
+      "id": "1113",
+      "schoolId": "162",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:48.983Z"
+    },
+    {
+      "id": "1114",
+      "schoolId": "162",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:48.985Z"
+    },
+    {
+      "id": "1115",
+      "schoolId": "162",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:48.987Z"
+    },
+    {
+      "id": "1116",
+      "schoolId": "162",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:48.989Z"
+    },
+    {
+      "id": "1117",
+      "schoolId": "162",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:48.991Z"
+    },
+    {
+      "id": "1118",
+      "schoolId": "162",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:48.993Z"
+    },
+    {
+      "id": "1119",
+      "schoolId": "163",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:48.995Z"
+    },
+    {
+      "id": "1120",
+      "schoolId": "163",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:48.997Z"
+    },
+    {
+      "id": "1121",
+      "schoolId": "163",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:49.000Z"
+    },
+    {
+      "id": "1122",
+      "schoolId": "163",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:49.002Z"
+    },
+    {
+      "id": "1123",
+      "schoolId": "163",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:49.004Z"
+    },
+    {
+      "id": "1124",
+      "schoolId": "163",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:49.006Z"
+    },
+    {
+      "id": "1125",
+      "schoolId": "163",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:49.008Z"
+    },
+    {
+      "id": "1126",
+      "schoolId": "163",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:49.010Z"
+    },
+    {
+      "id": "1127",
+      "schoolId": "163",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:49.012Z"
+    },
+    {
+      "id": "1128",
+      "schoolId": "164",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:49.015Z"
+    },
+    {
+      "id": "1129",
+      "schoolId": "164",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:49.017Z"
+    },
+    {
+      "id": "1130",
+      "schoolId": "164",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:49.019Z"
+    },
+    {
+      "id": "1131",
+      "schoolId": "165",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:49.021Z"
+    },
+    {
+      "id": "1132",
+      "schoolId": "165",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:49.023Z"
+    },
+    {
+      "id": "1133",
+      "schoolId": "165",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:49.025Z"
+    },
+    {
+      "id": "1134",
+      "schoolId": "165",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:49.027Z"
+    },
+    {
+      "id": "1135",
+      "schoolId": "165",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:49.029Z"
+    },
+    {
+      "id": "1136",
+      "schoolId": "165",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:49.031Z"
+    },
+    {
+      "id": "1137",
+      "schoolId": "165",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:49.033Z"
+    },
+    {
+      "id": "1138",
+      "schoolId": "165",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:49.035Z"
+    },
+    {
+      "id": "1139",
+      "schoolId": "165",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:49.038Z"
+    },
+    {
+      "id": "1140",
+      "schoolId": "165",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:49.040Z"
+    },
+    {
+      "id": "1141",
+      "schoolId": "165",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:49.042Z"
+    },
+    {
+      "id": "1142",
+      "schoolId": "165",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:49.044Z"
+    },
+    {
+      "id": "1143",
+      "schoolId": "165",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:49.046Z"
+    },
+    {
+      "id": "1144",
+      "schoolId": "166",
+      "name": "כיתה א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:49.048Z"
+    },
+    {
+      "id": "1145",
+      "schoolId": "166",
+      "name": "כיתה ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:49.050Z"
+    },
+    {
+      "id": "1146",
+      "schoolId": "166",
+      "name": "כיתה ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:49.052Z"
+    },
+    {
+      "id": "1147",
+      "schoolId": "166",
+      "name": "כיתה ד",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:49.054Z"
+    },
+    {
+      "id": "1148",
+      "schoolId": "166",
+      "name": "כיתה ה",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:49.057Z"
+    },
+    {
+      "id": "1149",
+      "schoolId": "166",
+      "name": "כיתה ו",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:49.059Z"
+    },
+    {
+      "id": "1150",
+      "schoolId": "166",
+      "name": "כיתה ז",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:49.061Z"
+    },
+    {
+      "id": "1151",
+      "schoolId": "166",
+      "name": "כיתה ח",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:49.063Z"
+    },
+    {
+      "id": "1152",
+      "schoolId": "166",
+      "name": "כיתה ט",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:49.065Z"
+    },
+    {
+      "id": "1153",
+      "schoolId": "167",
+      "name": "שיעור א",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:49.067Z"
+    },
+    {
+      "id": "1154",
+      "schoolId": "167",
+      "name": "שיעור ב",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:49.070Z"
+    },
+    {
+      "id": "1155",
+      "schoolId": "167",
+      "name": "שיעור ג",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:49.072Z"
+    },
+    {
+      "id": "1156",
+      "schoolId": "168",
+      "name": "Pre1A",
+      "gradeLevel": 0,
+      "createdAt": "2025-11-03T19:32:49.074Z"
+    },
+    {
+      "id": "1157",
+      "schoolId": "168",
+      "name": "Grade 1",
+      "gradeLevel": 1,
+      "createdAt": "2025-11-03T19:32:49.076Z"
+    },
+    {
+      "id": "1158",
+      "schoolId": "168",
+      "name": "Grade 2",
+      "gradeLevel": 2,
+      "createdAt": "2025-11-03T19:32:49.078Z"
+    },
+    {
+      "id": "1159",
+      "schoolId": "168",
+      "name": "Grade 3",
+      "gradeLevel": 3,
+      "createdAt": "2025-11-03T19:32:49.080Z"
+    },
+    {
+      "id": "1160",
+      "schoolId": "168",
+      "name": "Grade 4",
+      "gradeLevel": 4,
+      "createdAt": "2025-11-03T19:32:49.083Z"
+    },
+    {
+      "id": "1161",
+      "schoolId": "168",
+      "name": "Grade 5",
+      "gradeLevel": 5,
+      "createdAt": "2025-11-03T19:32:49.085Z"
+    },
+    {
+      "id": "1162",
+      "schoolId": "168",
+      "name": "Grade 6",
+      "gradeLevel": 6,
+      "createdAt": "2025-11-03T19:32:49.087Z"
+    },
+    {
+      "id": "1163",
+      "schoolId": "168",
+      "name": "Grade 7",
+      "gradeLevel": 7,
+      "createdAt": "2025-11-03T19:32:49.089Z"
+    },
+    {
+      "id": "1164",
+      "schoolId": "168",
+      "name": "Grade 8",
+      "gradeLevel": 8,
+      "createdAt": "2025-11-03T19:32:49.091Z"
+    },
+    {
+      "id": "1165",
+      "schoolId": "168",
+      "name": "Grade 9",
+      "gradeLevel": 9,
+      "createdAt": "2025-11-03T19:32:49.094Z"
+    },
+    {
+      "id": "1166",
+      "schoolId": "168",
+      "name": "Grade 10",
+      "gradeLevel": 10,
+      "createdAt": "2025-11-03T19:32:49.096Z"
+    },
+    {
+      "id": "1167",
+      "schoolId": "168",
+      "name": "Grade 11",
+      "gradeLevel": 11,
+      "createdAt": "2025-11-03T19:32:49.098Z"
+    },
+    {
+      "id": "1168",
+      "schoolId": "168",
+      "name": "Grade 12",
+      "gradeLevel": 12,
+      "createdAt": "2025-11-03T19:32:49.100Z"
+    }
+  ],
+  "timeBlocks": [],
+  "nextId": 1169
+}
