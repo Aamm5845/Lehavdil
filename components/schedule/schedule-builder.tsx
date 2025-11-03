@@ -29,6 +29,7 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
   const [timeBlocks, setTimeBlocks] = useState<TimeBlock[]>([]);
   const [classData, setClassData] = useState<Class | null>(null);
   const [classStartTime, setClassStartTime] = useState('08:00');
+  const [englishStartTime, setEnglishStartTime] = useState('10:30');
   const [classEndTime, setClassEndTime] = useState('13:00');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -51,12 +52,15 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
       // Set start and end times based on day type
       if (dayType === 'sunday') {
         setClassStartTime(cls.sundayStart || '08:00');
+        setEnglishStartTime(cls.sundayEnglishStart || '10:30');
         setClassEndTime(cls.sundayEnd || '13:00');
       } else if (dayType === 'weekday') {
         setClassStartTime(cls.weekdayStart || '08:00');
+        setEnglishStartTime(cls.weekdayEnglishStart || '10:30');
         setClassEndTime(cls.weekdayEnd || '13:00');
       } else if (dayType === 'friday') {
         setClassStartTime(cls.fridayStart || '08:00');
+        setEnglishStartTime(cls.fridayEnglishStart || '10:30');
         setClassEndTime(cls.fridayEnd || '13:00');
       }
       
@@ -137,12 +141,15 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
       const classUpdateData: any = {};
       if (dayType === 'sunday') {
         classUpdateData.sundayStart = classStartTime;
+        classUpdateData.sundayEnglishStart = englishStartTime;
         classUpdateData.sundayEnd = classEndTime;
       } else if (dayType === 'weekday') {
         classUpdateData.weekdayStart = classStartTime;
+        classUpdateData.weekdayEnglishStart = englishStartTime;
         classUpdateData.weekdayEnd = classEndTime;
       } else if (dayType === 'friday') {
         classUpdateData.fridayStart = classStartTime;
+        classUpdateData.fridayEnglishStart = englishStartTime;
         classUpdateData.fridayEnd = classEndTime;
       }
       
@@ -222,19 +229,24 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
       
       // Set class times from source day
       let sourceStart = '08:00';
+      let sourceEnglishStart = '10:30';
       let sourceEnd = '13:00';
       if (sourceDayType === 'sunday') {
         sourceStart = cls.sundayStart || '08:00';
+        sourceEnglishStart = cls.sundayEnglishStart || '10:30';
         sourceEnd = cls.sundayEnd || '13:00';
       } else if (sourceDayType === 'weekday') {
         sourceStart = cls.weekdayStart || '08:00';
+        sourceEnglishStart = cls.weekdayEnglishStart || '10:30';
         sourceEnd = cls.weekdayEnd || '13:00';
       } else if (sourceDayType === 'friday') {
         sourceStart = cls.fridayStart || '08:00';
+        sourceEnglishStart = cls.fridayEnglishStart || '10:30';
         sourceEnd = cls.fridayEnd || '13:00';
       }
       
       setClassStartTime(sourceStart);
+      setEnglishStartTime(sourceEnglishStart);
       setClassEndTime(sourceEnd);
       
       // Copy time blocks (without IDs so they're treated as new)
@@ -276,7 +288,7 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
           <h3 className="text-lg font-semibold text-slate-900 mb-4">
             {lang === 'en' ? 'Class Times' : 'שעות כיתה'}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Class Start Time */}
             <div className="space-y-2">
               <Label className="text-sm font-medium text-slate-700">
@@ -290,6 +302,22 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
               />
               <p className="text-xs text-slate-600">
                 {lang === 'en' ? 'When students begin class' : 'מתי התלמידים מתחילים שיעור'}
+              </p>
+            </div>
+            
+            {/* English Start Time */}
+            <div className="space-y-2">
+              <Label className="text-sm font-medium text-slate-700">
+                {lang === 'en' ? '📖 English Starts' : '📖 תחילת אנגלית'}
+              </Label>
+              <Input
+                type="time"
+                value={englishStartTime}
+                onChange={(e) => setEnglishStartTime(e.target.value)}
+                className="text-lg font-semibold"
+              />
+              <p className="text-xs text-slate-600">
+                {lang === 'en' ? 'When English learning begins' : 'מתי לימוד אנגלית מתחיל'}
               </p>
             </div>
             

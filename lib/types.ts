@@ -37,10 +37,13 @@ export interface Class {
   gradeLevel: number;
   // Start and end times per day type
   sundayStart?: string;  // HH:MM format
+  sundayEnglishStart?: string;  // When English learning begins
   sundayEnd?: string;
   weekdayStart?: string;
+  weekdayEnglishStart?: string;
   weekdayEnd?: string;
   fridayStart?: string;
+  fridayEnglishStart?: string;
   fridayEnd?: string;
   createdAt: Date;
 }

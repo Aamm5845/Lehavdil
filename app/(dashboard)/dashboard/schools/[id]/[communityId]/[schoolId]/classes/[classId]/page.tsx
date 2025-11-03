@@ -234,7 +234,7 @@ export default function ClassDetailPage() {
             <h2 className="text-2xl font-bold text-slate-900">
               {lang === 'en' ? 'Weekly Schedule' : 'לוח זמנים שבועי'}
             </h2>
-            <Link href="/dashboard/schedules">
+            <Link href={`/dashboard/schedules?cityId=${cityId}&communityId=${communityId}&schoolId=${schoolId}&classId=${classId}`}>
               <Button className="gap-2 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700">
                 <Edit className="w-4 h-4" />
                 {lang === 'en' ? 'Edit Schedule' : 'ערוך לוח זמנים'}

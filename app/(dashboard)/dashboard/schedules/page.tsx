@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '@/lib/i18n';
 import { Card, CardContent } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -13,6 +14,7 @@ import { ScheduleBuilder } from '@/components/schedule/schedule-builder';
 
 export default function SchedulesPage() {
   const { t, lang } = useLanguage();
+  const searchParams = useSearchParams();
   
   const [cities, setCities] = useState<City[]>([]);
   const [communities, setCommunities] = useState<Community[]>([]);
@@ -28,7 +30,18 @@ export default function SchedulesPage() {
 
   useEffect(() => {
     fetchCities();
-  }, []);
+    
+    // Auto-select from query params
+    const cityId = searchParams.get('cityId');
+    const communityId = searchParams.get('communityId');
+    const schoolId = searchParams.get('schoolId');
+    const classId = searchParams.get('classId');
+    
+    if (cityId) setSelectedCityId(cityId);
+    if (communityId) setSelectedCommunityId(communityId);
+    if (schoolId) setSelectedSchoolId(schoolId);
+    if (classId) setSelectedClassId(classId);
+  }, [searchParams]);
 
   const fetchCities = async () => {
     try {

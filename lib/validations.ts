@@ -35,10 +35,13 @@ export const classSchema = z.object({
   name: z.string().min(1, 'Class name is required'),
   gradeLevel: z.number().min(1).max(8, 'Grade level must be between 1 and 8'),
   sundayStart: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
+  sundayEnglishStart: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
   sundayEnd: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
   weekdayStart: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
+  weekdayEnglishStart: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
   weekdayEnd: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
   fridayStart: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
+  fridayEnglishStart: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
   fridayEnd: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
 });
 
