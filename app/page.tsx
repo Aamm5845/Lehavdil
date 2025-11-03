@@ -90,7 +90,7 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center mb-16 sm:mb-20 lg:mb-24"
         >
-          {/* Logo/Icon - Matching Dashboard */}
+          {/* Logo/Icon - Matching Dashboard with ל */}
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
@@ -100,9 +100,10 @@ export default function Home() {
               damping: 15,
               delay: 0.2 
             }}
-            className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-sky-500 via-violet-500 to-rose-500 mb-6 sm:mb-8 shadow-xl"
+            className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-sky-500 via-violet-500 to-rose-500 mb-6 sm:mb-8 shadow-xl relative"
           >
             <BarChart3 className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+            <div className="absolute top-1 right-1 text-white font-bold text-xl sm:text-2xl opacity-90">ל</div>
           </motion.div>
 
           {/* Main Title */}
@@ -189,24 +190,21 @@ export default function Home() {
 
                 {/* Two sides comparison */}
                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                  {/* Torah Side - Montreal (Heavier) */}
+                  {/* Montreal Side - WITH FLAG (Heavier - More Torah) */}
                   <motion.div
                     initial={{ y: 0, opacity: 0 }}
                     animate={{ y: 12, opacity: 1 }}
                     transition={{ delay: 1.2, duration: 0.6, type: "spring" }}
                   >
-                    <div className="bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl p-4 sm:p-6 shadow-lg relative">
+                    <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-4 sm:p-6 shadow-lg relative">
                       <div className="flex justify-center mb-3">
                         <div className="p-2 sm:p-3 bg-white/20 rounded-lg backdrop-blur-sm">
-                          <ScrollText className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                          <Flag className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                         </div>
                       </div>
-                      <h3 className="text-base sm:text-lg font-bold text-white text-center mb-1">
-                        {lang === 'en' ? 'Torah' : 'תורה'}
-                      </h3>
-                      <p className="text-white/80 text-center text-xs sm:text-sm mb-3">
+                      <h3 className="text-base sm:text-lg font-bold text-white text-center mb-3">
                         {lang === 'en' ? 'Montreal' : 'מונטריאול'}
-                      </p>
+                      </h3>
                       <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
                         <div className="text-2xl sm:text-3xl font-bold text-white text-center">
                           25+
@@ -222,24 +220,21 @@ export default function Home() {
                     </div>
                   </motion.div>
 
-                  {/* Government Side - Other Mosdos (Lighter) */}
+                  {/* Other Mosdos - WITH TORAH SCROLL (Lighter - Less Torah) */}
                   <motion.div
                     initial={{ y: 0, opacity: 0 }}
                     animate={{ y: -8, opacity: 1 }}
                     transition={{ delay: 1.2, duration: 0.6, type: "spring" }}
                   >
-                    <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-4 sm:p-6 shadow-lg relative">
+                    <div className="bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl p-4 sm:p-6 shadow-lg relative">
                       <div className="flex justify-center mb-3">
                         <div className="p-2 sm:p-3 bg-white/20 rounded-lg backdrop-blur-sm">
-                          <Flag className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                          <ScrollText className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                         </div>
                       </div>
-                      <h3 className="text-base sm:text-lg font-bold text-white text-center mb-1">
-                        {lang === 'en' ? 'Secular' : 'חול'}
-                      </h3>
-                      <p className="text-white/80 text-center text-xs sm:text-sm mb-3">
+                      <h3 className="text-base sm:text-lg font-bold text-white text-center mb-3">
                         {lang === 'en' ? 'Other Mosdos' : 'מוסדות אחרים'}
-                      </p>
+                      </h3>
                       <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
                         <div className="text-2xl sm:text-3xl font-bold text-white text-center">
                           18-20
