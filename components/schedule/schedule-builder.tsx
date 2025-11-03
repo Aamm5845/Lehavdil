@@ -7,7 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Plus, Trash2, GripVertical, Clock, Bus, BookOpen, Coffee } from 'lucide-react';
+import { Plus, Trash2, GripVertical, Clock, Bus, BookOpen, Coffee, Copy } from 'lucide-react';
 import { toast } from 'sonner';
 import type { TimeBlock, DayType, SubjectType, Class } from '@/lib/types';
 
@@ -32,6 +32,7 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
   const [classEndTime, setClassEndTime] = useState('13:00');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [copying, setCopying] = useState(false);
 
   useEffect(() => {
     fetchTimeBlocks();
@@ -202,7 +203,61 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
   };
 
   const getSubjectInfo = (type: SubjectType) => {
-    return SUBJECT_TYPES.find(s => s.value === type) || SUBJECT_TYPES[5];
+    return SUBJECT_TYPES.find(s => s.value === type) || SUBJECT_TYPES[4];
+  };
+  
+  const copyFromDay = async (sourceDayType: DayType) => {
+    try {
+      setCopying(true);
+      
+      // Fetch time blocks from source day
+      const res = await fetch(`/api/time-blocks?classId=${classId}&dayType=${sourceDayType}`);
+      const data = await res.json();
+      const sourceBlocks = data.timeBlocks || [];
+      
+      // Fetch class data to get times
+      const classRes = await fetch(`/api/classes/${classId}`);
+      const classDataRes = await classRes.json();
+      const cls = classDataRes.class;
+      
+      // Set class times from source day
+      let sourceStart = '08:00';
+      let sourceEnd = '13:00';
+      if (sourceDayType === 'sunday') {
+        sourceStart = cls.sundayStart || '08:00';
+        sourceEnd = cls.sundayEnd || '13:00';
+      } else if (sourceDayType === 'weekday') {
+        sourceStart = cls.weekdayStart || '08:00';
+        sourceEnd = cls.weekdayEnd || '13:00';
+      } else if (sourceDayType === 'friday') {
+        sourceStart = cls.fridayStart || '08:00';
+        sourceEnd = cls.fridayEnd || '13:00';
+      }
+      
+      setClassStartTime(sourceStart);
+      setClassEndTime(sourceEnd);
+      
+      // Copy time blocks (without IDs so they're treated as new)
+      const copiedBlocks = sourceBlocks.map((block: TimeBlock, index: number) => ({
+        classId,
+        dayType,
+        startTime: block.startTime,
+        endTime: block.endTime,
+        subjectType: block.subjectType,
+        description: block.description,
+        sortOrder: index,
+      }));
+      
+      setTimeBlocks(copiedBlocks as TimeBlock[]);
+      
+      toast.success(lang === 'en' 
+        ? `Schedule copied from ${sourceDayType}` 
+        : `לוח זמנים הועתק מ${sourceDayType}`);
+    } catch (error) {
+      toast.error(lang === 'en' ? 'Failed to copy schedule' : 'כשלון בהעתקת לוח זמנים');
+    } finally {
+      setCopying(false);
+    }
   };
 
   if (loading) {
@@ -256,6 +311,62 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
           </div>
         </CardContent>
       </Card>
+
+      {/* Copy From Other Days */}
+      {((dayType === 'sunday' && (timeBlocks.length === 0)) || dayType === 'weekday' || dayType === 'friday') && (
+        <Card className="border-slate-200 bg-blue-50">
+          <CardContent className="p-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-semibold text-slate-900 mb-1">
+                  {lang === 'en' ? '⚡ Quick Copy' : '⚡ העתקה מהירה'}
+                </p>
+                <p className="text-xs text-slate-600">
+                  {lang === 'en' ? 'Copy schedule from another day to save time' : 'העתק לוח זמנים מיום אחר לחסוך זמן'}
+                </p>
+              </div>
+              <div className="flex gap-2">
+                {dayType !== 'sunday' && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => copyFromDay('sunday')}
+                    disabled={copying}
+                    className="gap-2"
+                  >
+                    <Copy className="w-4 h-4" />
+                    {lang === 'en' ? 'From Sunday' : 'מראשון'}
+                  </Button>
+                )}
+                {dayType !== 'weekday' && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => copyFromDay('weekday')}
+                    disabled={copying}
+                    className="gap-2"
+                  >
+                    <Copy className="w-4 h-4" />
+                    {lang === 'en' ? 'From Weekday' : 'מיום חול'}
+                  </Button>
+                )}
+                {dayType !== 'friday' && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => copyFromDay('friday')}
+                    disabled={copying}
+                    className="gap-2"
+                  >
+                    <Copy className="w-4 h-4" />
+                    {lang === 'en' ? 'From Friday' : 'משישי'}
+                  </Button>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Quick Add Templates */}
       {timeBlocks.length === 0 && (
