@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/lib/i18n";
-import { ArrowRight, BarChart3, Clock, BookOpen, TrendingUp, Star, Sparkles } from "lucide-react";
+import { ArrowRight, BarChart3, Clock, BookOpen, TrendingUp, Star, ScrollText, Flag } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -90,7 +90,7 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center mb-16 sm:mb-20 lg:mb-24"
         >
-          {/* Logo/Icon */}
+          {/* Logo/Icon - Matching Dashboard */}
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
@@ -102,7 +102,7 @@ export default function Home() {
             }}
             className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-sky-500 via-violet-500 to-rose-500 mb-6 sm:mb-8 shadow-xl"
           >
-            <Sparkles className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+            <BarChart3 className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
           </motion.div>
 
           {/* Main Title */}
@@ -163,11 +163,122 @@ export default function Home() {
           </motion.div>
         </motion.div>
 
+        {/* Balance Scale Visualization - Compact Version */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="max-w-4xl mx-auto mb-12 sm:mb-16"
+        >
+          <Card className="bg-white/80 backdrop-blur-sm border-2 border-slate-200/50 shadow-xl overflow-hidden">
+            <CardContent className="p-6 sm:p-8">
+              {/* Scale visualization */}
+              <div className="relative">
+                {/* Scale arm with tilt */}
+                <div className="flex items-center justify-center mb-6">
+                  <motion.div
+                    initial={{ rotate: 0, opacity: 0 }}
+                    animate={{ rotate: -5, opacity: 1 }}
+                    transition={{ delay: 1, duration: 0.8, type: "spring" }}
+                    className="relative w-full max-w-2xl"
+                  >
+                    <div className="h-1 bg-gradient-to-r from-slate-400 via-slate-600 to-slate-400 rounded-full" />
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-slate-700 rounded-full" />
+                  </motion.div>
+                </div>
+
+                {/* Two sides comparison */}
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                  {/* Torah Side - Montreal (Heavier) */}
+                  <motion.div
+                    initial={{ y: 0, opacity: 0 }}
+                    animate={{ y: 12, opacity: 1 }}
+                    transition={{ delay: 1.2, duration: 0.6, type: "spring" }}
+                  >
+                    <div className="bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl p-4 sm:p-6 shadow-lg relative">
+                      <div className="flex justify-center mb-3">
+                        <div className="p-2 sm:p-3 bg-white/20 rounded-lg backdrop-blur-sm">
+                          <ScrollText className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                        </div>
+                      </div>
+                      <h3 className="text-base sm:text-lg font-bold text-white text-center mb-1">
+                        {lang === 'en' ? 'Torah' : 'תורה'}
+                      </h3>
+                      <p className="text-white/80 text-center text-xs sm:text-sm mb-3">
+                        {lang === 'en' ? 'Montreal' : 'מונטריאול'}
+                      </p>
+                      <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+                        <div className="text-2xl sm:text-3xl font-bold text-white text-center">
+                          25+
+                        </div>
+                        <div className="text-white/70 text-center text-xs">
+                          {lang === 'en' ? 'hrs/week' : 'שע/שבוע'}
+                        </div>
+                      </div>
+                      {/* Indicator */}
+                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-3 py-0.5 rounded-full text-xs font-semibold shadow-md">
+                        ↓
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Government Side - Other Mosdos (Lighter) */}
+                  <motion.div
+                    initial={{ y: 0, opacity: 0 }}
+                    animate={{ y: -8, opacity: 1 }}
+                    transition={{ delay: 1.2, duration: 0.6, type: "spring" }}
+                  >
+                    <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-4 sm:p-6 shadow-lg relative">
+                      <div className="flex justify-center mb-3">
+                        <div className="p-2 sm:p-3 bg-white/20 rounded-lg backdrop-blur-sm">
+                          <Flag className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                        </div>
+                      </div>
+                      <h3 className="text-base sm:text-lg font-bold text-white text-center mb-1">
+                        {lang === 'en' ? 'Secular' : 'חול'}
+                      </h3>
+                      <p className="text-white/80 text-center text-xs sm:text-sm mb-3">
+                        {lang === 'en' ? 'Other Mosdos' : 'מוסדות אחרים'}
+                      </p>
+                      <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3 border border-white/30">
+                        <div className="text-2xl sm:text-3xl font-bold text-white text-center">
+                          18-20
+                        </div>
+                        <div className="text-white/70 text-center text-xs">
+                          {lang === 'en' ? 'hrs/week' : 'שע/שבוע'}
+                        </div>
+                      </div>
+                      {/* Indicator */}
+                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-3 py-0.5 rounded-full text-xs font-semibold shadow-md">
+                        ↑
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+
+                {/* Bottom message */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.6 }}
+                  className="mt-6 text-center"
+                >
+                  <p className="text-sm sm:text-base text-slate-600">
+                    {lang === 'en'
+                      ? 'Comparing Torah learning hours: Montreal vs. Government-influenced institutions'
+                      : 'השוואת שעות לימוד תורה: מונטריאול מול מוסדות שונים'}
+                  </p>
+                </motion.div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
         {/* Belz Montreal Highlight */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 2.4 }}
           className="max-w-4xl mx-auto mb-16 sm:mb-20"
         >
           <Card className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border-2 border-amber-200/50 shadow-lg hover:shadow-xl transition-all duration-300">

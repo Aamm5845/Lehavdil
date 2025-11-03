@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useLanguage } from '@/lib/i18n';
 import { Card, CardContent } from '@/components/ui/card';
@@ -12,7 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ScheduleBuilder } from '@/components/schedule/schedule-builder';
 
-export default function SchedulesPage() {
+function SchedulesContent() {
   const { t, lang } = useLanguage();
   const searchParams = useSearchParams();
   
@@ -285,5 +285,17 @@ export default function SchedulesPage() {
         </Card>
       )}
     </div>
+  );
+}
+
+export default function SchedulesPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-violet-500"></div>
+      </div>
+    }>
+      <SchedulesContent />
+    </Suspense>
   );
 }
