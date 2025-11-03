@@ -7,9 +7,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Plus, Trash2, GripVertical, Clock, Bus, BookOpen, Coffee, DoorOpen, Bell } from 'lucide-react';
+import { Plus, Trash2, GripVertical, Clock, Bus, BookOpen, Coffee } from 'lucide-react';
 import { toast } from 'sonner';
-import type { TimeBlock, DayType, SubjectType } from '@/lib/types';
+import type { TimeBlock, DayType, SubjectType, Class } from '@/lib/types';
 
 interface ScheduleBuilderProps {
   classId: string;
@@ -18,17 +18,18 @@ interface ScheduleBuilderProps {
 
 const SUBJECT_TYPES: { value: SubjectType; labelEn: string; labelHe: string; icon: any; color: string }[] = [
   { value: 'bus-start', labelEn: 'Bus Arrival', labelHe: 'הגעת אוטובוס', icon: Bus, color: 'bg-blue-500' },
-  { value: 'class-start', labelEn: 'Class Starts', labelHe: 'תחילת שיעור', icon: Bell, color: 'bg-cyan-500' },
   { value: 'hebrew', labelEn: 'Hebrew Learning', labelHe: 'לימוד עברית', icon: BookOpen, color: 'bg-purple-500' },
   { value: 'english', labelEn: 'English Learning', labelHe: 'לימוד אנגלית', icon: BookOpen, color: 'bg-green-500' },
   { value: 'break', labelEn: 'Break', labelHe: 'הפסקה', icon: Coffee, color: 'bg-orange-500' },
-  { value: 'end-day', labelEn: 'End of Day', labelHe: 'סיום יום', icon: DoorOpen, color: 'bg-red-500' },
   { value: 'other', labelEn: 'Other', labelHe: 'אחר', icon: Clock, color: 'bg-slate-500' },
 ];
 
 export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
   const { lang } = useLanguage();
   const [timeBlocks, setTimeBlocks] = useState<TimeBlock[]>([]);
+  const [classData, setClassData] = useState<Class | null>(null);
+  const [classStartTime, setClassStartTime] = useState('08:00');
+  const [classEndTime, setClassEndTime] = useState('13:00');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
@@ -39,6 +40,26 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
   const fetchTimeBlocks = async () => {
     try {
       setLoading(true);
+      
+      // Fetch class data for start/end times
+      const classRes = await fetch(`/api/classes/${classId}`);
+      const classDataRes = await classRes.json();
+      const cls = classDataRes.class;
+      setClassData(cls);
+      
+      // Set start and end times based on day type
+      if (dayType === 'sunday') {
+        setClassStartTime(cls.sundayStart || '08:00');
+        setClassEndTime(cls.sundayEnd || '13:00');
+      } else if (dayType === 'weekday') {
+        setClassStartTime(cls.weekdayStart || '08:00');
+        setClassEndTime(cls.weekdayEnd || '13:00');
+      } else if (dayType === 'friday') {
+        setClassStartTime(cls.fridayStart || '08:00');
+        setClassEndTime(cls.fridayEnd || '13:00');
+      }
+      
+      // Fetch time blocks
       const res = await fetch(`/api/time-blocks?classId=${classId}&dayType=${dayType}`);
       const data = await res.json();
       setTimeBlocks((data.timeBlocks || []).sort((a: TimeBlock, b: TimeBlock) => a.sortOrder - b.sortOrder));
@@ -111,6 +132,30 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
     try {
       setSaving(true);
       
+      // Save class start/end times
+      const classUpdateData: any = {};
+      if (dayType === 'sunday') {
+        classUpdateData.sundayStart = classStartTime;
+        classUpdateData.sundayEnd = classEndTime;
+      } else if (dayType === 'weekday') {
+        classUpdateData.weekdayStart = classStartTime;
+        classUpdateData.weekdayEnd = classEndTime;
+      } else if (dayType === 'friday') {
+        classUpdateData.fridayStart = classStartTime;
+        classUpdateData.fridayEnd = classEndTime;
+      }
+      
+      await fetch(`/api/classes/${classId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          schoolId: classData?.schoolId,
+          name: classData?.name,
+          gradeLevel: classData?.gradeLevel,
+          ...classUpdateData,
+        }),
+      });
+      
       // Save each block
       for (const block of timeBlocks) {
         if (block.id) {
@@ -170,6 +215,48 @@ export function ScheduleBuilder({ classId, dayType }: ScheduleBuilderProps) {
 
   return (
     <div className="space-y-4">
+      {/* Class Start and End Day Times */}
+      <Card className="border-slate-200 bg-gradient-to-r from-violet-50 to-purple-50">
+        <CardContent className="p-6">
+          <h3 className="text-lg font-semibold text-slate-900 mb-4">
+            {lang === 'en' ? 'Class Times' : 'שעות כיתה'}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Class Start Time */}
+            <div className="space-y-2">
+              <Label className="text-sm font-medium text-slate-700">
+                {lang === 'en' ? '🔔 Class Starts' : '🔔 תחילת שיעור'}
+              </Label>
+              <Input
+                type="time"
+                value={classStartTime}
+                onChange={(e) => setClassStartTime(e.target.value)}
+                className="text-lg font-semibold"
+              />
+              <p className="text-xs text-slate-600">
+                {lang === 'en' ? 'When students begin class' : 'מתי התלמידים מתחילים שיעור'}
+              </p>
+            </div>
+            
+            {/* End of Day Time */}
+            <div className="space-y-2">
+              <Label className="text-sm font-medium text-slate-700">
+                {lang === 'en' ? '🚪 End of Day' : '🚪 סיום יום'}
+              </Label>
+              <Input
+                type="time"
+                value={classEndTime}
+                onChange={(e) => setClassEndTime(e.target.value)}
+                className="text-lg font-semibold"
+              />
+              <p className="text-xs text-slate-600">
+                {lang === 'en' ? 'When school day ends' : 'מתי יום הלימודים מסתיים'}
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Quick Add Templates */}
       {timeBlocks.length === 0 && (
         <div className="mb-6">

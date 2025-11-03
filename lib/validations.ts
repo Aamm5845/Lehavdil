@@ -34,6 +34,12 @@ export const classSchema = z.object({
   schoolId: z.string().min(1, 'School is required'),
   name: z.string().min(1, 'Class name is required'),
   gradeLevel: z.number().min(1).max(8, 'Grade level must be between 1 and 8'),
+  sundayStart: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
+  sundayEnd: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
+  weekdayStart: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
+  weekdayEnd: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
+  fridayStart: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
+  fridayEnd: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/).optional(),
 });
 
 export type ClassInput = z.infer<typeof classSchema>;
@@ -44,7 +50,7 @@ export const timeBlockSchema = z.object({
   dayType: z.enum(['sunday', 'weekday', 'friday'], 'Day type is required'),
   startTime: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/, 'Invalid time format (HH:MM)'),
   endTime: z.string().regex(/^([01]\d|2[0-3]):([0-5]\d)$/, 'Invalid time format (HH:MM)'),
-  subjectType: z.enum(['bus-start', 'class-start', 'hebrew', 'english', 'break', 'end-day', 'other'], 'Subject type is required'),
+  subjectType: z.enum(['bus-start', 'hebrew', 'english', 'break', 'other'], 'Subject type is required'),
   description: z.string().optional(),
   teacher: z.string().optional(),
   sortOrder: z.number().default(0),

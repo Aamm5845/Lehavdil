@@ -1,6 +1,30 @@
 import { NextResponse } from 'next/server';
-import { updateClass, deleteClass } from '@/lib/db';
+import { getClass, updateClass, deleteClass } from '@/lib/db';
 import { classSchema } from '@/lib/validations';
+
+export async function GET(
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id } = await params;
+    const classItem = await getClass(id);
+    
+    if (!classItem) {
+      return NextResponse.json(
+        { error: 'Class not found' },
+        { status: 404 }
+      );
+    }
+    
+    return NextResponse.json({ class: classItem });
+  } catch (error) {
+    return NextResponse.json(
+      { error: 'Failed to fetch class' },
+      { status: 500 }
+    );
+  }
+}
 
 export async function PUT(
   request: Request,

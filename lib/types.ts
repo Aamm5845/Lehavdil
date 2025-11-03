@@ -2,7 +2,7 @@
 
 export type SchoolType = 'boys' | 'yeshivah' | 'girls';
 export type DayType = 'sunday' | 'weekday' | 'friday';
-export type SubjectType = 'bus-start' | 'class-start' | 'hebrew' | 'english' | 'break' | 'end-day' | 'other';
+export type SubjectType = 'bus-start' | 'hebrew' | 'english' | 'break' | 'other';
 
 export interface City {
   id: string;
@@ -35,6 +35,13 @@ export interface Class {
   schoolId: string;
   name: string;
   gradeLevel: number;
+  // Start and end times per day type
+  sundayStart?: string;  // HH:MM format
+  sundayEnd?: string;
+  weekdayStart?: string;
+  weekdayEnd?: string;
+  fridayStart?: string;
+  fridayEnd?: string;
   createdAt: Date;
 }
 

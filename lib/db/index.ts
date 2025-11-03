@@ -229,6 +229,11 @@ export async function getClasses(schoolId?: string): Promise<Class[]> {
   return db.classes;
 }
 
+export async function getClass(id: string): Promise<Class | undefined> {
+  const db = readDB();
+  return db.classes.find(c => c.id === id);
+}
+
 export async function createClass(data: { schoolId: string; name: string; gradeLevel: number }): Promise<Class> {
   const db = readDB();
   
@@ -252,7 +257,7 @@ export async function createClass(data: { schoolId: string; name: string; gradeL
   return classItem;
 }
 
-export async function updateClass(id: string, data: { schoolId: string; name: string; gradeLevel: number }): Promise<Class> {
+export async function updateClass(id: string, data: any): Promise<Class> {
   const db = readDB();
   const index = db.classes.findIndex(c => c.id === id);
   if (index === -1) throw new Error('Class not found');
@@ -267,9 +272,7 @@ export async function updateClass(id: string, data: { schoolId: string; name: st
   
   db.classes[index] = {
     ...db.classes[index],
-    schoolId: data.schoolId,
-    name: data.name,
-    gradeLevel: data.gradeLevel,
+    ...data,
   };
   writeDB(db);
   return db.classes[index];
