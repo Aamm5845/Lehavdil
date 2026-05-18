@@ -143,11 +143,14 @@ export function BulkScheduleEditor({
   const doSave = async () => {
     setSubmitting(true);
     setConfirmOpen(false);
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 45_000);
     try {
       const split = splitBreaks(breaks, englishStart);
       const r = await fetch('/api/schedules/bulk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
         body: JSON.stringify({
           classIds: Array.from(selectedClassIds),
           dayType,
@@ -163,9 +166,11 @@ export function BulkScheduleEditor({
       toast.success(`Saved schedule to ${j.classCount} class${j.classCount === 1 ? '' : 'es'} (${j.blocksPerClass} blocks each)`);
       onSaved?.();
     } catch (e: unknown) {
-      const msg = e instanceof Error ? e.message : 'Failed to save';
+      const aborted = e instanceof DOMException && e.name === 'AbortError';
+      const msg = aborted ? 'Save took too long — try again' : e instanceof Error ? e.message : 'Failed to save';
       toast.error(msg);
     } finally {
+      clearTimeout(timeoutId);
       setSubmitting(false);
     }
   };

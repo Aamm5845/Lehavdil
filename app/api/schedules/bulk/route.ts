@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import type { DayType } from '@/lib/types';
 
+export const maxDuration = 60;
+
 type Break = { start: string; end: string; label?: string };
 
 type BulkBody = {
@@ -95,33 +97,31 @@ export async function POST(request: Request) {
     const generated = generate(body);
     const classIdsNum = body.classIds.map((id) => Number(id));
 
-    await prisma.$transaction(
-      async (tx) => {
-        // Wipe existing blocks for selected classes + day, then re-insert.
-        await tx.timeBlock.deleteMany({
-          where: { classId: { in: classIdsNum }, dayType: body.dayType },
-        });
-
-        for (const classId of classIdsNum) {
-          await tx.timeBlock.createMany({
-            data: generated.map((b, i) => ({
-              classId,
-              dayType: body.dayType,
-              startTime: b.startTime,
-              endTime: b.endTime,
-              subjectType: b.subjectType,
-              description: b.description,
-              sortOrder: i,
-            })),
-          });
-          await tx.class.update({
-            where: { id: classId },
-            data: anchorFields(body.dayType, body.hebrewStart, body.englishStart, body.endTime),
-          });
-        }
-      },
-      { maxWait: 10_000, timeout: 30_000 }
+    // Build all block rows for every selected class up-front so the whole
+    // save fits in 3 queries: deleteMany, createMany, updateMany.
+    const blockRows = classIdsNum.flatMap((classId) =>
+      generated.map((b, i) => ({
+        classId,
+        dayType: body.dayType,
+        startTime: b.startTime,
+        endTime: b.endTime,
+        subjectType: b.subjectType,
+        description: b.description,
+        sortOrder: i,
+      }))
     );
+    const anchors = anchorFields(body.dayType, body.hebrewStart, body.englishStart, body.endTime);
+
+    await prisma.$transaction([
+      prisma.timeBlock.deleteMany({
+        where: { classId: { in: classIdsNum }, dayType: body.dayType },
+      }),
+      prisma.timeBlock.createMany({ data: blockRows }),
+      prisma.class.updateMany({
+        where: { id: { in: classIdsNum } },
+        data: anchors,
+      }),
+    ]);
 
     return NextResponse.json({
       ok: true,
