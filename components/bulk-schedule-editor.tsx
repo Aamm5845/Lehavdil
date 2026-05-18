@@ -82,17 +82,14 @@ export function BulkScheduleEditor({ classes }: { classes: Class[] }) {
       toast.error('Pick at least one class');
       return;
     }
-    // Check whether any selected class already has blocks for this day.
+    // Single round-trip: fetch blocks for ALL selected classes in one call.
     setSubmitting(true);
     try {
-      const checks = await Promise.all(
-        Array.from(selectedClassIds).map(async (id) => {
-          const r = await fetch(`/api/time-blocks?classId=${id}&dayType=${dayType}`);
-          const j = (await r.json()) as { timeBlocks: TimeBlock[] };
-          return { id, has: (j.timeBlocks ?? []).length > 0 };
-        })
-      );
-      const withData = checks.filter((c) => c.has).map((c) => c.id);
+      const ids = Array.from(selectedClassIds).join(',');
+      const r = await fetch(`/api/time-blocks?dayType=${dayType}&classIds=${ids}`);
+      const j = (await r.json()) as { timeBlocks?: TimeBlock[] };
+      const occupied = new Set((j.timeBlocks ?? []).map((b) => b.classId));
+      const withData = Array.from(selectedClassIds).filter((id) => occupied.has(id));
       if (withData.length > 0) {
         setClassesWithData(sortedClasses.filter((c) => withData.includes(c.id)));
         setConfirmOpen(true);

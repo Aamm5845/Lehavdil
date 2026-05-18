@@ -40,7 +40,7 @@ export default function SchoolTypePage() {
         fetch(`/api/cities/${cityId}`),
         fetch(`/api/communities/${communityId}`),
         fetch(`/api/schools/${schoolId}`),
-        fetch(`/api/classes`),
+        fetch(`/api/classes?schoolId=${schoolId}`),
       ]);
 
       if (!cityRes.ok || !communityRes.ok || !schoolRes.ok) {
@@ -57,11 +57,7 @@ export default function SchoolTypePage() {
       setCity(cityData.city);
       setCommunity(communityData.community);
       setSchool(schoolData.school);
-      
-      const schoolClasses = (classesData.classes || []).filter(
-        (c: Class) => c.schoolId === schoolId
-      );
-      setClasses(schoolClasses);
+      setClasses(classesData.classes || []);
     } catch (error) {
       toast.error(lang === 'en' ? 'Failed to load data' : 'כשלון בטעינת נתונים');
       router.push(`/dashboard/schools/${cityId}/${communityId}`);

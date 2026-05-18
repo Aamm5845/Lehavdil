@@ -2,9 +2,11 @@ import { NextResponse } from 'next/server';
 import { getClasses, createClass } from '@/lib/db';
 import { classSchema } from '@/lib/validations';
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    const classes = await getClasses();
+    const { searchParams } = new URL(request.url);
+    const schoolId = searchParams.get('schoolId');
+    const classes = await getClasses(schoolId || undefined);
     return NextResponse.json({ classes });
   } catch (error) {
     return NextResponse.json(

@@ -48,13 +48,14 @@ export function SchoolScheduleGrid({ classes }: { classes: Class[] }) {
     () => [...classes].sort((a, b) => a.gradeLevel - b.gradeLevel),
     [classes]
   );
-  const classIds = useMemo(() => new Set(sortedClasses.map((c) => c.id)), [sortedClasses]);
+  const classIdsParam = useMemo(() => sortedClasses.map((c) => c.id).join(','), [sortedClasses]);
 
   useEffect(() => {
+    if (!classIdsParam) return;
     let cancelled = false;
     setLoading(true);
     setError(null);
-    fetch(`/api/time-blocks?dayType=${dayType}`)
+    fetch(`/api/time-blocks?dayType=${dayType}&classIds=${classIdsParam}`)
       .then((r) => r.json())
       .then((j: { timeBlocks?: TimeBlock[]; error?: string }) => {
         if (cancelled) return;
@@ -62,8 +63,7 @@ export function SchoolScheduleGrid({ classes }: { classes: Class[] }) {
           setError(j.error);
           setBlocks([]);
         } else {
-          // Keep only blocks for the classes in this school.
-          setBlocks((j.timeBlocks ?? []).filter((b) => classIds.has(b.classId)));
+          setBlocks(j.timeBlocks ?? []);
         }
       })
       .catch(() => !cancelled && setError('Failed to load schedule'))
@@ -71,7 +71,7 @@ export function SchoolScheduleGrid({ classes }: { classes: Class[] }) {
     return () => {
       cancelled = true;
     };
-  }, [dayType, classIds]);
+  }, [dayType, classIdsParam]);
 
   const blocksByClass = useMemo(() => {
     const m = new Map<string, TimeBlock[]>();

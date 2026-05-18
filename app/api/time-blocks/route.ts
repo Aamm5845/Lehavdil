@@ -6,18 +6,15 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const classId = searchParams.get('classId');
-    const dayType = searchParams.get('dayType');
-    
-    let timeBlocks = await getTimeBlocks(classId || undefined);
-    
-    // Filter by dayType if provided
-    if (dayType) {
-      timeBlocks = timeBlocks.filter(tb => tb.dayType === dayType);
-    }
-    
-    // Sort by sortOrder
-    timeBlocks.sort((a, b) => a.sortOrder - b.sortOrder);
-    
+    const dayType = searchParams.get('dayType') as 'sunday' | 'weekday' | 'friday' | null;
+    const classIdsParam = searchParams.get('classIds');
+    const classIds = classIdsParam ? classIdsParam.split(',').filter(Boolean) : undefined;
+
+    const timeBlocks = await getTimeBlocks(classId || undefined, {
+      dayType: dayType ?? undefined,
+      classIds,
+    });
+
     return NextResponse.json({ timeBlocks });
   } catch (error) {
     return NextResponse.json(

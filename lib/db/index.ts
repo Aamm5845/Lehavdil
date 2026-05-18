@@ -272,9 +272,17 @@ export async function deleteClass(id: string): Promise<void> {
 }
 
 // Time Blocks
-export async function getTimeBlocks(classId?: string): Promise<TimeBlock[]> {
+export async function getTimeBlocks(classId?: string, opts?: { dayType?: DayType; classIds?: string[] }): Promise<TimeBlock[]> {
+  const where: { classId?: number | { in: number[] }; dayType?: DayType } = {};
+  if (classId) {
+    where.classId = Number(classId);
+  } else if (opts?.classIds && opts.classIds.length > 0) {
+    where.classId = { in: opts.classIds.map((id) => Number(id)) };
+  }
+  if (opts?.dayType) where.dayType = opts.dayType;
+
   const rows = await prisma.timeBlock.findMany({
-    where: classId ? { classId: Number(classId) } : undefined,
+    where: Object.keys(where).length > 0 ? where : undefined,
     orderBy: [{ classId: 'asc' }, { dayType: 'asc' }, { sortOrder: 'asc' }, { id: 'asc' }],
   });
   return rows.map(toTimeBlock);
