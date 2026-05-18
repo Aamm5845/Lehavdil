@@ -166,6 +166,30 @@ export function SchoolScheduleGrid({
     if (init) onEdit?.(dayType, init);
   };
 
+  // Per-class totals (minutes) for the current day.
+  const totals = useMemo(() => {
+    const m = new Map<string, { hebrew: number; english: number; break: number }>();
+    for (const c of sortedClasses) m.set(c.id, { hebrew: 0, english: 0, break: 0 });
+    for (const b of blocks) {
+      const t = m.get(b.classId);
+      if (!t) continue;
+      const dur = toMin(b.endTime) - toMin(b.startTime);
+      if (b.subjectType === 'hebrew') t.hebrew += dur;
+      else if (b.subjectType === 'english') t.english += dur;
+      else if (b.subjectType === 'break') t.break += dur;
+    }
+    return m;
+  }, [blocks, sortedClasses]);
+
+  const fmtDur = (mins: number) => {
+    if (mins <= 0) return '—';
+    const h = Math.floor(mins / 60);
+    const m = mins % 60;
+    if (h === 0) return `${m}m`;
+    if (m === 0) return `${h}h`;
+    return `${h}h ${m}m`;
+  };
+
   return (
     <Card className="border-slate-200 shadow-sm">
       <CardHeader>
@@ -268,6 +292,45 @@ export function SchoolScheduleGrid({
                   </tr>
                 ))}
               </tbody>
+              <tfoot>
+                {[
+                  { key: 'hebrew' as const, label: 'Hebrew', style: SUBJECT_STYLE.hebrew },
+                  { key: 'english' as const, label: 'English', style: SUBJECT_STYLE.english },
+                  { key: 'break' as const, label: 'Break', style: SUBJECT_STYLE.break },
+                ].map((row, idx) => (
+                  <tr key={row.key} className={idx === 0 ? 'border-t-2 border-slate-300' : ''}>
+                    <td className={`sticky left-0 bg-white z-10 text-slate-700 font-semibold px-2 py-2 whitespace-nowrap ${idx === 0 ? 'border-t-2 border-slate-300' : ''}`}>
+                      {row.label}
+                    </td>
+                    {sortedClasses.map((c) => {
+                      const mins = totals.get(c.id)?.[row.key] ?? 0;
+                      return (
+                        <td key={c.id} className={`px-1 py-2 ${idx === 0 ? 'border-t-2 border-slate-300' : ''}`}>
+                          <div className={`text-center rounded border px-1 py-1 font-mono text-[11px] ${row.style}`}>
+                            {fmtDur(mins)}
+                          </div>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+                <tr>
+                  <td className="sticky left-0 bg-white z-10 text-slate-900 font-bold px-2 py-2 whitespace-nowrap border-t border-slate-200">
+                    Total
+                  </td>
+                  {sortedClasses.map((c) => {
+                    const t = totals.get(c.id);
+                    const total = (t?.hebrew ?? 0) + (t?.english ?? 0) + (t?.break ?? 0);
+                    return (
+                      <td key={c.id} className="px-1 py-2 border-t border-slate-200">
+                        <div className="text-center font-mono text-[11px] font-bold text-slate-900">
+                          {fmtDur(total)}
+                        </div>
+                      </td>
+                    );
+                  })}
+                </tr>
+              </tfoot>
             </table>
           </div>
         )}
