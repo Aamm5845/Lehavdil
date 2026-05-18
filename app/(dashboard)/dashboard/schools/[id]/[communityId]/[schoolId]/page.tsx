@@ -8,7 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Plus, ChevronLeft, GraduationCap, BookOpen, Calendar, Users } from 'lucide-react';
 import { toast } from 'sonner';
-import type { City, Community, School, Class } from '@/lib/types';
+import type { City, Community, School, Class, DayType } from '@/lib/types';
+import type { BulkScheduleInitial } from '@/components/bulk-schedule-editor';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
@@ -29,6 +30,18 @@ export default function SchoolTypePage() {
   const [school, setSchool] = useState<School | null>(null);
   const [classes, setClasses] = useState<Class[]>([]);
   const [loading, setLoading] = useState(true);
+  const [editorOpen, setEditorOpen] = useState(false);
+  const [editorInitial, setEditorInitial] = useState<BulkScheduleInitial | undefined>(undefined);
+  const [gridRefresh, setGridRefresh] = useState(0);
+
+  const openEditor = (_day: DayType, initial: BulkScheduleInitial) => {
+    setEditorInitial(initial);
+    setEditorOpen(true);
+  };
+  const handleSaved = () => {
+    setEditorOpen(false);
+    setGridRefresh((n) => n + 1);
+  };
 
   useEffect(() => {
     fetchData();
@@ -182,11 +195,25 @@ export default function SchoolTypePage() {
         </CardContent>
       </Card>
 
-      {/* Bulk Schedule Editor */}
-      {classes.length > 0 && <BulkScheduleEditor classes={classes} />}
+      {/* Schedule (grid + Add/Edit) */}
+      {classes.length > 0 && (
+        <SchoolScheduleGrid
+          classes={classes}
+          refreshKey={gridRefresh}
+          onEdit={openEditor}
+        />
+      )}
 
-      {/* School-wide Schedule Grid */}
-      {classes.length > 0 && <SchoolScheduleGrid classes={classes} />}
+      {/* Schedule editor (shown only when Add/Edit is pressed) */}
+      {classes.length > 0 && editorOpen && (
+        <BulkScheduleEditor
+          key={`${editorInitial?.dayType ?? 'weekday'}-${editorInitial?.classIds?.join(',') ?? ''}`}
+          classes={classes}
+          initial={editorInitial}
+          onSaved={handleSaved}
+          onCancel={() => setEditorOpen(false)}
+        />
+      )}
 
       {/* Classes Section Header */}
       <div className="flex items-center justify-between">

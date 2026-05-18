@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { toast } from 'sonner';
-import { Plus, Trash2, Loader2, Save, BookOpen, Languages } from 'lucide-react';
+import { Plus, Trash2, Loader2, Save, BookOpen, Languages, X } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -25,14 +25,44 @@ const newRow = (start = '', end = '', label = ''): BreakRow => ({
   label,
 });
 
-export function BulkScheduleEditor({ classes }: { classes: Class[] }) {
-  const [selectedClassIds, setSelectedClassIds] = useState<Set<string>>(new Set());
-  const [dayType, setDayType] = useState<DayType>('weekday');
-  const [hebrewStart, setHebrewStart] = useState('09:00');
-  const [englishStart, setEnglishStart] = useState('13:00');
-  const [endTime, setEndTime] = useState('16:15');
-  const [hebrewBreaks, setHebrewBreaks] = useState<BreakRow[]>([newRow()]);
-  const [englishBreaks, setEnglishBreaks] = useState<BreakRow[]>([newRow()]);
+export type BulkScheduleInitial = {
+  dayType?: DayType;
+  classIds?: string[];
+  hebrewStart?: string;
+  englishStart?: string;
+  endTime?: string;
+  hebrewBreaks?: { start: string; end: string; label?: string }[];
+  englishBreaks?: { start: string; end: string; label?: string }[];
+};
+
+export function BulkScheduleEditor({
+  classes,
+  initial,
+  onSaved,
+  onCancel,
+}: {
+  classes: Class[];
+  initial?: BulkScheduleInitial;
+  onSaved?: () => void;
+  onCancel?: () => void;
+}) {
+  const [selectedClassIds, setSelectedClassIds] = useState<Set<string>>(
+    () => new Set(initial?.classIds ?? [])
+  );
+  const [dayType, setDayType] = useState<DayType>(initial?.dayType ?? 'weekday');
+  const [hebrewStart, setHebrewStart] = useState(initial?.hebrewStart ?? '09:00');
+  const [englishStart, setEnglishStart] = useState(initial?.englishStart ?? '13:00');
+  const [endTime, setEndTime] = useState(initial?.endTime ?? '16:15');
+  const [hebrewBreaks, setHebrewBreaks] = useState<BreakRow[]>(
+    initial?.hebrewBreaks?.length
+      ? initial.hebrewBreaks.map((b) => newRow(b.start, b.end, b.label ?? ''))
+      : [newRow()]
+  );
+  const [englishBreaks, setEnglishBreaks] = useState<BreakRow[]>(
+    initial?.englishBreaks?.length
+      ? initial.englishBreaks.map((b) => newRow(b.start, b.end, b.label ?? ''))
+      : [newRow()]
+  );
   const [submitting, setSubmitting] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [classesWithData, setClassesWithData] = useState<Class[]>([]);
@@ -123,12 +153,21 @@ export function BulkScheduleEditor({ classes }: { classes: Class[] }) {
       const j = await r.json();
       if (!r.ok) throw new Error(j.error || 'Failed to save');
       toast.success(`Saved schedule to ${j.classCount} class${j.classCount === 1 ? '' : 'es'} (${j.blocksPerClass} blocks each)`);
+      onSaved?.();
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : 'Failed to save';
       toast.error(msg);
     } finally {
       setSubmitting(false);
     }
+  };
+
+  const fmt12 = (t: string) => {
+    if (!t) return '';
+    const [h, m] = t.split(':').map(Number);
+    const period = h >= 12 ? 'PM' : 'AM';
+    const h12 = h % 12 === 0 ? 12 : h % 12;
+    return `${h12}:${String(m).padStart(2, '0')} ${period}`;
   };
 
   return (
@@ -219,7 +258,7 @@ export function BulkScheduleEditor({ classes }: { classes: Class[] }) {
         {/* Hebrew section */}
         <SectionEditor
           title="Hebrew"
-          range={`${hebrewStart} – ${englishStart}`}
+          range={`${fmt12(hebrewStart)} – ${fmt12(englishStart)}`}
           icon={<BookOpen className="w-4 h-4" />}
           accent="text-blue-600 bg-blue-50 border-blue-200"
           breaks={hebrewBreaks}
@@ -231,7 +270,7 @@ export function BulkScheduleEditor({ classes }: { classes: Class[] }) {
         {/* English section */}
         <SectionEditor
           title="English"
-          range={`${englishStart} – ${endTime}`}
+          range={`${fmt12(englishStart)} – ${fmt12(endTime)}`}
           icon={<Languages className="w-4 h-4" />}
           accent="text-green-700 bg-green-50 border-green-200"
           breaks={englishBreaks}
@@ -240,15 +279,23 @@ export function BulkScheduleEditor({ classes }: { classes: Class[] }) {
           onRemove={(id) => removeBreak('english', id)}
         />
 
-        {/* Save */}
+        {/* Save / Cancel */}
         <div className="flex items-center justify-between pt-2 border-t border-slate-200">
           <span className="text-sm text-slate-600">
             {selectedClassIds.size} class{selectedClassIds.size === 1 ? '' : 'es'} selected
           </span>
-          <Button onClick={handleSavePressed} disabled={submitting}>
-            {submitting && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
-            Save to selected classes
-          </Button>
+          <div className="flex items-center gap-2">
+            {onCancel && (
+              <Button type="button" variant="outline" onClick={onCancel} disabled={submitting}>
+                <X className="w-4 h-4 mr-1" />
+                Cancel
+              </Button>
+            )}
+            <Button onClick={handleSavePressed} disabled={submitting}>
+              {submitting && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
+              Save to selected classes
+            </Button>
+          </div>
         </div>
       </CardContent>
 

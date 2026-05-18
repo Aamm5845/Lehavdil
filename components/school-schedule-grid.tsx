@@ -3,8 +3,10 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
-import { CalendarDays } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { CalendarDays, Plus, Pencil } from 'lucide-react';
 import type { Class, DayType, SubjectType, TimeBlock } from '@/lib/types';
+import type { BulkScheduleInitial } from '@/components/bulk-schedule-editor';
 
 const DAYS: { value: DayType; label: string }[] = [
   { value: 'sunday', label: 'Sunday' },
@@ -33,12 +35,22 @@ const toMin = (t: string) => {
   return h * 60 + m;
 };
 const fmt = (mins: number) => {
-  const h = Math.floor(mins / 60);
+  const h24 = Math.floor(mins / 60);
   const m = mins % 60;
-  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+  const period = h24 >= 12 ? 'PM' : 'AM';
+  const h12 = h24 % 12 === 0 ? 12 : h24 % 12;
+  return `${h12}:${String(m).padStart(2, '0')} ${period}`;
 };
 
-export function SchoolScheduleGrid({ classes }: { classes: Class[] }) {
+export function SchoolScheduleGrid({
+  classes,
+  refreshKey = 0,
+  onEdit,
+}: {
+  classes: Class[];
+  refreshKey?: number;
+  onEdit?: (dayType: DayType, initial: BulkScheduleInitial) => void;
+}) {
   const [dayType, setDayType] = useState<DayType>('weekday');
   const [blocks, setBlocks] = useState<TimeBlock[]>([]);
   const [loading, setLoading] = useState(true);
@@ -71,7 +83,7 @@ export function SchoolScheduleGrid({ classes }: { classes: Class[] }) {
     return () => {
       cancelled = true;
     };
-  }, [dayType, classIdsParam]);
+  }, [dayType, classIdsParam, refreshKey]);
 
   const blocksByClass = useMemo(() => {
     const m = new Map<string, TimeBlock[]>();
@@ -105,32 +117,89 @@ export function SchoolScheduleGrid({ classes }: { classes: Class[] }) {
     return list.find((b) => toMin(b.startTime) <= slot.start && toMin(b.endTime) >= slot.end);
   };
 
+  // Reverse-engineer anchor times + break list from a class's blocks. Used so
+  // clicking "Edit" pre-fills the form with the existing schedule.
+  const deriveInitial = (classId: string): BulkScheduleInitial | null => {
+    const list = (blocksByClass.get(classId) ?? []).slice().sort((a, b) => a.sortOrder - b.sortOrder);
+    if (list.length === 0) return null;
+    const firstEnglishIdx = list.findIndex((b) => b.subjectType === 'english');
+    const hebrewStart = list[0].startTime;
+    const englishStart = firstEnglishIdx >= 0 ? list[firstEnglishIdx].startTime : list[list.length - 1].endTime;
+    const endTime = list[list.length - 1].endTime;
+    const hebrewPart = firstEnglishIdx >= 0 ? list.slice(0, firstEnglishIdx) : list;
+    const englishPart = firstEnglishIdx >= 0 ? list.slice(firstEnglishIdx) : [];
+    const hebrewBreaks = hebrewPart
+      .filter((b) => b.subjectType === 'break')
+      .map((b) => ({ start: b.startTime, end: b.endTime, label: b.description }));
+    const englishBreaks = englishPart
+      .filter((b) => b.subjectType === 'break')
+      .map((b) => ({ start: b.startTime, end: b.endTime, label: b.description }));
+    return { dayType, classIds: [classId], hebrewStart, englishStart, endTime, hebrewBreaks, englishBreaks };
+  };
+
+  // Build the "Edit" preset: pick the first class that has blocks for this day,
+  // grab its schedule, and pre-select every class that shares the exact same
+  // block fingerprint (start/end/subject/description).
+  const buildEditInitial = (): BulkScheduleInitial | null => {
+    const populatedClasses = sortedClasses.filter((c) => (blocksByClass.get(c.id) ?? []).length > 0);
+    if (populatedClasses.length === 0) return null;
+    const template = populatedClasses[0];
+    const initial = deriveInitial(template.id);
+    if (!initial) return null;
+    const fingerprint = (list: TimeBlock[]) =>
+      list
+        .slice()
+        .sort((a, b) => a.sortOrder - b.sortOrder)
+        .map((b) => `${b.startTime}|${b.endTime}|${b.subjectType}|${b.description ?? ''}`)
+        .join(';');
+    const target = fingerprint(blocksByClass.get(template.id) ?? []);
+    const matchingIds = populatedClasses
+      .filter((c) => fingerprint(blocksByClass.get(c.id) ?? []) === target)
+      .map((c) => c.id);
+    return { ...initial, classIds: matchingIds };
+  };
+
+  const hasData = rows.length > 0;
+  const handleAddClick = () => onEdit?.(dayType, { dayType });
+  const handleEditClick = () => {
+    const init = buildEditInitial();
+    if (init) onEdit?.(dayType, init);
+  };
+
   return (
     <Card className="border-slate-200 shadow-sm">
       <CardHeader>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="flex items-center gap-2">
             <CalendarDays className="w-5 h-5 text-violet-600" />
-            School Schedule Overview
+            Schedule
           </CardTitle>
-          <div className="flex flex-wrap gap-2">
-            {DAYS.map((d) => {
-              const selected = d.value === dayType;
-              return (
-                <button
-                  key={d.value}
-                  type="button"
-                  onClick={() => setDayType(d.value)}
-                  className={`px-3 py-1.5 text-sm rounded-md border transition-colors ${
-                    selected
-                      ? 'bg-slate-900 text-white border-slate-900'
-                      : 'bg-white text-slate-700 border-slate-300 hover:border-slate-400'
-                  }`}
-                >
-                  {d.label}
-                </button>
-              );
-            })}
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap gap-2">
+              {DAYS.map((d) => {
+                const selected = d.value === dayType;
+                return (
+                  <button
+                    key={d.value}
+                    type="button"
+                    onClick={() => setDayType(d.value)}
+                    className={`px-3 py-1.5 text-sm rounded-md border transition-colors ${
+                      selected
+                        ? 'bg-slate-900 text-white border-slate-900'
+                        : 'bg-white text-slate-700 border-slate-300 hover:border-slate-400'
+                    }`}
+                  >
+                    {d.label}
+                  </button>
+                );
+              })}
+            </div>
+            {onEdit && hasData && (
+              <Button size="sm" variant="outline" onClick={handleEditClick}>
+                <Pencil className="w-4 h-4 mr-1" />
+                Edit
+              </Button>
+            )}
           </div>
         </div>
       </CardHeader>
@@ -143,10 +212,18 @@ export function SchoolScheduleGrid({ classes }: { classes: Class[] }) {
           </div>
         ) : error ? (
           <p className="text-sm text-destructive">{error}</p>
-        ) : rows.length === 0 ? (
-          <p className="text-sm text-slate-600 text-center py-8">
-            No schedule yet for {DAYS.find((d) => d.value === dayType)?.label}. Use the editor above to add hours.
-          </p>
+        ) : !hasData ? (
+          <div className="flex flex-col items-center justify-center py-12 gap-3">
+            <p className="text-sm text-slate-600">
+              No schedule yet for {DAYS.find((d) => d.value === dayType)?.label}.
+            </p>
+            {onEdit && (
+              <Button onClick={handleAddClick}>
+                <Plus className="w-4 h-4 mr-1" />
+                Add Schedule
+              </Button>
+            )}
+          </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-xs border-separate border-spacing-0">
