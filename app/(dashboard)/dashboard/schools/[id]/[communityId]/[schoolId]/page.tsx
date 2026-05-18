@@ -14,6 +14,7 @@ import { Badge } from '@/components/ui/badge';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { motion } from 'framer-motion';
 import { BulkScheduleEditor } from '@/components/bulk-schedule-editor';
+import { SchoolScheduleGrid } from '@/components/school-schedule-grid';
 
 export default function SchoolTypePage() {
   const params = useParams();
@@ -187,6 +188,9 @@ export default function SchoolTypePage() {
 
       {/* Bulk Schedule Editor */}
       {classes.length > 0 && <BulkScheduleEditor classes={classes} />}
+
+      {/* School-wide Schedule Grid */}
+      {classes.length > 0 && <SchoolScheduleGrid classes={classes} />}
 
       {/* Classes Section Header */}
       <div className="flex items-center justify-between">
