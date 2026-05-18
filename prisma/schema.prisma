@@ -1,0 +1,82 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model City {
+  id          Int         @id @default(autoincrement())
+  nameEn      String
+  nameHe      String?
+  country     String
+  createdAt   DateTime    @default(now())
+  communities Community[]
+}
+
+model Community {
+  id        Int      @id @default(autoincrement())
+  cityId    Int
+  city      City     @relation(fields: [cityId], references: [id], onDelete: Cascade)
+  nameEn    String
+  nameHe    String?
+  createdAt DateTime @default(now())
+  schools   School[]
+
+  @@index([cityId])
+}
+
+model School {
+  id          Int       @id @default(autoincrement())
+  communityId Int
+  community   Community @relation(fields: [communityId], references: [id], onDelete: Cascade)
+  schoolType  String
+  nameEn      String
+  nameHe      String?
+  isBaseline  Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  classes     Class[]
+
+  @@index([communityId])
+}
+
+model Class {
+  id                  Int         @id @default(autoincrement())
+  schoolId            Int
+  school              School      @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  name                String
+  gradeLevel          Int
+  sundayStart         String?
+  sundayEnglishStart  String?
+  sundayEnd           String?
+  weekdayStart        String?
+  weekdayEnglishStart String?
+  weekdayEnd          String?
+  fridayStart         String?
+  fridayEnglishStart  String?
+  fridayEnd           String?
+  createdAt           DateTime    @default(now())
+  timeBlocks          TimeBlock[]
+
+  @@index([schoolId])
+}
+
+model TimeBlock {
+  id          Int      @id @default(autoincrement())
+  classId     Int
+  class       Class    @relation(fields: [classId], references: [id], onDelete: Cascade)
+  dayType     String
+  startTime   String
+  endTime     String
+  subjectType String
+  description String?
+  teacher     String?
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@index([classId])
+  @@index([classId, dayType])
+}
