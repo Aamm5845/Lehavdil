@@ -79,16 +79,16 @@ export default function SchoolTypePage() {
     }
   };
 
-  const getSchoolTypeColor = (type: 'boys' | 'yeshivah' | 'girls') => {
+  const getSchoolTypeAccent = (type: 'boys' | 'yeshivah' | 'girls') => {
     switch (type) {
       case 'boys':
-        return 'from-blue-500 to-cyan-500';
+        return { iconBg: 'bg-blue-50 text-blue-600', badge: 'bg-blue-50 text-blue-700 border-blue-200' };
       case 'yeshivah':
-        return 'from-purple-500 to-pink-500';
+        return { iconBg: 'bg-violet-50 text-violet-600', badge: 'bg-violet-50 text-violet-700 border-violet-200' };
       case 'girls':
-        return 'from-rose-500 to-pink-500';
+        return { iconBg: 'bg-rose-50 text-rose-600', badge: 'bg-rose-50 text-rose-700 border-rose-200' };
       default:
-        return 'from-gray-500 to-slate-500';
+        return { iconBg: 'bg-slate-50 text-slate-600', badge: 'bg-slate-50 text-slate-700 border-slate-200' };
     }
   };
 
@@ -114,7 +114,7 @@ export default function SchoolTypePage() {
     return null;
   }
 
-  const gradientClass = getSchoolTypeColor(school.schoolType);
+  const accent = getSchoolTypeAccent(school.schoolType);
 
   return (
     <div className="space-y-6 animate-in fade-in duration-500">
@@ -152,42 +152,41 @@ export default function SchoolTypePage() {
       </Breadcrumb>
 
       {/* School Header Card */}
-      <Card className="overflow-hidden border-slate-200 shadow-lg">
-        <div className={`h-3 w-full bg-gradient-to-r ${gradientClass}`} />
-        <CardContent className="p-8">
-          <div className="flex items-center gap-6">
-            <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${gradientClass} flex items-center justify-center shadow-xl`}>
-              <GraduationCap className="w-10 h-10 text-white" />
+      <Card className="overflow-hidden border-border">
+        <CardContent className="p-6 md:p-8">
+          <div className="flex items-center gap-5">
+            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${accent.iconBg}`}>
+              <GraduationCap className="w-7 h-7" />
             </div>
 
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-2">
-                <h1 className="text-3xl md:text-4xl font-bold text-slate-900">
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-3 mb-1 flex-wrap">
+                <h1 className="text-2xl md:text-3xl font-semibold text-foreground tracking-tight">
                   {lang === 'en' ? school.nameEn : (school.nameHe || school.nameEn)}
                 </h1>
-                <Badge variant={school.schoolType === 'boys' ? 'default' : school.schoolType === 'yeshivah' ? 'destructive' : 'secondary'}>
+                <span className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium ${accent.badge}`}>
                   {school.schoolType === 'boys'
                     ? (lang === 'en' ? 'Boys' : 'בנים')
                     : school.schoolType === 'yeshivah'
                     ? (lang === 'en' ? 'Yeshivah' : 'ישיבה')
                     : (lang === 'en' ? 'Girls' : 'בנות')
                   }
-                </Badge>
+                </span>
               </div>
 
               {school.nameHe && lang === 'en' && (
-                <p className="text-lg text-slate-600 font-hebrew mb-2">{school.nameHe}</p>
+                <p className="text-sm text-muted-foreground font-hebrew mb-2">{school.nameHe}</p>
               )}
               {lang === 'he' && (
-                <p className="text-lg text-slate-600 mb-2">{school.nameEn}</p>
+                <p className="text-sm text-muted-foreground mb-2">{school.nameEn}</p>
               )}
 
-              <div className="flex items-center gap-2 text-slate-600">
-                <Users className="w-5 h-5" />
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Users className="w-4 h-4" />
                 <span>{lang === 'en' ? community.nameEn : (community.nameHe || community.nameEn)}</span>
-                <span>•</span>
+                <span>·</span>
                 <span>
-                  {classes.length} {lang === 'en' ? (classes.length === 1 ? 'Class' : 'Classes') : 'כיתות'}
+                  {classes.length} {lang === 'en' ? (classes.length === 1 ? 'class' : 'classes') : 'כיתות'}
                 </span>
               </div>
             </div>
@@ -254,15 +253,15 @@ export default function SchoolTypePage() {
               transition={{ delay: index * 0.05 }}
             >
               <Link href={`/dashboard/schools/${cityId}/${communityId}/${schoolId}/classes/${classItem.id}`}>
-                <Card className="group cursor-pointer bg-white border-slate-200 hover:shadow-lg transition-all duration-200">
+                <Card className="group cursor-pointer border-border hover:border-primary/30 transition-colors duration-200 py-0">
                   <CardContent className="p-4">
                     {/* Icon and Name */}
                     <div className="flex items-center gap-3 mb-3">
-                      <div className={`p-2.5 rounded-lg bg-gradient-to-br ${gradientClass} shrink-0`}>
-                        <GraduationCap className="w-5 h-5 text-white" />
+                      <div className={`p-2 rounded-lg shrink-0 ${accent.iconBg}`}>
+                        <GraduationCap className="w-4 h-4" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-sm text-slate-900 truncate">
+                        <h3 className="font-medium text-sm text-foreground truncate">
                           {classItem.name}
                         </h3>
                       </div>
@@ -270,10 +269,10 @@ export default function SchoolTypePage() {
 
                     {/* Grade Level */}
                     <div className="flex items-center justify-between text-xs">
-                      <span className="text-slate-600">
+                      <span className="text-muted-foreground">
                         {lang === 'en' ? 'Grade' : 'כיתה'}
                       </span>
-                      <span className="font-semibold text-slate-800">
+                      <span className="font-medium text-foreground">
                         {classItem.gradeLevel}
                       </span>
                     </div>

@@ -38,24 +38,24 @@ export function Header() {
   });
 
   return (
-    <header className="border-b bg-card sticky top-0 z-30">
-      <div className="flex items-center justify-between px-6 py-4">
+    <header className="border-b border-border bg-card sticky top-0 z-30">
+      <div className="flex items-center justify-between px-6 lg:px-10 py-3">
         {/* Breadcrumbs */}
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/">{t('home')}</BreadcrumbLink>
+              <BreadcrumbLink href="/" className="text-sm">{t('home')}</BreadcrumbLink>
             </BreadcrumbItem>
-            {breadcrumbs.map((crumb, index) => (
+            {breadcrumbs.map((crumb) => (
               <div key={crumb.href} className="flex items-center gap-2">
                 <BreadcrumbSeparator>
-                  <ChevronRight className="w-4 h-4" />
+                  <ChevronRight className="w-3.5 h-3.5" />
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
                   {crumb.isLast ? (
-                    <BreadcrumbPage>{crumb.label}</BreadcrumbPage>
+                    <BreadcrumbPage className="text-sm">{crumb.label}</BreadcrumbPage>
                   ) : (
-                    <BreadcrumbLink href={crumb.href}>{crumb.label}</BreadcrumbLink>
+                    <BreadcrumbLink href={crumb.href} className="text-sm">{crumb.label}</BreadcrumbLink>
                   )}
                 </BreadcrumbItem>
               </div>

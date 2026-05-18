@@ -15,11 +15,11 @@ const DAYS: { value: DayType; label: string }[] = [
 ];
 
 const SUBJECT_STYLE: Record<SubjectType, string> = {
-  hebrew: 'bg-blue-100 text-blue-900 border-blue-200',
-  english: 'bg-green-100 text-green-900 border-green-200',
-  break: 'bg-amber-100 text-amber-900 border-amber-200',
-  other: 'bg-slate-100 text-slate-700 border-slate-200',
-  'bus-start': 'bg-violet-100 text-violet-900 border-violet-200',
+  hebrew: 'bg-blue-50 text-blue-800 border-blue-100',
+  english: 'bg-emerald-50 text-emerald-800 border-emerald-100',
+  break: 'bg-amber-50 text-amber-800 border-amber-100',
+  other: 'bg-slate-50 text-slate-700 border-slate-100',
+  'bus-start': 'bg-fuchsia-50 text-fuchsia-800 border-fuchsia-100',
 };
 
 const SUBJECT_LABEL: Record<SubjectType, string> = {
@@ -194,8 +194,8 @@ export function SchoolScheduleGrid({
     <Card className="border-slate-200 shadow-sm">
       <CardHeader>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <CardTitle className="flex items-center gap-2">
-            <CalendarDays className="w-5 h-5 text-violet-600" />
+          <CardTitle className="flex items-center gap-2 text-base font-semibold">
+            <CalendarDays className="w-4 h-4 text-primary" />
             Schedule
           </CardTitle>
           <div className="flex flex-wrap items-center gap-2">
@@ -207,10 +207,10 @@ export function SchoolScheduleGrid({
                     key={d.value}
                     type="button"
                     onClick={() => setDayType(d.value)}
-                    className={`px-3 py-1.5 text-sm rounded-md border transition-colors ${
+                    className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${
                       selected
-                        ? 'bg-slate-900 text-white border-slate-900'
-                        : 'bg-white text-slate-700 border-slate-300 hover:border-slate-400'
+                        ? 'bg-foreground text-background border-foreground'
+                        : 'bg-card text-foreground border-border hover:border-foreground/40'
                     }`}
                   >
                     {d.label}

@@ -171,13 +171,13 @@ export function BulkScheduleEditor({
   };
 
   return (
-    <Card className="border-slate-200 shadow-sm">
+    <Card className="border-border">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Save className="w-5 h-5 text-violet-600" />
-          Bulk Schedule Editor
+        <CardTitle className="flex items-center gap-2 text-base font-semibold">
+          <Save className="w-4 h-4 text-primary" />
+          Schedule Editor
         </CardTitle>
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-muted-foreground">
           Pick classes, set anchor times, and list breaks inside each section. Save applies the same schedule to every selected class.
         </p>
       </CardHeader>
@@ -202,10 +202,10 @@ export function BulkScheduleEditor({
                   type="button"
                   key={c.id}
                   onClick={() => toggleClass(c.id)}
-                  className={`px-3 py-1.5 text-sm rounded-md border transition-colors ${
+                  className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${
                     selected
-                      ? 'bg-violet-600 text-white border-violet-600'
-                      : 'bg-white text-slate-700 border-slate-300 hover:border-slate-400'
+                      ? 'bg-primary text-primary-foreground border-primary'
+                      : 'bg-card text-foreground border-border hover:border-primary/40'
                   }`}
                 >
                   {c.name}
@@ -226,10 +226,10 @@ export function BulkScheduleEditor({
                   type="button"
                   key={d.value}
                   onClick={() => setDayType(d.value)}
-                  className={`px-3 py-1.5 text-sm rounded-md border transition-colors ${
+                  className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${
                     selected
-                      ? 'bg-slate-900 text-white border-slate-900'
-                      : 'bg-white text-slate-700 border-slate-300 hover:border-slate-400'
+                      ? 'bg-foreground text-background border-foreground'
+                      : 'bg-card text-foreground border-border hover:border-foreground/40'
                   }`}
                 >
                   {d.label}
@@ -260,7 +260,7 @@ export function BulkScheduleEditor({
           title="Hebrew"
           range={`${fmt12(hebrewStart)} – ${fmt12(englishStart)}`}
           icon={<BookOpen className="w-4 h-4" />}
-          accent="text-blue-600 bg-blue-50 border-blue-200"
+          accent="text-blue-700 bg-blue-50 border-blue-100"
           breaks={hebrewBreaks}
           onAdd={() => addBreak('hebrew')}
           onUpdate={(id, patch) => updateBreak('hebrew', id, patch)}
@@ -272,7 +272,7 @@ export function BulkScheduleEditor({
           title="English"
           range={`${fmt12(englishStart)} – ${fmt12(endTime)}`}
           icon={<Languages className="w-4 h-4" />}
-          accent="text-green-700 bg-green-50 border-green-200"
+          accent="text-emerald-700 bg-emerald-50 border-emerald-100"
           breaks={englishBreaks}
           onAdd={() => addBreak('english')}
           onUpdate={(id, patch) => updateBreak('english', id, patch)}
@@ -342,13 +342,13 @@ function SectionEditor({
   onRemove: (id: string) => void;
 }) {
   return (
-    <div className={`rounded-lg border ${accent.split(' ').filter((x) => x.startsWith('border-')).join(' ')} bg-slate-50/50 p-4`}>
+    <div className={`rounded-xl border ${accent.split(' ').filter((x) => x.startsWith('border-')).join(' ')} bg-background p-4`}>
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <div className={`p-1.5 rounded ${accent}`}>{icon}</div>
+          <div className={`p-1.5 rounded-md ${accent}`}>{icon}</div>
           <div>
-            <div className="font-semibold text-slate-900">{title}</div>
-            <div className="text-xs text-slate-600">{range}</div>
+            <div className="font-medium text-foreground">{title}</div>
+            <div className="text-xs text-muted-foreground">{range}</div>
           </div>
         </div>
       </div>
