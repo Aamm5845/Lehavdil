@@ -159,12 +159,30 @@ export function SchoolScheduleGrid({
     return { ...initial, classIds: matchingIds };
   };
 
+  // Which classes are explicitly marked as "no school" for the current day.
+  const closedField = `${dayType}Closed` as 'sundayClosed' | 'weekdayClosed' | 'fridayClosed';
+  const isClosed = (c: Class) => Boolean(c[closedField]);
+  const closedClasses = sortedClasses.filter(isClosed);
+  const allClosed = sortedClasses.length > 0 && closedClasses.length === sortedClasses.length;
+
   const hasData = rows.length > 0;
   const handleAddClick = () => onEdit?.(dayType, { dayType });
   const handleEditClick = () => {
+    if (allClosed) {
+      // Editing a day that's marked "no school" — pre-fill with that flag + every class selected.
+      onEdit?.(dayType, {
+        dayType,
+        noSchool: true,
+        classIds: sortedClasses.map((c) => c.id),
+      });
+      return;
+    }
     const init = buildEditInitial();
     if (init) onEdit?.(dayType, init);
   };
+  // The grid should show "Edit" whenever there's something to look at — either
+  // real blocks or a class marked closed.
+  const canEdit = hasData || closedClasses.length > 0;
 
   // Per-class totals (minutes) for the current day.
   const totals = useMemo(() => {
@@ -218,7 +236,7 @@ export function SchoolScheduleGrid({
                 );
               })}
             </div>
-            {onEdit && hasData && (
+            {onEdit && canEdit && (
               <Button size="sm" variant="outline" onClick={handleEditClick}>
                 <Pencil className="w-4 h-4 mr-1" />
                 Edit
@@ -236,9 +254,21 @@ export function SchoolScheduleGrid({
           </div>
         ) : error ? (
           <p className="text-sm text-destructive">{error}</p>
+        ) : allClosed ? (
+          <div className="flex flex-col items-center justify-center py-12 gap-3">
+            <p className="text-sm text-muted-foreground">
+              No school on {DAYS.find((d) => d.value === dayType)?.label} for any class.
+            </p>
+            {onEdit && (
+              <Button variant="outline" onClick={handleEditClick}>
+                <Pencil className="w-4 h-4 mr-1" />
+                Change
+              </Button>
+            )}
+          </div>
         ) : !hasData ? (
           <div className="flex flex-col items-center justify-center py-12 gap-3">
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-muted-foreground">
               No schedule yet for {DAYS.find((d) => d.value === dayType)?.label}.
             </p>
             {onEdit && (
@@ -273,6 +303,24 @@ export function SchoolScheduleGrid({
                       {fmt(slot.start)}–{fmt(slot.end)}
                     </td>
                     {sortedClasses.map((c) => {
+                      if (isClosed(c)) {
+                        // Closed columns get one banded "No school" cell that spans the
+                        // whole timeline — only render on the first row.
+                        if (rowIdx === 0) {
+                          return (
+                            <td
+                              key={c.id}
+                              rowSpan={rows.length}
+                              className="px-1 py-1 border-b border-slate-100 align-middle"
+                            >
+                              <div className="text-center rounded border bg-slate-50 text-slate-500 border-slate-100 px-1 py-2 text-[11px] italic">
+                                No school
+                              </div>
+                            </td>
+                          );
+                        }
+                        return null;
+                      }
                       const block = findBlock(c.id, slot);
                       if (!block) {
                         return (
@@ -303,11 +351,12 @@ export function SchoolScheduleGrid({
                       {row.label}
                     </td>
                     {sortedClasses.map((c) => {
+                      const closed = isClosed(c);
                       const mins = totals.get(c.id)?.[row.key] ?? 0;
                       return (
                         <td key={c.id} className={`px-1 py-2 ${idx === 0 ? 'border-t-2 border-slate-300' : ''}`}>
-                          <div className={`text-center rounded border px-1 py-1 font-mono text-[11px] ${row.style}`}>
-                            {fmtDur(mins)}
+                          <div className={`text-center rounded border px-1 py-1 font-mono text-[11px] ${closed ? 'bg-slate-50 text-slate-400 border-slate-100' : row.style}`}>
+                            {closed ? '—' : fmtDur(mins)}
                           </div>
                         </td>
                       );
@@ -319,12 +368,13 @@ export function SchoolScheduleGrid({
                     Total
                   </td>
                   {sortedClasses.map((c) => {
+                    const closed = isClosed(c);
                     const t = totals.get(c.id);
                     const total = (t?.hebrew ?? 0) + (t?.english ?? 0) + (t?.break ?? 0);
                     return (
                       <td key={c.id} className="px-1 py-2 border-t border-slate-200">
-                        <div className="text-center font-mono text-[11px] font-bold text-slate-900">
-                          {fmtDur(total)}
+                        <div className={`text-center font-mono text-[11px] font-bold ${closed ? 'text-slate-400' : 'text-slate-900'}`}>
+                          {closed ? '—' : fmtDur(total)}
                         </div>
                       </td>
                     );

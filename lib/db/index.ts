@@ -13,12 +13,15 @@ type DbClass = {
   sundayStart: string | null;
   sundayEnglishStart: string | null;
   sundayEnd: string | null;
+  sundayClosed: boolean;
   weekdayStart: string | null;
   weekdayEnglishStart: string | null;
   weekdayEnd: string | null;
+  weekdayClosed: boolean;
   fridayStart: string | null;
   fridayEnglishStart: string | null;
   fridayEnd: string | null;
+  fridayClosed: boolean;
   createdAt: Date;
 };
 type DbTimeBlock = { id: number; classId: number; dayType: string; startTime: string; endTime: string; subjectType: string; description: string | null; teacher: string | null; sortOrder: number; createdAt: Date };
@@ -59,12 +62,15 @@ const toClass = (c: DbClass): Class => ({
   sundayStart: undef(c.sundayStart),
   sundayEnglishStart: undef(c.sundayEnglishStart),
   sundayEnd: undef(c.sundayEnd),
+  sundayClosed: c.sundayClosed,
   weekdayStart: undef(c.weekdayStart),
   weekdayEnglishStart: undef(c.weekdayEnglishStart),
   weekdayEnd: undef(c.weekdayEnd),
+  weekdayClosed: c.weekdayClosed,
   fridayStart: undef(c.fridayStart),
   fridayEnglishStart: undef(c.fridayEnglishStart),
   fridayEnd: undef(c.fridayEnd),
+  fridayClosed: c.fridayClosed,
   createdAt: c.createdAt,
 });
 

@@ -39,12 +39,15 @@ export interface Class {
   sundayStart?: string;  // HH:MM format
   sundayEnglishStart?: string;  // When English learning begins
   sundayEnd?: string;
+  sundayClosed?: boolean;
   weekdayStart?: string;
   weekdayEnglishStart?: string;
   weekdayEnd?: string;
+  weekdayClosed?: boolean;
   fridayStart?: string;
   fridayEnglishStart?: string;
   fridayEnd?: string;
+  fridayClosed?: boolean;
   createdAt: Date;
 }
 

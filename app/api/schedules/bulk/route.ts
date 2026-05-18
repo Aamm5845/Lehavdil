@@ -9,9 +9,10 @@ type Break = { start: string; end: string; label?: string };
 type BulkBody = {
   classIds: string[];
   dayType: DayType;
-  hebrewStart: string;
-  englishStart: string;
-  endTime: string;
+  noSchool?: boolean;
+  hebrewStart?: string;
+  englishStart?: string;
+  endTime?: string;
   hebrewBreaks?: Break[];
   englishBreaks?: Break[];
 };
@@ -25,13 +26,15 @@ const toMin = (t: string) => {
 function validate(body: BulkBody) {
   if (!Array.isArray(body.classIds) || body.classIds.length === 0) throw new Error('classIds required');
   if (!['sunday', 'weekday', 'friday'].includes(body.dayType)) throw new Error('Invalid dayType');
+  if (body.noSchool) return; // no times to validate
   for (const f of ['hebrewStart', 'englishStart', 'endTime'] as const) {
-    if (!HHMM.test(body[f])) throw new Error(`${f} must be HH:MM`);
+    const v = body[f];
+    if (!v || !HHMM.test(v)) throw new Error(`${f} must be HH:MM`);
   }
-  if (toMin(body.hebrewStart) >= toMin(body.englishStart)) {
+  if (toMin(body.hebrewStart!) >= toMin(body.englishStart!)) {
     throw new Error('hebrewStart must be before englishStart');
   }
-  if (toMin(body.englishStart) >= toMin(body.endTime)) {
+  if (toMin(body.englishStart!) >= toMin(body.endTime!)) {
     throw new Error('englishStart must be before endTime');
   }
   const check = (breaks: Break[] | undefined, lo: number, hi: number, label: string) => {
@@ -48,8 +51,8 @@ function validate(body: BulkBody) {
       prevEnd = e;
     }
   };
-  check(body.hebrewBreaks, toMin(body.hebrewStart), toMin(body.englishStart), 'hebrew');
-  check(body.englishBreaks, toMin(body.englishStart), toMin(body.endTime), 'english');
+  check(body.hebrewBreaks, toMin(body.hebrewStart!), toMin(body.englishStart!), 'hebrew');
+  check(body.englishBreaks, toMin(body.englishStart!), toMin(body.endTime!), 'english');
 }
 
 type GenBlock = { startTime: string; endTime: string; subjectType: 'hebrew' | 'english' | 'break'; description: string | null };
@@ -75,17 +78,18 @@ function generate(body: BulkBody): GenBlock[] {
       out.push({ startTime: cursor, endTime: periodEnd, subjectType: subj, description: null });
     }
   };
-  sect(body.hebrewStart, body.englishStart, 'hebrew', body.hebrewBreaks);
-  sect(body.englishStart, body.endTime, 'english', body.englishBreaks);
+  sect(body.hebrewStart!, body.englishStart!, 'hebrew', body.hebrewBreaks);
+  sect(body.englishStart!, body.endTime!, 'english', body.englishBreaks);
   return out;
 }
 
-const anchorFields = (dayType: DayType, hebrewStart: string, englishStart: string, endTime: string) => {
+const anchorFields = (dayType: DayType, hebrewStart: string | null, englishStart: string | null, endTime: string | null, closed: boolean) => {
   const prefix = dayType === 'weekday' ? 'weekday' : dayType;
   return {
     [`${prefix}Start`]: hebrewStart,
     [`${prefix}EnglishStart`]: englishStart,
     [`${prefix}End`]: endTime,
+    [`${prefix}Closed`]: closed,
   };
 };
 
@@ -94,8 +98,28 @@ export async function POST(request: Request) {
     const body = (await request.json()) as BulkBody;
     validate(body);
 
-    const generated = generate(body);
     const classIdsNum = body.classIds.map((id) => Number(id));
+
+    if (body.noSchool) {
+      // "No school" mode: wipe existing blocks + mark each class as closed for this day.
+      await prisma.$transaction([
+        prisma.timeBlock.deleteMany({
+          where: { classId: { in: classIdsNum }, dayType: body.dayType },
+        }),
+        prisma.class.updateMany({
+          where: { id: { in: classIdsNum } },
+          data: anchorFields(body.dayType, null, null, null, true),
+        }),
+      ]);
+      return NextResponse.json({
+        ok: true,
+        classCount: classIdsNum.length,
+        blocksPerClass: 0,
+        noSchool: true,
+      });
+    }
+
+    const generated = generate(body);
 
     // Build all block rows for every selected class up-front so the whole
     // save fits in 3 queries: deleteMany, createMany, updateMany.
@@ -110,7 +134,7 @@ export async function POST(request: Request) {
         sortOrder: i,
       }))
     );
-    const anchors = anchorFields(body.dayType, body.hebrewStart, body.englishStart, body.endTime);
+    const anchors = anchorFields(body.dayType, body.hebrewStart!, body.englishStart!, body.endTime!, false);
 
     await prisma.$transaction([
       prisma.timeBlock.deleteMany({

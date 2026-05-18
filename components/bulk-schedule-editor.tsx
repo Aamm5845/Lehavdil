@@ -28,6 +28,7 @@ const newRow = (start = '', end = '', label = ''): BreakRow => ({
 export type BulkScheduleInitial = {
   dayType?: DayType;
   classIds?: string[];
+  noSchool?: boolean;
   hebrewStart?: string;
   englishStart?: string;
   endTime?: string;
@@ -50,6 +51,7 @@ export function BulkScheduleEditor({
     () => new Set(initial?.classIds ?? [])
   );
   const [dayType, setDayType] = useState<DayType>(initial?.dayType ?? 'weekday');
+  const [noSchool, setNoSchool] = useState<boolean>(initial?.noSchool ?? false);
   const [hebrewStart, setHebrewStart] = useState(initial?.hebrewStart ?? '09:00');
   const [englishStart, setEnglishStart] = useState(initial?.englishStart ?? '13:00');
   const [endTime, setEndTime] = useState(initial?.endTime ?? '16:15');
@@ -146,24 +148,37 @@ export function BulkScheduleEditor({
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 45_000);
     try {
-      const split = splitBreaks(breaks, englishStart);
+      const payload = noSchool
+        ? {
+            classIds: Array.from(selectedClassIds),
+            dayType,
+            noSchool: true,
+          }
+        : (() => {
+            const split = splitBreaks(breaks, englishStart);
+            return {
+              classIds: Array.from(selectedClassIds),
+              dayType,
+              hebrewStart,
+              englishStart,
+              endTime,
+              hebrewBreaks: split.hebrew,
+              englishBreaks: split.english,
+            };
+          })();
       const r = await fetch('/api/schedules/bulk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         signal: controller.signal,
-        body: JSON.stringify({
-          classIds: Array.from(selectedClassIds),
-          dayType,
-          hebrewStart,
-          englishStart,
-          endTime,
-          hebrewBreaks: split.hebrew,
-          englishBreaks: split.english,
-        }),
+        body: JSON.stringify(payload),
       });
       const j = await r.json();
       if (!r.ok) throw new Error(j.error || 'Failed to save');
-      toast.success(`Saved schedule to ${j.classCount} class${j.classCount === 1 ? '' : 'es'} (${j.blocksPerClass} blocks each)`);
+      toast.success(
+        noSchool
+          ? `Marked ${j.classCount} class${j.classCount === 1 ? '' : 'es'} as no school`
+          : `Saved schedule to ${j.classCount} class${j.classCount === 1 ? '' : 'es'} (${j.blocksPerClass} blocks each)`
+      );
       onSaved?.();
     } catch (e: unknown) {
       const aborted = e instanceof DOMException && e.name === 'AbortError';
@@ -252,29 +267,44 @@ export function BulkScheduleEditor({
           </div>
         </div>
 
-        {/* Anchor times */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="space-y-1.5">
-            <Label htmlFor="hebrewStart">Hebrew starts</Label>
-            <Input id="hebrewStart" type="time" value={hebrewStart} onChange={(e) => setHebrewStart(e.target.value)} />
-          </div>
-          <div className="space-y-1.5">
-            <Label htmlFor="englishStart">English starts</Label>
-            <Input id="englishStart" type="time" value={englishStart} onChange={(e) => setEnglishStart(e.target.value)} />
-          </div>
-          <div className="space-y-1.5">
-            <Label htmlFor="endTime">End of day</Label>
-            <Input id="endTime" type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
-          </div>
-        </div>
+        {/* No school toggle */}
+        <label className="flex items-center gap-2 cursor-pointer select-none">
+          <input
+            type="checkbox"
+            checked={noSchool}
+            onChange={(e) => setNoSchool(e.target.checked)}
+            className="w-4 h-4 rounded border-border accent-primary"
+          />
+          <span className="text-sm text-foreground">No school on this day</span>
+        </label>
 
-        {/* Unified breaks */}
-        <BreaksEditor
-          breaks={breaks}
-          onAdd={addBreak}
-          onUpdate={updateBreak}
-          onRemove={removeBreak}
-        />
+        {!noSchool && (
+          <>
+            {/* Anchor times */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="space-y-1.5">
+                <Label htmlFor="hebrewStart">Hebrew starts</Label>
+                <Input id="hebrewStart" type="time" step={300} value={hebrewStart} onChange={(e) => setHebrewStart(e.target.value)} />
+              </div>
+              <div className="space-y-1.5">
+                <Label htmlFor="englishStart">English starts</Label>
+                <Input id="englishStart" type="time" step={300} value={englishStart} onChange={(e) => setEnglishStart(e.target.value)} />
+              </div>
+              <div className="space-y-1.5">
+                <Label htmlFor="endTime">End of day</Label>
+                <Input id="endTime" type="time" step={300} value={endTime} onChange={(e) => setEndTime(e.target.value)} />
+              </div>
+            </div>
+
+            {/* Unified breaks */}
+            <BreaksEditor
+              breaks={breaks}
+              onAdd={addBreak}
+              onUpdate={updateBreak}
+              onRemove={removeBreak}
+            />
+          </>
+        )}
 
         {/* Save / Cancel */}
         <div className="flex items-center justify-between pt-2 border-t border-slate-200">
@@ -345,12 +375,14 @@ function BreaksEditor({
           <div key={b.id} className="grid grid-cols-[1fr_1fr_2fr_auto] gap-2 items-center">
             <Input
               type="time"
+              step={300}
               value={b.start}
               onChange={(e) => onUpdate(b.id, { start: e.target.value })}
               placeholder="Start"
             />
             <Input
               type="time"
+              step={300}
               value={b.end}
               onChange={(e) => onUpdate(b.id, { end: e.target.value })}
               placeholder="End"

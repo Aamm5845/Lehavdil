@@ -52,12 +52,15 @@ model Class {
   sundayStart         String?
   sundayEnglishStart  String?
   sundayEnd           String?
+  sundayClosed        Boolean     @default(false)
   weekdayStart        String?
   weekdayEnglishStart String?
   weekdayEnd          String?
+  weekdayClosed       Boolean     @default(false)
   fridayStart         String?
   fridayEnglishStart  String?
   fridayEnd           String?
+  fridayClosed        Boolean     @default(false)
   createdAt           DateTime    @default(now())
   timeBlocks          TimeBlock[]
 
