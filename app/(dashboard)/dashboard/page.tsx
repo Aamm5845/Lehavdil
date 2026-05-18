@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { Skeleton } from '@/components/ui/skeleton';
 import { motion } from 'framer-motion';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { SchoolsWithSchedules } from '@/components/schools-with-schedules';
 
 // Professional CRM-style colors - sophisticated and clean
 const COLORS = {
@@ -194,6 +195,9 @@ export default function DashboardPage() {
           );
         })}
       </div>
+
+      {/* Schools with schedules — visible at a glance */}
+      <SchoolsWithSchedules />
 
       {/* Charts Row - 2 columns side by side */}
       <div className="grid gap-6 lg:grid-cols-2">

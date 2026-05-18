@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { toast } from 'sonner';
-import { Plus, Trash2, Loader2, Save, BookOpen, Languages, X } from 'lucide-react';
+import { Plus, Trash2, Loader2, Save, X } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -53,16 +53,16 @@ export function BulkScheduleEditor({
   const [hebrewStart, setHebrewStart] = useState(initial?.hebrewStart ?? '09:00');
   const [englishStart, setEnglishStart] = useState(initial?.englishStart ?? '13:00');
   const [endTime, setEndTime] = useState(initial?.endTime ?? '16:15');
-  const [hebrewBreaks, setHebrewBreaks] = useState<BreakRow[]>(
-    initial?.hebrewBreaks?.length
-      ? initial.hebrewBreaks.map((b) => newRow(b.start, b.end, b.label ?? ''))
-      : [newRow()]
-  );
-  const [englishBreaks, setEnglishBreaks] = useState<BreakRow[]>(
-    initial?.englishBreaks?.length
-      ? initial.englishBreaks.map((b) => newRow(b.start, b.end, b.label ?? ''))
-      : [newRow()]
-  );
+  // One unified list of breaks. On save we split by start time vs englishStart.
+  const [breaks, setBreaks] = useState<BreakRow[]>(() => {
+    const combined = [
+      ...(initial?.hebrewBreaks ?? []),
+      ...(initial?.englishBreaks ?? []),
+    ];
+    return combined.length > 0
+      ? combined.map((b) => newRow(b.start, b.end, b.label ?? ''))
+      : [newRow()];
+  });
   const [submitting, setSubmitting] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [classesWithData, setClassesWithData] = useState<Class[]>([]);
@@ -89,23 +89,30 @@ export function BulkScheduleEditor({
     }
   };
 
-  const updateBreak = (which: 'hebrew' | 'english', id: string, patch: Partial<BreakRow>) => {
-    const setter = which === 'hebrew' ? setHebrewBreaks : setEnglishBreaks;
-    setter((rows) => rows.map((r) => (r.id === id ? { ...r, ...patch } : r)));
+  const updateBreak = (id: string, patch: Partial<BreakRow>) => {
+    setBreaks((rows) => rows.map((r) => (r.id === id ? { ...r, ...patch } : r)));
   };
-  const addBreak = (which: 'hebrew' | 'english') => {
-    const setter = which === 'hebrew' ? setHebrewBreaks : setEnglishBreaks;
-    setter((rows) => [...rows, newRow()]);
+  const addBreak = () => {
+    setBreaks((rows) => [...rows, newRow()]);
   };
-  const removeBreak = (which: 'hebrew' | 'english', id: string) => {
-    const setter = which === 'hebrew' ? setHebrewBreaks : setEnglishBreaks;
-    setter((rows) => (rows.length === 1 ? [newRow()] : rows.filter((r) => r.id !== id)));
+  const removeBreak = (id: string) => {
+    setBreaks((rows) => (rows.length === 1 ? [newRow()] : rows.filter((r) => r.id !== id)));
   };
 
-  const cleanBreaks = (rows: BreakRow[]) =>
-    rows
+  // Skip incomplete rows; split the rest by start time relative to englishStart.
+  const toMin = (t: string) => {
+    const [h, m] = t.split(':').map(Number);
+    return h * 60 + m;
+  };
+  const splitBreaks = (rows: BreakRow[], englishStart: string) => {
+    const valid = rows
       .filter((r) => r.start && r.end)
       .map((r) => ({ start: r.start, end: r.end, label: r.label || undefined }));
+    const cut = toMin(englishStart);
+    const hebrew = valid.filter((b) => toMin(b.start) < cut);
+    const english = valid.filter((b) => toMin(b.start) >= cut);
+    return { hebrew, english };
+  };
 
   const handleSavePressed = async () => {
     if (selectedClassIds.size === 0) {
@@ -137,6 +144,7 @@ export function BulkScheduleEditor({
     setSubmitting(true);
     setConfirmOpen(false);
     try {
+      const split = splitBreaks(breaks, englishStart);
       const r = await fetch('/api/schedules/bulk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -146,8 +154,8 @@ export function BulkScheduleEditor({
           hebrewStart,
           englishStart,
           endTime,
-          hebrewBreaks: cleanBreaks(hebrewBreaks),
-          englishBreaks: cleanBreaks(englishBreaks),
+          hebrewBreaks: split.hebrew,
+          englishBreaks: split.english,
         }),
       });
       const j = await r.json();
@@ -189,7 +197,7 @@ export function BulkScheduleEditor({
             <button
               type="button"
               onClick={toggleAll}
-              className="text-xs text-violet-600 hover:underline"
+              className="text-xs text-primary hover:underline"
             >
               {selectedClassIds.size === sortedClasses.length ? 'Clear all' : 'Select all'}
             </button>
@@ -255,28 +263,12 @@ export function BulkScheduleEditor({
           </div>
         </div>
 
-        {/* Hebrew section */}
-        <SectionEditor
-          title="Hebrew"
-          range={`${fmt12(hebrewStart)} – ${fmt12(englishStart)}`}
-          icon={<BookOpen className="w-4 h-4" />}
-          accent="text-blue-700 bg-blue-50 border-blue-100"
-          breaks={hebrewBreaks}
-          onAdd={() => addBreak('hebrew')}
-          onUpdate={(id, patch) => updateBreak('hebrew', id, patch)}
-          onRemove={(id) => removeBreak('hebrew', id)}
-        />
-
-        {/* English section */}
-        <SectionEditor
-          title="English"
-          range={`${fmt12(englishStart)} – ${fmt12(endTime)}`}
-          icon={<Languages className="w-4 h-4" />}
-          accent="text-emerald-700 bg-emerald-50 border-emerald-100"
-          breaks={englishBreaks}
-          onAdd={() => addBreak('english')}
-          onUpdate={(id, patch) => updateBreak('english', id, patch)}
-          onRemove={(id) => removeBreak('english', id)}
+        {/* Unified breaks */}
+        <BreaksEditor
+          breaks={breaks}
+          onAdd={addBreak}
+          onUpdate={updateBreak}
+          onRemove={removeBreak}
         />
 
         {/* Save / Cancel */}
@@ -311,7 +303,7 @@ export function BulkScheduleEditor({
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel disabled={submitting}>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={doSave} disabled={submitting} className="bg-violet-600 hover:bg-violet-700">
+            <AlertDialogAction onClick={doSave} disabled={submitting}>
               {submitting && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
               Overwrite
             </AlertDialogAction>
@@ -322,38 +314,28 @@ export function BulkScheduleEditor({
   );
 }
 
-function SectionEditor({
-  title,
-  range,
-  icon,
-  accent,
+function BreaksEditor({
   breaks,
   onAdd,
   onUpdate,
   onRemove,
 }: {
-  title: string;
-  range: string;
-  icon: React.ReactNode;
-  accent: string;
   breaks: BreakRow[];
   onAdd: () => void;
   onUpdate: (id: string, patch: Partial<BreakRow>) => void;
   onRemove: (id: string) => void;
 }) {
   return (
-    <div className={`rounded-xl border ${accent.split(' ').filter((x) => x.startsWith('border-')).join(' ')} bg-background p-4`}>
+    <div className="rounded-xl border border-border p-4">
       <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-2">
-          <div className={`p-1.5 rounded-md ${accent}`}>{icon}</div>
-          <div>
-            <div className="font-medium text-foreground">{title}</div>
-            <div className="text-xs text-muted-foreground">{range}</div>
+        <div>
+          <div className="font-medium text-foreground">Breaks</div>
+          <div className="text-xs text-muted-foreground">
+            Add any breaks throughout the day — start, end, optional label. Order and timing don&apos;t need to be exact.
           </div>
         </div>
       </div>
       <div className="space-y-2">
-        <Label className="text-xs uppercase tracking-wide text-slate-500">Breaks</Label>
         {breaks.map((b) => (
           <div key={b.id} className="grid grid-cols-[1fr_1fr_2fr_auto] gap-2 items-center">
             <Input
@@ -372,7 +354,7 @@ function SectionEditor({
               type="text"
               value={b.label}
               onChange={(e) => onUpdate(b.id, { label: e.target.value })}
-              placeholder="Label (optional)"
+              placeholder="Label (e.g. Lunch)"
             />
             <Button
               type="button"
